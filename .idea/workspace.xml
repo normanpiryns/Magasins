@@ -22,7 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a5c1f534-93cc-4193-b070-c0f3e943f591" name="Default Changelist" comment="Gestion Magasin modif" />
+    <list default="true" id="a5c1f534-93cc-4193-b070-c0f3e943f591" name="Default Changelist" comment="implémentation des méthodes crud produit" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -200,7 +200,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610782775879</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="implémentation des méthodes crud produit">
+      <created>1610787338224</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1610787338224</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,6 +258,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Gestion Magasin" />
     <MESSAGE value="Gestion Magasin modif" />
-    <option name="LAST_COMMIT_MESSAGE" value="Gestion Magasin modif" />
+    <MESSAGE value="implémentation des méthodes crud produit" />
+    <option name="LAST_COMMIT_MESSAGE" value="implémentation des méthodes crud produit" />
   </component>
 </project>
