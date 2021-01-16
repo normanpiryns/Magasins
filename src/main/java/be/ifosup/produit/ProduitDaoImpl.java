@@ -1,6 +1,10 @@
 package be.ifosup.produit;
 
+import be.ifosup.categorie.Categorie;
+import be.ifosup.categorie.CategorieDAO;
 import be.ifosup.dao.DAOFactory;
+import be.ifosup.mesure.Mesure;
+import be.ifosup.mesure.MesureDAO;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -8,7 +12,10 @@ import java.util.List;
 import java.util.Locale;
 
 public class ProduitDaoImpl implements ProduitDAO{
-    private final DAOFactory daoFactory;
+    private final DAOFactory daoFactory = DAOFactory.getInstance();
+
+    private MesureDAO mesureDAO = daoFactory.getMesureDAO();
+    private CategorieDAO categorieDAO = daoFactory.getCategorieDao();
 
     Connection connection =null;
     Statement statement = null;
@@ -44,11 +51,15 @@ public class ProduitDaoImpl implements ProduitDAO{
         resultat.next();
 
         String nom = resultat.getString("nom_produit");
-        //int fk_categorie = resultat.getString("fk_categorie");//cherché les categories via l'objet java
-        //int fk_mesure = resultat.getString("fk_mesure");//cherché les mesure via l'objet java
-        //Produit produit = new Produit(id,nom,fk_categorie,fk_mesure);
+        int fk_categorie = resultat.getInt("fk_categorie");//cherché les categories via l'objet java
+        int fk_mesure = resultat.getInt("fk_mesure");//cherché les mesure via l'objet java
+        Mesure mes = mesureDAO.getMesurebyID(fk_mesure);
+        Categorie cat = categorieDAO.(fk_categorie);
 
-        //return produit;
+
+        Produit produit = new Produit(id,nom,cat.getNom(),mes.getmesure());
+
+        return produit;
     }
 
     @Override

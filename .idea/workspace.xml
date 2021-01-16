@@ -22,11 +22,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab03b686-dbb4-4a3b-90be-6d71ee26d46f" name="Default Changelist" comment="Implementation CRUD categories">
+    <list default="true" id="ab03b686-dbb4-4a3b-90be-6d71ee26d46f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifosup/categorie/CategorieDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifosup/categorie/CategorieDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifosup/categorie/CategorieDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifosup/categorie/CategorieDaoImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/be/ifosup/dao/DAOFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifosup/dao/DAOFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifosup/produit/ProduitDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifosup/produit/ProduitDaoImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +41,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Pull.Settings">
+    <option name="BRANCH" value="main" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -80,6 +82,19 @@
     <property name="service.view.auto.scroll.to.source" value="true" />
   </component>
   <component name="RunManager">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Tomcat 7.0.92" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.92" ALTERNATIVE_JRE_ENABLED="false">
       <deployment>
         <artifact name="Magasins:war exploded">
@@ -254,5 +269,11 @@
     <MESSAGE value="implémentation des méthodes crud produit" />
     <MESSAGE value="Implementation CRUD categories" />
     <option name="LAST_COMMIT_MESSAGE" value="Implementation CRUD categories" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="184" y="86" key="DiffContextDialog" timestamp="1610798128684">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="184" y="86" key="DiffContextDialog/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1610798128684" />
   </component>
 </project>

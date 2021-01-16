@@ -2,6 +2,8 @@ package be.ifosup.dao;
 
 import be.ifosup.categorie.CategorieDAO;
 import be.ifosup.categorie.CategorieDaoImpl;
+import be.ifosup.mesure.MesureDAO;
+import be.ifosup.mesure.MesureDAOImpl;
 import be.ifosup.produit.Produit;
 import be.ifosup.produit.ProduitDAO;
 import be.ifosup.produit.ProduitDaoImpl;
@@ -52,6 +54,10 @@ public class DAOFactory {
 
     public CategorieDAO getCategorieDao(){
         return new CategorieDaoImpl(this);
+    }
+
+    public MesureDAO getMesureDAO(){
+        return new MesureDAOImpl(this);
     }
 
 }
