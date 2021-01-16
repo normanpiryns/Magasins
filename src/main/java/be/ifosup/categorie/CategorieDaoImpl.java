@@ -2,12 +2,11 @@ package be.ifosup.categorie;
 
 import be.ifosup.dao.DAOFactory;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
-public class CategorieDaoImpl {
+public class CategorieDaoImpl implements CategorieDAO {
     private final DAOFactory daoFactory;
 
     Connection connection =null;
@@ -19,4 +18,57 @@ public class CategorieDaoImpl {
         this.daoFactory = daoFactory;
     }
 
+    @Override
+    public List<Categorie> liste() throws SQLException {
+        List<Categorie> categories = new ArrayList<>();
+
+        connection = daoFactory.getConnection();
+        statement = connection.createStatement();
+        resultat = statement.executeQuery("SELECT * FROM categories");
+
+        while(resultat.next()){
+            int id = resultat.getInt("id_categorie");
+            String nom = resultat.getString("nom_categorie");
+
+            categories.add(new Categorie(id,nom));
+        }
+        return categories;
+    }
+
+    @Override
+    public void ajouter(Categorie categorie) throws SQLException {
+        connection = daoFactory.getConnection();
+
+        preparedStatement = connection.prepareStatement("INSERT INTO categories (id_categorie,nom_categorie) VALUES (?,?)");
+
+
+        preparedStatement.setInt(1,categorie.getId());
+        preparedStatement.setString(2,categorie.getNom());
+
+        preparedStatement.executeUpdate();
+    }
+
+    @Override
+    public void supprimer(Long id) throws SQLException {
+        connection = daoFactory.getConnection();
+
+        preparedStatement = connection.prepareStatement("DELETE FROM categories WHERE id_categorie = ?");
+
+        preparedStatement.setLong(1,id);
+
+        preparedStatement.executeUpdate();
+    }
+
+    @Override
+    public void modifier(Categorie categorie) throws SQLException {
+        connection = daoFactory.getConnection();
+
+        preparedStatement = connection.prepareStatement("UPDATE categories SET nom_categorie = ? WHERE id_categorie = ?; ");
+
+        preparedStatement.setInt(1,categorie.getId());
+        preparedStatement.setString(2,categorie.getNom());
+
+
+        preparedStatement.executeUpdate();
+    }
 }
