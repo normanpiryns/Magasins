@@ -11,10 +11,10 @@ public class MesureDAOImpl implements MesureDAO {
     private final DAOFactory daoFactory;
 
     public MesureDAOImpl(DAOFactory daoFactory) {
-        this.daoFactory=daoFactory;
+        this.daoFactory = daoFactory;
     }
 
-    Connection connection =null;
+    Connection connection = null;
     Statement statement = null;
     PreparedStatement preparedStatement = null;
     ResultSet resultat = null;
@@ -26,11 +26,11 @@ public class MesureDAOImpl implements MesureDAO {
         preparedStatement = connection.prepareStatement("select * from mesures");
 
         preparedStatement.executeQuery();
-        while(resultat.next()){
+        while (resultat.next()) {
             int id = resultat.getInt("ID_mesure");
             String mesure = resultat.getString("nom_mesure");
 
-            Mesure user = new Mesure(id,mesure);
+            Mesure user = new Mesure(id, mesure);
 
             listeMesure.add(user);
 
@@ -67,7 +67,8 @@ public class MesureDAOImpl implements MesureDAO {
         preparedStatement.executeUpdate();
     }
 
-    public Mesure mesure(int id ) throws SQLException {
+    @Override
+    public Mesure getMesurebyID(int id ) throws SQLException {
         connection = daoFactory.getConnection();
         preparedStatement = connection.prepareStatement("select nom_mesure from mesures where ID_mesure = (?) ;");
         preparedStatement.setInt(1,id);

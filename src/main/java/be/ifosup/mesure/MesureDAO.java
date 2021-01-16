@@ -1,5 +1,7 @@
 package be.ifosup.mesure;
 
+import be.ifosup.produit.Produit;
+
 import java.sql.SQLException;
 import java.util.List;
 
@@ -11,4 +13,7 @@ public interface MesureDAO {
     void supprimer (Mesure mesure) throws SQLException;
 
     void modifier (Mesure mesure) throws SQLException;
+
+    public Mesure getMesurebyID(int id ) throws SQLException;
+
 }
