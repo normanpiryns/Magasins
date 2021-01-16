@@ -54,7 +54,7 @@ public class ProduitDaoImpl implements ProduitDAO{
         int fk_categorie = resultat.getInt("fk_categorie");//cherché les categories via l'objet java
         int fk_mesure = resultat.getInt("fk_mesure");//cherché les mesure via l'objet java
         Mesure mes = mesureDAO.getMesurebyID(fk_mesure);
-        Categorie cat = categorieDAO.(fk_categorie);
+        Categorie cat = categorieDAO.getCategorieById(fk_categorie);
 
 
         Produit produit = new Produit(id,nom,cat.getNom(),mes.getmesure());
