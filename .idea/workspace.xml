@@ -22,12 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a5c1f534-93cc-4193-b070-c0f3e943f591" name="Default Changelist" comment="Gestion Magasin">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifosup/unite/Unite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifosup/unite/Unite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifosup/unite/UniteDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifosup/unite/UniteDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifosup/unite/UniteDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifosup/unite/UniteDAOImpl.java" afterDir="false" />
-    </list>
+    <list default="true" id="a5c1f534-93cc-4193-b070-c0f3e943f591" name="Default Changelist" comment="implémentation des méthodes crud produit" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -72,20 +67,22 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../dao" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/mysql-connector-java-8.0.22.jar" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15429688" />
     <property name="project.structure.side.proportion" value="0.30512822" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -196,7 +193,21 @@
       <option name="project" value="LOCAL" />
       <updated>1610781737471</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Gestion Magasin modif">
+      <created>1610782775879</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1610782775879</updated>
+    </task>
+    <task id="LOCAL-00003" summary="implémentation des méthodes crud produit">
+      <created>1610787338224</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1610787338224</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -246,20 +257,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Gestion Magasin" />
-    <option name="LAST_COMMIT_MESSAGE" value="Gestion Magasin" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="1085" y="384" key="#com.intellij.ide.util.MemberChooser" timestamp="1610786809986">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="1085" y="384" key="#com.intellij.ide.util.MemberChooser/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1610786809986" />
-    <state x="984" y="477" key="#com.intellij.refactoring.encapsulateFields.EncalpsulateFieldsDialog" timestamp="1610786770780">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="984" y="477" key="#com.intellij.refactoring.encapsulateFields.EncalpsulateFieldsDialog/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1610786770780" />
-    <state x="1060" y="455" key="FileChooserDialogImpl" timestamp="1610787584267">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="1060" y="455" key="FileChooserDialogImpl/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1610787584267" />
+    <MESSAGE value="Gestion Magasin modif" />
+    <MESSAGE value="implémentation des méthodes crud produit" />
+    <option name="LAST_COMMIT_MESSAGE" value="implémentation des méthodes crud produit" />
   </component>
 </project>
