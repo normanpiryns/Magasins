@@ -27,20 +27,35 @@ public class ProduitDaoImpl implements ProduitDAO{
         connection = daoFactory.getConnection();
         statement = connection.createStatement();
         resultat = statement.executeQuery("SELECT * FROM produit");
-        while(resultat.next()){
-            int id = resultat.getInt("id_produit");
-            String intitule = resultat.getString("nom_produit");
-            int fk_categorie = resultat.getInt("fk_categorie");
-            int fk_unite = resultat.getInt("fk_unite");
 
-            Produit Produit = new Produit(id,intitule,fk_categorie,fk_unite);
-            produits.add(Produit);
-        }
+
+
         return produits;
     }
 
     @Override
-    public void ajouter(Produit produit) throws SQLException {
+    public Produit GetProduitByID(int id) throws SQLException {
+
+        connection = daoFactory.getConnection();
+        statement = connection.createStatement();
+        preparedStatement = connection.prepareStatement("SELECT * FROM produit WHERE pk_produit = ?");
+
+        preparedStatement.setInt(1,id);
+
+        resultat = preparedStatement.executeQuery();
+
+        resultat.next();
+
+        String intitule = resultat.getString("nom_produit");
+        int fk_categorie = resultat.getInt("fk_categorie");
+        int fk_unite = resultat.getInt("fk_unite");
+        Produit produit = new Produit(id,intitule,fk_categorie,fk_unite);
+
+        return produit;
+    }
+
+    @Override
+    public void Ajouter(Produit produit) throws SQLException {
         connection = daoFactory.getConnection();
 
         preparedStatement = connection.prepareStatement("INSERT INTO produit (id_produit,intitule_produit,fk_categorie,fk_unite) VALUES (?,?,?,?)");
@@ -55,7 +70,7 @@ public class ProduitDaoImpl implements ProduitDAO{
     }
 
     @Override
-    public void supprimer(int id) throws SQLException {
+    public void Supprimer(int id) throws SQLException {
         connection = daoFactory.getConnection();
 
         preparedStatement = connection.prepareStatement("DELETE FROM produit WHERE id_produit = ?");
@@ -66,7 +81,7 @@ public class ProduitDaoImpl implements ProduitDAO{
     }
 
     @Override
-    public void modifier(Produit produit) throws SQLException {
+    public void Modifier(Produit produit) throws SQLException {
         connection = daoFactory.getConnection();
 
         preparedStatement = connection.prepareStatement("UPDATE produit SET intitule_produit = ?, fk_categorie = ?  , fk_unite = ? WHERE id_produit = ?; ");
@@ -78,5 +93,4 @@ public class ProduitDaoImpl implements ProduitDAO{
 
         preparedStatement.executeUpdate();
     }
-
 }

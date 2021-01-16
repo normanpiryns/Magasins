@@ -6,10 +6,12 @@ import java.util.List;
 public interface ProduitDAO {
     List<Produit> ListeProduit() throws SQLException;
 
-    void ajouter (Produit produit) throws SQLException;
+    Produit GetProduitByID(int id) throws SQLException;
 
-    void supprimer (int id) throws SQLException;
+    void Ajouter (Produit produit) throws SQLException;
 
-    void modifier (Produit produit) throws SQLException;
+    void Supprimer (int id) throws SQLException;
+
+    void Modifier (Produit produit) throws SQLException;
 
 }
