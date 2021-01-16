@@ -4,34 +4,34 @@ public class Magasin {
 
     // ---------------------------------------- attributes -------------------------------------------------------------
 
-    private int ID_Magasin;
-    private String Nom_Magasin;
+    private int ID;
+    private String Nom;
 
     // ---------------------------------------- constructors -----------------------------------------------------------
 
-    public Magasin(int ID_Magasin,String Nom_Magasin){
-        this.ID_Magasin=ID_Magasin;
-        this.Nom_Magasin=Nom_Magasin;
+    public Magasin(int ID,String Nom){
+        this.ID =ID;
+        this.Nom=Nom;
     }
 
-    public Magasin(String Nom_Magasin){ this.Nom_Magasin=Nom_Magasin;}
+    public Magasin(String Nom){ this.Nom=Nom;}
 
 
     // --------------------------------------- getter&setter -----------------------------------------------------------
 
-    public String getNom_Magasin() {
-        return Nom_Magasin;
+    public String getNom() {
+        return Nom;
     }
 
-    public void setNom_Magasin(String nom_Magasin) {
-        Nom_Magasin = nom_Magasin;
+    public void setNom(String Nom) {
+       this.Nom = Nom;
     }
 
-    public int getID_Magasin() {
-        return ID_Magasin;
+    public int getID() {
+        return ID;
     }
 
-    public void setID_Magasin(int ID_Magasin) {
-        this.ID_Magasin = ID_Magasin;
+    public void setID(int ID) {
+        this.ID = ID;
     }
 }

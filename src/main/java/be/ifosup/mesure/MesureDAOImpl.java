@@ -54,7 +54,7 @@ public class MesureDAOImpl implements MesureDAO {
         preparedStatement = connection.prepareStatement("delete into mesures(ID_mesure) values(?);");
         preparedStatement.setInt(1, mesure.getId());
 
-        preparedStatement.executeQuery();
+        preparedStatement.executeUpdate();
     }
 
     @Override
