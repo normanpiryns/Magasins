@@ -30,4 +30,3 @@ public class Produit {
         this.intitule = intitule;
     }
 }
-//Je suis là
