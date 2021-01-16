@@ -1,8 +1,11 @@
 package be.ifosup.dao;
 
+import be.ifosup.categorie.CategorieDAO;
+import be.ifosup.categorie.CategorieDaoImpl;
 import be.ifosup.produit.Produit;
 import be.ifosup.produit.ProduitDAO;
 import be.ifosup.produit.ProduitDaoImpl;
+
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -46,4 +49,9 @@ public class DAOFactory {
     public ProduitDAO getProduitDAO(){
         return new ProduitDaoImpl(this);
     }
+
+    public CategorieDAO getCategorieDao(){
+        return new CategorieDaoImpl(this);
+    }
+
 }

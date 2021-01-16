@@ -22,10 +22,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a5c1f534-93cc-4193-b070-c0f3e943f591" name="Default Changelist" comment="">
+    <list default="true" id="ab03b686-dbb4-4a3b-90be-6d71ee26d46f" name="Default Changelist" comment="Implementation CRUD categories">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifosup/produit/Produit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifosup/produit/Produit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifosup/produit/ProduitDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifosup/produit/ProduitDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifosup/categorie/CategorieDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifosup/categorie/CategorieDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifosup/categorie/CategorieDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifosup/categorie/CategorieDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifosup/dao/DAOFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifosup/dao/DAOFactory.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,9 +42,6 @@
         <option value="Class" />
       </list>
     </option>
-  </component>
-  <component name="Git.Pull.Settings">
-    <option name="BRANCH" value="main" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -74,26 +72,14 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/mysql-connector-java-8.0.22.jar" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../todo" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15429688" />
     <property name="project.structure.side.proportion" value="0.30512822" />
+    <property name="service.view.auto.scroll.to.source" value="true" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Tomcat 7.0.92" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.92" ALTERNATIVE_JRE_ENABLED="false">
       <deployment>
         <artifact name="Magasins:war exploded">
@@ -214,21 +200,7 @@
       <option name="project" value="LOCAL" />
       <updated>1610787338224</updated>
     </task>
-    <task id="LOCAL-00004" summary="implémentation des méthodes crud produit">
-      <created>1610787523317</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1610787523317</updated>
-    </task>
-    <task id="LOCAL-00005" summary="ajout du simple produit">
-      <created>1610790946477</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1610790946477</updated>
-    </task>
-    <option name="localTasksCounter" value="6" />
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -280,21 +252,7 @@
     <MESSAGE value="Gestion Magasin" />
     <MESSAGE value="Gestion Magasin modif" />
     <MESSAGE value="implémentation des méthodes crud produit" />
-    <MESSAGE value="ajout du simple produit" />
-    <option name="LAST_COMMIT_MESSAGE" value="ajout du simple produit" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="285" y="230" key="#com.intellij.ide.util.MemberChooser" timestamp="1610788407390">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="285" y="230" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1610788407390" />
-    <state x="72" y="256" key="Vcs.Push.Dialog.v2" timestamp="1610790977286">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="72" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1610790977286" />
-    <state x="93" y="100" width="774" height="847" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1610789934372">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="93" y="100" width="774" height="847" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1610789934372" />
+    <MESSAGE value="Implementation CRUD categories" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implementation CRUD categories" />
   </component>
 </project>
