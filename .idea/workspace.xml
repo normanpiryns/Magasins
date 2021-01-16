@@ -22,7 +22,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a5c1f534-93cc-4193-b070-c0f3e943f591" name="Default Changelist" comment="implémentation des méthodes crud produit" />
+    <list default="true" id="a5c1f534-93cc-4193-b070-c0f3e943f591" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifosup/produit/Produit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifosup/produit/Produit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifosup/produit/ProduitDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifosup/produit/ProduitDaoImpl.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,6 +41,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Pull.Settings">
+    <option name="BRANCH" value="main" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -207,7 +214,21 @@
       <option name="project" value="LOCAL" />
       <updated>1610787338224</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="implémentation des méthodes crud produit">
+      <created>1610787523317</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1610787523317</updated>
+    </task>
+    <task id="LOCAL-00005" summary="ajout du simple produit">
+      <created>1610790946477</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1610790946477</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -259,6 +280,21 @@
     <MESSAGE value="Gestion Magasin" />
     <MESSAGE value="Gestion Magasin modif" />
     <MESSAGE value="implémentation des méthodes crud produit" />
-    <option name="LAST_COMMIT_MESSAGE" value="implémentation des méthodes crud produit" />
+    <MESSAGE value="ajout du simple produit" />
+    <option name="LAST_COMMIT_MESSAGE" value="ajout du simple produit" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="285" y="230" key="#com.intellij.ide.util.MemberChooser" timestamp="1610788407390">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="285" y="230" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1610788407390" />
+    <state x="72" y="256" key="Vcs.Push.Dialog.v2" timestamp="1610790977286">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="72" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1610790977286" />
+    <state x="93" y="100" width="774" height="847" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1610789934372">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="93" y="100" width="774" height="847" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1610789934372" />
   </component>
 </project>
