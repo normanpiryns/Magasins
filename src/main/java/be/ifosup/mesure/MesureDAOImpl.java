@@ -28,7 +28,7 @@ public class MesureDAOImpl implements MesureDAO {
         preparedStatement.executeQuery();
         while(resultat.next()){
             int id = resultat.getInt("ID_mesure");
-            String mesure = resultat.getString("Libelle_mesure");
+            String mesure = resultat.getString("nom_mesure");
 
             Mesure user = new Mesure(id,mesure);
 
@@ -42,7 +42,7 @@ public class MesureDAOImpl implements MesureDAO {
     @Override
     public void ajouter(Mesure mesure) throws SQLException {
         connection = daoFactory.getConnection();
-        preparedStatement = connection.prepareStatement("insert into mesures(Libelle_mesure) values(?);");
+        preparedStatement = connection.prepareStatement("insert into mesures(nom_mesure) values(?);");
         preparedStatement.setString(1, mesure.getmesure());
 
         preparedStatement.executeUpdate();
@@ -60,7 +60,7 @@ public class MesureDAOImpl implements MesureDAO {
     @Override
     public void modifier(Mesure mesure) throws SQLException {
         connection = daoFactory.getConnection();
-        preparedStatement = connection.prepareStatement("update into mesures(Libelle_mesure) values(?) where ID_mesure =(?);");
+        preparedStatement = connection.prepareStatement("update into mesures(nom_mesure) values(?) where ID_mesure =(?);");
         preparedStatement.setString(1, mesure.getmesure());
         preparedStatement.setInt(1, mesure.getId());
 
@@ -69,10 +69,10 @@ public class MesureDAOImpl implements MesureDAO {
 
     public Mesure mesure(int id ) throws SQLException {
         connection = daoFactory.getConnection();
-        preparedStatement = connection.prepareStatement("select Libelle_mesure from mesures where ID_mesure = (?) ;");
+        preparedStatement = connection.prepareStatement("select nom_mesure from mesures where ID_mesure = (?) ;");
         preparedStatement.setInt(1,id);
 
         preparedStatement.executeQuery();
-        return new Mesure(id, resultat.getString("Libelle_mesure"));
+        return new Mesure(id, resultat.getString("nom_mesure"));
     }
 }
