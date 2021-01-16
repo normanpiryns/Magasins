@@ -1,21 +1,19 @@
 package be.ifosup.produit;
 
+import be.ifosup.categorie.Categorie;
+
 public class Produit {
     private int id;
-    private String intitule;
-    private int fk_categorie;
-    private int fk_untie;
+    private String nom;
+    private String categorie;
+    private String mesure;
 
 
-    public Produit(int id, String intitule,int fk_categorie,int fk_untie) {
+    public Produit(int id, String nom,String categorie,String mesure) {
         this.id = id;
-        this.intitule = intitule;
-        this.fk_categorie = fk_categorie;
-        this.fk_untie = fk_untie;
-    }
-
-    public Produit(String intitule) {
-        this.intitule = intitule;
+        this.nom = nom;
+        this.categorie = categorie;
+        this.mesure = mesure;
     }
 
     public int getId() {
@@ -24,28 +22,27 @@ public class Produit {
 
     public void setId(int id) { this.id = id; }
 
-    public String getIntitule() {
-        return intitule;
+    public String getNom() {
+        return nom;
     }
 
-    public void setIntitule(String intitule) {
-        this.intitule = intitule;
+    public void setNom(String nom) {
+        this.nom = nom;
     }
 
-    public int getFk_categorie() {
-        return fk_categorie;
+    public String getCategorie() {
+        return categorie;
     }
 
-    public void setFk_categorie(int fk_categorie) {
-        this.fk_categorie = fk_categorie;
+    public void setCategorie(String categorie) {
+        this.categorie = categorie;
     }
 
-    public int getFk_untie() {
-        return fk_untie;
+    public String getMesure() {
+        return mesure;
     }
 
-    public void setFk_untie(int fk_untie) {
-        this.fk_untie = fk_untie;
+    public void setMesure(String mesure) {
+        this.mesure = mesure;
     }
-
 }
