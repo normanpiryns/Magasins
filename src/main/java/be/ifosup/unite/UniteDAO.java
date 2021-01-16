@@ -8,9 +8,9 @@ import java.util.List;
 public interface UniteDAO {
     List<Unite> ListeUnite() throws SQLException;
 
-    void ajouter (Produit produit) throws SQLException;
+    void ajouter (Unite unite) throws SQLException;
 
-    void supprimer (int id) throws SQLException;
+    void supprimer (Unite unite) throws SQLException;
 
     void modifier (Unite unite) throws SQLException;
 }
