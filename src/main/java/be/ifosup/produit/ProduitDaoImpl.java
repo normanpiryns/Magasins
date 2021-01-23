@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Locale;
 
 public class ProduitDaoImpl implements ProduitDAO{
-    private final DAOFactory daoFactory = DAOFactory.getInstance();
+    private DAOFactory daoFactory = DAOFactory.getInstance();
 
     private MesureDAO mesureDAO = daoFactory.getMesureDAO();
     private CategorieDAO categorieDAO = daoFactory.getCategorieDao();
