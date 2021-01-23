@@ -5,7 +5,7 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 
-@WebServlet(name = "ServletMag", urlPatterns = {"/mag"})
+@WebServlet(name = "ServletMag", urlPatterns = {"/"})
 public class ServletMag extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
