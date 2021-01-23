@@ -1,17 +1,6 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: user
-  Date: 23-01-21
-  Time: 08:57
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>Ajouter Produit</title>
-
-</head>
-<body>
+<%@page pageEncoding="UTF-8" %>
+<%@include file="../template/header.jsp"%>
+<%@include file="../template/navigation.jsp"%>
 
 <h1>Ajouter produit</h1>
 
@@ -44,5 +33,4 @@
 
     <button type="submit">Connect</button>
 </form>
-</body>
-</html>
+<%@include file="../template/footer.jsp"%>
