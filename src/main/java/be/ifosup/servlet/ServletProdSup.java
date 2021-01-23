@@ -1,7 +1,7 @@
 package be.ifosup.servlet;
 
 import be.ifosup.dao.DAOFactory;
-import be.ifosup.magasin.MagasinDAO;
+import be.ifosup.produit.ProduitDAO;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -9,14 +9,14 @@ import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.sql.SQLException;
 
-@WebServlet(name = "ServletCategoriesSup", urlPatterns = {"/magsup"})
-public class ServletMagSup extends HttpServlet {
+@WebServlet(name = "ServletCategoriesSup", urlPatterns = {"/prodsup"})
+public class ServletProdSup extends HttpServlet {
 
-    private MagasinDAO magasinDAO;
+    private ProduitDAO produitDAO;
 
     public void init() {
         DAOFactory daoFactory = DAOFactory.getInstance();
-        this.magasinDAO = daoFactory.getMagasinDAO();
+        this.produitDAO = daoFactory.getProduitDAO();
     }
 
     @Override
@@ -28,15 +28,15 @@ public class ServletMagSup extends HttpServlet {
 
         // ----------------------------- Cancel method call ------------------
         try {
-            magasinDAO.supprimer((int) Long.parseLong(id));
-            request.setAttribute("mag", magasinDAO.listMag());
+            produitDAO.Supprimer((int) Long.parseLong(id));
+            request.setAttribute("prod", produitDAO.ListeProduit());
 
         } catch (SQLException e) {
             e.printStackTrace();
         }
         // -------------------------------- redirection -----------------------
 
-        request.getRequestDispatcher("views/mag.jsp").forward(request, response);
+        request.getRequestDispatcher("views/prod.jsp").forward(request, response);
     }
 
     @Override
