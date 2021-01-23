@@ -38,11 +38,12 @@ public class ServletProd extends HttpServlet {
 
 
         request.setCharacterEncoding("UTF-8");
+        String magasin = request.getParameter("");
         String nom = request.getParameter("mag");
         String categorie = request.getParameter("");
         String mesure = request.getParameter("");
         try {
-            produitDAO.Ajouter(new Produit(nom, categorie, mesure));
+            produitDAO.Ajouter(new Produit(magasin, nom, categorie, mesure));
         } catch (SQLException e) {
             e.printStackTrace();
         }

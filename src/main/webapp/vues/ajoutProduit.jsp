@@ -9,7 +9,7 @@
 
 <h1>Ajouter produit</h1>
 
-<form action="" method="post">
+<form action="prodadd" method="post">
     <input type="text"  name="nom du produit" placeholder="produit">
 
     <input list="categorie" id="categorie_choice" name="categorie_choice" />

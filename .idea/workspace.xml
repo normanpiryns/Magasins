@@ -28,9 +28,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5c1f534-93cc-4193-b070-c0f3e943f591" name="Default Changelist" comment="Ajouter la vue liste.jsp">
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/template/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/template/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/vues/liste.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/vues/liste.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifosup/produit/Produit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifosup/produit/Produit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifosup/servlet/ServletProd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifosup/servlet/ServletProd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifosup/servlet/ServletProdAdd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifosup/servlet/ServletProdAdd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/vues/ajoutProduit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/vues/ajoutProduit.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +80,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15429688" />
@@ -193,6 +195,8 @@
       <workItem from="1610784546829" duration="16000" />
       <workItem from="1610901688563" duration="24000" />
       <workItem from="1611387480977" duration="678000" />
+      <workItem from="1611393889679" duration="182000" />
+      <workItem from="1611394083797" duration="1083000" />
     </task>
     <task id="LOCAL-00001" summary="Gestion Magasin">
       <created>1610781737470</created>
@@ -323,68 +327,5 @@
     <MESSAGE value="dossier vues" />
     <MESSAGE value="vues 5 6 7 V1" />
     <option name="LAST_COMMIT_MESSAGE" value="vues 5 6 7 V1" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state width="1741" height="15" key="GridCell.Tab.0.bottom" timestamp="1611391818695">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="1741" height="15" key="GridCell.Tab.0.bottom/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1611391818695" />
-    <state width="1741" height="15" key="GridCell.Tab.0.center" timestamp="1611391818695">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="1741" height="15" key="GridCell.Tab.0.center/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1611391818695" />
-    <state width="1741" height="15" key="GridCell.Tab.0.left" timestamp="1611391818695">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="1741" height="15" key="GridCell.Tab.0.left/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1611391818695" />
-    <state width="1741" height="15" key="GridCell.Tab.0.right" timestamp="1611391818695">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="1741" height="15" key="GridCell.Tab.0.right/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1611391818695" />
-    <state width="1741" height="15" key="GridCell.Tab.1.bottom" timestamp="1611390304390">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="1741" height="15" key="GridCell.Tab.1.bottom/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1611390304390" />
-    <state width="1741" height="15" key="GridCell.Tab.1.center" timestamp="1611390304390">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="1741" height="15" key="GridCell.Tab.1.center/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1611390304390" />
-    <state width="1741" height="15" key="GridCell.Tab.1.left" timestamp="1611390304389">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="1741" height="15" key="GridCell.Tab.1.left/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1611390304389" />
-    <state width="1741" height="15" key="GridCell.Tab.1.right" timestamp="1611390304390">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="1741" height="15" key="GridCell.Tab.1.right/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1611390304390" />
-    <state width="1741" height="15" key="GridCell.Tab.2.bottom" timestamp="1611390304390">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="1741" height="15" key="GridCell.Tab.2.bottom/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1611390304390" />
-    <state width="1741" height="15" key="GridCell.Tab.2.center" timestamp="1611390304390">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="1741" height="15" key="GridCell.Tab.2.center/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1611390304390" />
-    <state width="1741" height="15" key="GridCell.Tab.2.left" timestamp="1611390304390">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="1741" height="15" key="GridCell.Tab.2.left/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1611390304390" />
-    <state width="1741" height="15" key="GridCell.Tab.2.right" timestamp="1611390304390">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="1741" height="15" key="GridCell.Tab.2.right/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1611390304390" />
-    <state x="918" y="461" width="1088" height="588" key="MultipleFileMergeDialog" timestamp="1611391929292">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="918" y="461" width="1088" height="588" key="MultipleFileMergeDialog/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1611391929292" />
-    <state x="1376" y="345" key="Vcs.Push.Dialog.v2" timestamp="1611391937078">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="1032" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1611389595930" />
-    <state x="1376" y="345" key="Vcs.Push.Dialog.v2/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1611391937078" />
-    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1611389589547">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1611389589547" />
   </component>
 </project>
