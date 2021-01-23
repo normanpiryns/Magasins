@@ -7,8 +7,9 @@ public class Produit {
     private String nom;
     private String categorie;
     private String mesure;
+    private String magasin;
 
-    public Produit(String nom, String categorie,String mesure){
+    public Produit(String magasin, String nom, String categorie,String mesure){
         this.nom = nom;
         this.categorie=categorie;
         this.mesure=mesure;
@@ -50,5 +51,13 @@ public class Produit {
 
     public void setMesure(String mesure) {
         this.mesure = mesure;
+    }
+
+    public String getMagasin() {
+        return magasin;
+    }
+
+    public void setMagasin(String magasin) {
+        this.magasin = magasin;
     }
 }
