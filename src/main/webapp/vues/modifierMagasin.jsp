@@ -12,7 +12,7 @@
 <form action="" method="post">
     <input type="text"  name="magasin" placeholder="magasin">
 
-
+    <br>
     <button type="submit">submit</button>
 </form>
 </body>

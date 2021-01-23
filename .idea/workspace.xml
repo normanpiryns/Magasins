@@ -27,7 +27,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a5c1f534-93cc-4193-b070-c0f3e943f591" name="Default Changelist" comment="enlever magasin vues produits" />
+    <list default="true" id="a5c1f534-93cc-4193-b070-c0f3e943f591" name="Default Changelist" comment="change bouton">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/vues/ajoutProduit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/vues/ajoutProduit.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/vues/modifierCategorie.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/vues/modifierCategorie.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/vues/modifierMagasin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/vues/modifierMagasin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/vues/modifierMesure.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/vues/modifierMesure.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/vues/modifierProduit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/vues/modifierProduit.jsp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -262,7 +269,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611391887102</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="change bouton">
+      <created>1611397927263</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1611397927263</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -321,28 +335,29 @@
     <MESSAGE value="dossier vues" />
     <MESSAGE value="vues 5 6 7 V1" />
     <MESSAGE value="enlever magasin vues produits" />
-    <option name="LAST_COMMIT_MESSAGE" value="enlever magasin vues produits" />
+    <MESSAGE value="change bouton" />
+    <option name="LAST_COMMIT_MESSAGE" value="change bouton" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1741" height="15" key="GridCell.Tab.0.bottom" timestamp="1611397602048">
+    <state width="1741" height="15" key="GridCell.Tab.0.bottom" timestamp="1611397721122">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1741" height="15" key="GridCell.Tab.0.bottom/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1611397602048" />
-    <state width="1741" height="15" key="GridCell.Tab.0.center" timestamp="1611397602047">
+    <state width="1741" height="15" key="GridCell.Tab.0.bottom/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1611397721122" />
+    <state width="1741" height="15" key="GridCell.Tab.0.center" timestamp="1611397721121">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1741" height="15" key="GridCell.Tab.0.center/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1611397602047" />
-    <state width="1741" height="15" key="GridCell.Tab.0.left" timestamp="1611397602047">
+    <state width="1741" height="15" key="GridCell.Tab.0.center/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1611397721121" />
+    <state width="1741" height="15" key="GridCell.Tab.0.left" timestamp="1611397721121">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1741" height="15" key="GridCell.Tab.0.left/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1611397602047" />
-    <state width="1741" height="15" key="GridCell.Tab.0.right" timestamp="1611397602047">
+    <state width="1741" height="15" key="GridCell.Tab.0.left/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1611397721121" />
+    <state width="1741" height="15" key="GridCell.Tab.0.right" timestamp="1611397721122">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1741" height="15" key="GridCell.Tab.0.right/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1611397602047" />
-    <state x="872" y="433" key="Vcs.Push.Dialog.v2" timestamp="1611397624373">
+    <state width="1741" height="15" key="GridCell.Tab.0.right/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1611397721122" />
+    <state x="872" y="433" key="Vcs.Push.Dialog.v2" timestamp="1611397898052">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="872" y="433" key="Vcs.Push.Dialog.v2/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1611397624373" />
+    <state x="872" y="433" key="Vcs.Push.Dialog.v2/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1611397898052" />
   </component>
 </project>
