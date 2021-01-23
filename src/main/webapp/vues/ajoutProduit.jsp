@@ -1,11 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: user
-  Date: 23-01-21
-  Time: 08:57
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <html>
 <head>
     <title>Ajouter Produit</title>
@@ -25,7 +18,7 @@
 
     <br>
 
-    <input type="nombre"  name="nom du produit" placeholder="mesure">
+    <input type="nombre"  name="mesure" placeholder="mesure">
 
     <input list="mesure" id="mesure_choice" name="mesure_choice" />
     <datalist id = "mesure">
