@@ -27,9 +27,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a5c1f534-93cc-4193-b070-c0f3e943f591" name="Default Changelist" comment="change bouton">
+    <list default="true" id="a5c1f534-93cc-4193-b070-c0f3e943f591" name="Default Changelist" comment="Input hidden , changements dans ajoutProduit, liste.jsp/styles.css">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/vues/ajoutProduit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/vues/ajoutProduit.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/vues/liste.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/vues/liste.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,22 +79,22 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15429688" />
     <property name="project.structure.side.proportion" value="0.30512822" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\user\Desktop\Magasins\src\main\webapp\vues" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Programmes\xampp temp\htdocs\poo\Magasins\src\main\webapp" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\user\Desktop\Magasins\src\main\webapp\vues" />
+    </key>
   </component>
   <component name="RunManager">
-    <configuration name="Tomcat 7.0.92" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.60" ALTERNATIVE_JRE_ENABLED="false">
+    <configuration name="Tomcat 7.0.92" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.92" ALTERNATIVE_JRE_ENABLED="false">
       <deployment>
         <artifact name="Magasins:war exploded">
           <settings>
@@ -192,8 +194,6 @@
       <workItem from="1610784546829" duration="16000" />
       <workItem from="1610901688563" duration="24000" />
       <workItem from="1611387480977" duration="678000" />
-      <workItem from="1611393889679" duration="182000" />
-      <workItem from="1611394083797" duration="1083000" />
     </task>
     <task id="LOCAL-00001" summary="Gestion Magasin">
       <created>1610781737470</created>
@@ -265,21 +265,7 @@
       <option name="project" value="LOCAL" />
       <updated>1611391887102</updated>
     </task>
-    <task id="LOCAL-00011" summary="change bouton">
-      <created>1611397927263</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1611397927263</updated>
-    </task>
-    <task id="LOCAL-00012" summary="change bouton">
-      <created>1611398125477</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1611398125477</updated>
-    </task>
-    <option name="localTasksCounter" value="13" />
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -337,30 +323,7 @@
     <MESSAGE value="correction du dernier commit sur le template &amp; le css" />
     <MESSAGE value="dossier vues" />
     <MESSAGE value="vues 5 6 7 V1" />
-    <MESSAGE value="enlever magasin vues produits" />
-    <MESSAGE value="change bouton" />
-    <option name="LAST_COMMIT_MESSAGE" value="change bouton" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state width="1741" height="15" key="GridCell.Tab.0.bottom" timestamp="1611400569375">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="1741" height="15" key="GridCell.Tab.0.bottom/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1611400569375" />
-    <state width="1741" height="15" key="GridCell.Tab.0.center" timestamp="1611400569375">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="1741" height="15" key="GridCell.Tab.0.center/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1611400569375" />
-    <state width="1741" height="15" key="GridCell.Tab.0.left" timestamp="1611400569375">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="1741" height="15" key="GridCell.Tab.0.left/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1611400569375" />
-    <state width="1741" height="15" key="GridCell.Tab.0.right" timestamp="1611400569375">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="1741" height="15" key="GridCell.Tab.0.right/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1611400569375" />
-    <state x="872" y="433" key="Vcs.Push.Dialog.v2" timestamp="1611397898052">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="872" y="433" key="Vcs.Push.Dialog.v2/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1611397898052" />
+    <MESSAGE value="Input hidden , changements dans ajoutProduit, liste.jsp/styles.css" />
+    <option name="LAST_COMMIT_MESSAGE" value="Input hidden , changements dans ajoutProduit, liste.jsp/styles.css" />
   </component>
 </project>
