@@ -1,35 +1,33 @@
 package be.ifosup.servlet;
 
-// ------------------------------------- imports ----------------------------------------------------
-
 import be.ifosup.dao.DAOFactory;
-import be.ifosup.magasin.Magasin;
-import be.ifosup.magasin.MagasinDAO;
+import be.ifosup.produit.Produit;
+import be.ifosup.produit.ProduitDAO;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.sql.SQLException;
 
-@WebServlet(name = "ServletCategories", urlPatterns = {"/mag"})
-public class ServletMag extends HttpServlet {
+@WebServlet(name = "ServletCategories", urlPatterns = {"/produit"})
+public class ServletProd extends HttpServlet {
 
     // -------------------------------------------- attributes -------------------------------------------
 
-    private MagasinDAO magasinDAO;
+    private ProduitDAO produitDAO;
 
     // -------------------------------------------- init method --------------------------------------------------------
 
     public void init() {
         DAOFactory daoFactory = DAOFactory.getInstance();
-        this.magasinDAO = daoFactory.getMagasinDAO();
+        this.produitDAO = daoFactory.getProduitDAO();
     }
 
     // ---------------------------------------- doGet ----------------------------------------------------
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("views/magAdd.jsp").forward(request, response);
+        request.getRequestDispatcher("views/prodAdd.jsp").forward(request, response);
     }
 
     // ---------------------------------------- doPost ----------------------------------------------------
@@ -40,9 +38,11 @@ public class ServletMag extends HttpServlet {
 
 
         request.setCharacterEncoding("UTF-8");
-        String titre = request.getParameter("mag");
+        String nom = request.getParameter("mag");
+        String categorie = request.getParameter("");
+        String mesure = request.getParameter("");
         try {
-            magasinDAO.ajouter(new Magasin(titre));
+            produitDAO.Ajouter(new Produit(nom, categorie, mesure));
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -50,13 +50,13 @@ public class ServletMag extends HttpServlet {
         // -------------------------redirection ----------------------------
 
         try {
-            request.setAttribute("mag", magasinDAO.listMag());
-            request.getRequestDispatcher("views/categories.jsp").forward(request,response);
+            request.setAttribute("mag", produitDAO.ListeProduit());
+            request.getRequestDispatcher("views/produit.jsp").forward(request,response);
 
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        request.getRequestDispatcher("views/categories.jsp").forward(request, response);
+        request.getRequestDispatcher("views/produit.jsp").forward(request, response);
     }
 
 }

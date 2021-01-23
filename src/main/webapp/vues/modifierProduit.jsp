@@ -1,15 +1,14 @@
-
 <html>
 <head>
-    <title>Ajouter Produit</title>
+    <title>Modifier produit</title>
 
 </head>
 <body>
 
-<h1>Ajouter produit</h1>
+<h1>Modifier produit</h1>
 
 <form action="" method="post">
-    <input type="text"  name="nom du produit" placeholder="produit">
+    <input type="text"  name="produit" placeholder="produit">
 
     <input list="categorie" id="categorie_choice" name="categorie_choice" />
     <datalist id = "categorie">
