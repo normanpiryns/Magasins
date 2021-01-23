@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
 
-@WebServlet(name = "ServletCatAdd" , urlPatterns = {"/catmod"})
+@WebServlet(name = "ServletCatMod" , urlPatterns = {"/catmod"})
 public class ServletCatMod extends HttpServlet {
     private CategorieDAO categorieDAO;
 

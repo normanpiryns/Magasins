@@ -11,7 +11,7 @@ import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.sql.SQLException;
 
-@WebServlet(name = "ServletCategories", urlPatterns = {"/mag"})
+@WebServlet(name = "ServletMag", urlPatterns = {"/mag"})
 public class ServletMag extends HttpServlet {
 
     // -------------------------------------------- attributes -------------------------------------------
@@ -29,7 +29,7 @@ public class ServletMag extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("views/magAdd.jsp").forward(request, response);
+        request.getRequestDispatcher("vues/magasins.jsp").forward(request, response);
     }
 
     // ---------------------------------------- doPost ----------------------------------------------------
@@ -51,12 +51,12 @@ public class ServletMag extends HttpServlet {
 
         try {
             request.setAttribute("mag", magasinDAO.listMag());
-            request.getRequestDispatcher("views/categories.jsp").forward(request,response);
+            request.getRequestDispatcher("vues/categories.jsp").forward(request,response);
 
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        request.getRequestDispatcher("views/categories.jsp").forward(request, response);
+        request.getRequestDispatcher("vues/categories.jsp").forward(request, response);
     }
 
 }

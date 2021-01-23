@@ -11,7 +11,7 @@ import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.sql.SQLException;
 
-@WebServlet(name = "ServletCategoriesAdd", urlPatterns = {"/magadd"})
+@WebServlet(name = "ServletMagAdd", urlPatterns = {"/magadd"})
 
 public class ServletMagAdd extends HttpServlet {
 

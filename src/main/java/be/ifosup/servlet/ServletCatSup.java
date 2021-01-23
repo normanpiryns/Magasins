@@ -23,7 +23,7 @@ public class ServletCatSup extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //recup de l'id
-        Long id =Long.parseLong(request.getParameter("id"));
+        int id =Integer.parseInt(request.getParameter("id"));
 
         //appel methode de suppression
         try {
