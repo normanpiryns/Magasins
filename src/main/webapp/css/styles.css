@@ -37,8 +37,6 @@ footer{
 .edit-del-wrap{
     display: inline-block;
     float: right;
-    margin-top: 16px;
-    margin-bottom: 16px;
 
 }
 
@@ -49,6 +47,8 @@ footer{
 }
 #del-liste{
     float: right;
+    text-decoration: none;
+    color: red;
 }
 .content p{
     display: inline-block;

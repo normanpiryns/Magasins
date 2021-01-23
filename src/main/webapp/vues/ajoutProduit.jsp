@@ -25,10 +25,11 @@
     <datalist id = "mesure">
         <option value = "kg" selected></option>
     </datalist>
+    <input type="hidden" id="id-mag" value=""> <!-- value = l'id du magasin que tu recup à ajouter à la liste -->
 
 
 
-    <button type="submit">Connect</button>
+    <button type="submit">Submit</button>
 </form>
 </body>
 

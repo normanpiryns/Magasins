@@ -23,7 +23,11 @@
 <button type="button" class="collapsible">Lorem ipsum</button>
 <div class="content">
     <!-- foreach produit in categorie in liste -->
-    <p>Lorem ipsum </p><div class="edit-del-wrap"><a href="#">✎</a><a href="#">✖</a></div>
+    <ul class="list-group">
+        <li class="list-group-item">Lorem ipsum<div class="edit-del-wrap"><a href="#">✎</a><a href="#">✖</a></div></li>
+
+        <li class="list-group-item">Lorem ipsum<div class="edit-del-wrap"><a href="#">✎</a><a href="#">✖</a></div></li>
+    </ul>
 </div>
 
 <a href="#" id="add-produit">Ajouter produit</a>
