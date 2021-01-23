@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Magasins:war exploded" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
@@ -22,10 +27,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a5c1f534-93cc-4193-b070-c0f3e943f591" name="Default Changelist" comment="getMesureByID">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+    <list default="true" id="a5c1f534-93cc-4193-b070-c0f3e943f591" name="Default Changelist" comment="execute">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/ajoutProduit.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifosup/mesure/MesureDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifosup/mesure/MesureDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +44,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -71,13 +77,32 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/mysql-connector-java-8.0.22.jar" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../dao" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15429688" />
     <property name="project.structure.side.proportion" value="0.30512822" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\user\Desktop\Magasins\src\main\webapp" />
+      <recent name="C:\Users\user\Desktop\Magasins\src\main\webapp\WEB-INF" />
+    </key>
+  </component>
   <component name="RunManager">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Tomcat 7.0.92" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.92" ALTERNATIVE_JRE_ENABLED="false">
       <deployment>
         <artifact name="Magasins:war exploded">
@@ -176,6 +201,7 @@
       <workItem from="1610190994292" duration="3149000" />
       <workItem from="1610774098442" duration="784000" />
       <workItem from="1610784546829" duration="16000" />
+      <workItem from="1611385837996" duration="2961000" />
     </task>
     <task id="LOCAL-00001" summary="Gestion Magasin">
       <created>1610781737470</created>
@@ -198,7 +224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610787338224</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="execute">
+      <created>1610798725216</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1610798725216</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -250,6 +283,21 @@
     <MESSAGE value="Gestion Magasin" />
     <MESSAGE value="Gestion Magasin modif" />
     <MESSAGE value="implémentation des méthodes crud produit" />
-    <option name="LAST_COMMIT_MESSAGE" value="implémentation des méthodes crud produit" />
+    <MESSAGE value="execute" />
+    <option name="LAST_COMMIT_MESSAGE" value="execute" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1981" y="849" key="#Tomcat_Server" timestamp="1611389184120">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1981" y="849" key="#Tomcat_Server/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1611389184120" />
+    <state x="1060" y="455" key="FileChooserDialogImpl" timestamp="1611389182612">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1060" y="455" key="FileChooserDialogImpl/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1611389182612" />
+    <state x="872" y="433" key="Vcs.Push.Dialog.v2" timestamp="1610798749312">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="872" y="433" key="Vcs.Push.Dialog.v2/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1610798749312" />
   </component>
 </project>
