@@ -27,11 +27,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a5c1f534-93cc-4193-b070-c0f3e943f591" name="Default Changelist" comment="Input hidden , changements dans ajoutProduit, liste.jsp/styles.css">
+    <list default="true" id="a5c1f534-93cc-4193-b070-c0f3e943f591" name="Default Changelist" comment="Input hidden dans ajoutProduit.jsp, changements dans ajoutProduit, liste.jsp/styles.css 2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/vues/ajoutProduit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/vues/ajoutProduit.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/vues/liste.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/vues/liste.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifosup/categorie/CategorieDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifosup/categorie/CategorieDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifosup/categorie/CategorieDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifosup/categorie/CategorieDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifosup/servlet/ServletCatMod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifosup/servlet/ServletCatMod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/vues/modifierCategorie.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/vues/modifierCategorie.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,6 +95,17 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Tomcat 7.0.92" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.92" ALTERNATIVE_JRE_ENABLED="false">
       <deployment>
         <artifact name="Magasins:war exploded">
@@ -265,7 +277,21 @@
       <option name="project" value="LOCAL" />
       <updated>1611391887102</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Input hidden dans ajoutProduit.jsp, changements dans ajoutProduit, liste.jsp/styles.css">
+      <created>1611400222393</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1611400222393</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Input hidden dans ajoutProduit.jsp, changements dans ajoutProduit, liste.jsp/styles.css 2">
+      <created>1611400329636</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1611400329636</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -324,6 +350,8 @@
     <MESSAGE value="dossier vues" />
     <MESSAGE value="vues 5 6 7 V1" />
     <MESSAGE value="Input hidden , changements dans ajoutProduit, liste.jsp/styles.css" />
-    <option name="LAST_COMMIT_MESSAGE" value="Input hidden , changements dans ajoutProduit, liste.jsp/styles.css" />
+    <MESSAGE value="Input hidden dans ajoutProduit.jsp, changements dans ajoutProduit, liste.jsp/styles.css" />
+    <MESSAGE value="Input hidden dans ajoutProduit.jsp, changements dans ajoutProduit, liste.jsp/styles.css 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Input hidden dans ajoutProduit.jsp, changements dans ajoutProduit, liste.jsp/styles.css 2" />
   </component>
 </project>

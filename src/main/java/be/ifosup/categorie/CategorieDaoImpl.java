@@ -49,12 +49,12 @@ public class CategorieDaoImpl implements CategorieDAO {
     }
 
     @Override
-    public void supprimer(Long id) throws SQLException {
+    public void supprimer(int id) throws SQLException {
         connection = daoFactory.getConnection();
 
         preparedStatement = connection.prepareStatement("DELETE FROM categories WHERE id_categorie = ?");
 
-        preparedStatement.setLong(1,id);
+        preparedStatement.setInt(1,id);
 
         preparedStatement.executeUpdate();
     }

@@ -46,12 +46,22 @@ public class ServletCatMod extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        //recupération de l'id
+        String id = request.getParameter("id");
+
+        try {
+            request.setAttribute("categorie", categorieDAO.getCategorieById(Integer.parseInt(id)));
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        request.getRequestDispatcher("vues/modifierCategorie.jsp").forward(request,response);
+        /*      Ici il faut récuperer par id. Pas besoin de toute la liste. -Norman
         try {
             request.setAttribute("categories", categorieDAO.liste());
         } catch (SQLException e){
             System.out.println(e.getMessage());
         }
-        request.getRequestDispatcher("vues/categories.jsp").forward(request,response);
 
+        */
     }
 }
