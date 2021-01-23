@@ -1,4 +1,4 @@
-<html>
+
 <head>
     <title>Modifier magasin</title>
 
@@ -14,4 +14,3 @@
     <button type="submit">Connect</button>
 </form>
 </body>
-</html>

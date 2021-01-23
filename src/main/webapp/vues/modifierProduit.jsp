@@ -1,4 +1,4 @@
-<html>
+
 <head>
     <title>Modifier produit</title>
 
@@ -37,4 +37,3 @@
     <button type="submit">Connect</button>
 </form>
 </body>
-</html>

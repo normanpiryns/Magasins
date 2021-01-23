@@ -1,5 +1,5 @@
 
-<html>
+
 <head>
     <title>Ajouter Produit</title>
 
@@ -38,4 +38,4 @@
     <button type="submit">Connect</button>
 </form>
 </body>
-</html>
+
