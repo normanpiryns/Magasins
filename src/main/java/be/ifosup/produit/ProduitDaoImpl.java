@@ -1,6 +1,10 @@
 package be.ifosup.produit;
 
+import be.ifosup.categorie.Categorie;
+import be.ifosup.categorie.CategorieDAO;
 import be.ifosup.dao.DAOFactory;
+import be.ifosup.mesure.Mesure;
+import be.ifosup.mesure.MesureDAO;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -8,7 +12,10 @@ import java.util.List;
 import java.util.Locale;
 
 public class ProduitDaoImpl implements ProduitDAO{
-    private final DAOFactory daoFactory;
+    private DAOFactory daoFactory = DAOFactory.getInstance();
+
+    private MesureDAO mesureDAO = daoFactory.getMesureDAO();
+    private CategorieDAO categorieDAO = daoFactory.getCategorieDao();
 
     Connection connection =null;
     Statement statement = null;
@@ -19,16 +26,13 @@ public class ProduitDaoImpl implements ProduitDAO{
         this.daoFactory = daoFactory;
     }
 
-
     @Override
     public List<Produit> ListeProduit() throws SQLException {
         List<Produit> produits = new ArrayList<>();
 
         connection = daoFactory.getConnection();
         statement = connection.createStatement();
-        resultat = statement.executeQuery("SELECT * FROM produit");
-
-
+        resultat = statement.executeQuery("SELECT * FROM produits");
 
         return produits;
     }
@@ -38,7 +42,7 @@ public class ProduitDaoImpl implements ProduitDAO{
 
         connection = daoFactory.getConnection();
         statement = connection.createStatement();
-        preparedStatement = connection.prepareStatement("SELECT * FROM produit WHERE pk_produit = ?");
+        preparedStatement = connection.prepareStatement("SELECT * FROM produits WHERE id_produit = ?");
 
         preparedStatement.setInt(1,id);
 
@@ -46,10 +50,14 @@ public class ProduitDaoImpl implements ProduitDAO{
 
         resultat.next();
 
-        String intitule = resultat.getString("nom_produit");
-        int fk_categorie = resultat.getInt("fk_categorie");
-        int fk_unite = resultat.getInt("fk_unite");
-        Produit produit = new Produit(id,intitule,fk_categorie,fk_unite);
+        String nom = resultat.getString("nom_produit");
+        int fk_categorie = resultat.getInt("fk_categorie");//cherché les categories via l'objet java
+        int fk_mesure = resultat.getInt("fk_mesure");//cherché les mesure via l'objet java
+        Mesure mes = mesureDAO.getMesurebyID(fk_mesure);
+        Categorie cat = categorieDAO.getCategorieById(fk_categorie);
+
+
+        Produit produit = new Produit(id,nom,cat.getNom(),mes.getmesure());
 
         return produit;
     }
@@ -58,13 +66,13 @@ public class ProduitDaoImpl implements ProduitDAO{
     public void Ajouter(Produit produit) throws SQLException {
         connection = daoFactory.getConnection();
 
-        preparedStatement = connection.prepareStatement("INSERT INTO produit (id_produit,intitule_produit,fk_categorie,fk_unite) VALUES (?,?,?,?)");
+        preparedStatement = connection.prepareStatement("INSERT INTO produits (id_produit,nom_produit,fk_categorie,fk_mesure) VALUES (?,?,?,?)");
 
 
         preparedStatement.setInt(1,produit.getId());
-        preparedStatement.setString(2,produit.getIntitule());
-        preparedStatement.setInt(3,produit.getFk_categorie());
-        preparedStatement.setInt(4,produit.getFk_untie());
+        preparedStatement.setString(2,produit.getNom());
+        preparedStatement.setString(3,produit.getCategorie());
+        preparedStatement.setString(4,produit.getMesure());
 
         preparedStatement.executeUpdate();
     }
@@ -73,7 +81,7 @@ public class ProduitDaoImpl implements ProduitDAO{
     public void Supprimer(int id) throws SQLException {
         connection = daoFactory.getConnection();
 
-        preparedStatement = connection.prepareStatement("DELETE FROM produit WHERE id_produit = ?");
+        preparedStatement = connection.prepareStatement("DELETE FROM produits WHERE id_produit = ?");
 
         preparedStatement.setLong(1,id);
 
@@ -84,12 +92,12 @@ public class ProduitDaoImpl implements ProduitDAO{
     public void Modifier(Produit produit) throws SQLException {
         connection = daoFactory.getConnection();
 
-        preparedStatement = connection.prepareStatement("UPDATE produit SET intitule_produit = ?, fk_categorie = ?  , fk_unite = ? WHERE id_produit = ?; ");
+        preparedStatement = connection.prepareStatement("UPDATE produits SET nom_produit = ?, fk_categorie = ?  , fk_mesure = ? WHERE id_produit = ?; ");
 
         preparedStatement.setInt(1,produit.getId());
-        preparedStatement.setString(2,produit.getIntitule());
-        preparedStatement.setInt(3,produit.getFk_categorie());
-        preparedStatement.setInt(4,produit.getFk_untie());
+        preparedStatement.setString(2,produit.getNom());
+        preparedStatement.setString(3,produit.getCategorie());
+        preparedStatement.setString(4,produit.getMesure());
 
         preparedStatement.executeUpdate();
     }

@@ -24,7 +24,7 @@ public class MagasinDaoImpl implements MagasinDAO{
         List<Magasin> magasins = new ArrayList<>();
         connection = daoFactory.getConnection();
         statement=connection.createStatement();
-        resultat=statement.executeQuery("select ID_Magasin, Nom_Magasin from magasin");
+        resultat=statement.executeQuery("select id_magasin, nom_magasin from magasins");
 
         while(resultat.next()){
             int id = resultat.getInt("ID_Magasin");
@@ -39,7 +39,7 @@ public class MagasinDaoImpl implements MagasinDAO{
     @Override
     public void ajouter(Magasin magasin) throws SQLException {
         connection=daoFactory.getConnection();
-        preparedStatement=connection.prepareStatement("insert into magasin (Nom_Magasin)value(?) ");
+        preparedStatement=connection.prepareStatement("insert into magasins (nom_magasin)value(?) ");
         preparedStatement.setString(1, magasin.getNom());
         preparedStatement.executeUpdate();
 
@@ -49,7 +49,7 @@ public class MagasinDaoImpl implements MagasinDAO{
     @Override
     public void supprimer(int ID) throws SQLException {
         connection=daoFactory.getConnection();
-        preparedStatement=connection.prepareStatement("delete from magasin where ID_Magasin = ?");
+        preparedStatement=connection.prepareStatement("delete from magasins where id_magasin = ?");
         preparedStatement.setInt(1,ID);
         preparedStatement.executeUpdate();
 
