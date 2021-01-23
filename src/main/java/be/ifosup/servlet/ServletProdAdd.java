@@ -3,33 +3,33 @@ package be.ifosup.servlet;
 // ----------------------------------------- imports ------------------------------------------------------------------
 
 import be.ifosup.dao.DAOFactory;
-import be.ifosup.magasin.Magasin;
-import be.ifosup.magasin.MagasinDAO;
+import be.ifosup.produit.Produit;
+import be.ifosup.produit.ProduitDAO;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.sql.SQLException;
 
-@WebServlet(name = "ServletCategoriesAdd", urlPatterns = {"/magadd"})
+@WebServlet(name = "ServletCategoriesAdd", urlPatterns = {"/prodadd"})
 
-public class ServletMagAdd extends HttpServlet {
+public class ServletProdAdd extends HttpServlet {
 
     // ------------------------------------------- Attributes ---------------------------------------------------------
 
-    private MagasinDAO magasinDAO;
+    private ProduitDAO produitDAO;
 
 
     // -------------------------------------------- init method --------------------------------------------------------
 
     public void init() {
         DAOFactory daoFactory = DAOFactory.getInstance();
-        this.magasinDAO = daoFactory.getMagasinDAO();
+        this.produitDAO = daoFactory.getProduitDAO();
     }
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("views/magAdd.jsp").forward(request, response);
+        request.getRequestDispatcher("views/prodAdd.jsp").forward(request, response);
     }
 
     @Override
@@ -43,13 +43,15 @@ public class ServletMagAdd extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
 
         // ----------------------- getParameters ---------------------------
-        String titre = request.getParameter("cat");
+        String nom = request.getParameter("cprod");
+        String categorie = request.getParameter("");
+        String mesure = request.getParameter("");
 
 
         // ------------------------add to the db ---------------------------
 
         try {
-            magasinDAO.ajouter( new Magasin(titre) );
+            produitDAO.Ajouter( new Produit(nom,categorie,mesure) );
 
 
 
@@ -59,12 +61,12 @@ public class ServletMagAdd extends HttpServlet {
 
 
         try {
-            request.setAttribute("mag", magasinDAO.listMag());
+            request.setAttribute("mag", produitDAO.ListeProduit());
         } catch (SQLException e) {
             e.printStackTrace();
         }
         // ---------------------- redirection -----------------------------------------
 
-        request.getRequestDispatcher("views/magAdd.jsp").forward(request, response);
+        request.getRequestDispatcher("views/prodAdd.jsp").forward(request, response);
     }
 }
