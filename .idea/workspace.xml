@@ -23,8 +23,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5c1f534-93cc-4193-b070-c0f3e943f591" name="Default Changelist" comment="correction du dernier commit sur le template &amp; le css">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ajoutProduit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/vues/ajoutProduit.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +38,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="jsf" />
       </list>
     </option>
   </component>
@@ -80,18 +81,23 @@
     <property name="project.structure.side.proportion" value="0.30512822" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\user\Desktop\Magasins\src\main\webapp\vues" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Programmes\xampp temp\htdocs\poo\Magasins\src\main\webapp" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -312,10 +318,59 @@
     <option name="LAST_COMMIT_MESSAGE" value="correction du dernier commit sur le template &amp; le css" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1032" y="256" key="Vcs.Push.Dialog.v2" timestamp="1611389595930">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1741" height="15" key="GridCell.Tab.0.bottom" timestamp="1611390304389">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1741" height="15" key="GridCell.Tab.0.bottom/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1611390304389" />
+    <state width="1741" height="15" key="GridCell.Tab.0.center" timestamp="1611390304389">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1741" height="15" key="GridCell.Tab.0.center/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1611390304389" />
+    <state width="1741" height="15" key="GridCell.Tab.0.left" timestamp="1611390304389">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1741" height="15" key="GridCell.Tab.0.left/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1611390304389" />
+    <state width="1741" height="15" key="GridCell.Tab.0.right" timestamp="1611390304389">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1741" height="15" key="GridCell.Tab.0.right/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1611390304389" />
+    <state width="1741" height="15" key="GridCell.Tab.1.bottom" timestamp="1611390304390">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1741" height="15" key="GridCell.Tab.1.bottom/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1611390304390" />
+    <state width="1741" height="15" key="GridCell.Tab.1.center" timestamp="1611390304390">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1741" height="15" key="GridCell.Tab.1.center/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1611390304390" />
+    <state width="1741" height="15" key="GridCell.Tab.1.left" timestamp="1611390304389">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1741" height="15" key="GridCell.Tab.1.left/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1611390304389" />
+    <state width="1741" height="15" key="GridCell.Tab.1.right" timestamp="1611390304390">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1741" height="15" key="GridCell.Tab.1.right/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1611390304390" />
+    <state width="1741" height="15" key="GridCell.Tab.2.bottom" timestamp="1611390304390">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1741" height="15" key="GridCell.Tab.2.bottom/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1611390304390" />
+    <state width="1741" height="15" key="GridCell.Tab.2.center" timestamp="1611390304390">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1741" height="15" key="GridCell.Tab.2.center/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1611390304390" />
+    <state width="1741" height="15" key="GridCell.Tab.2.left" timestamp="1611390304390">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1741" height="15" key="GridCell.Tab.2.left/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1611390304390" />
+    <state width="1741" height="15" key="GridCell.Tab.2.right" timestamp="1611390304390">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1741" height="15" key="GridCell.Tab.2.right/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1611390304390" />
+    <state x="1376" y="345" key="Vcs.Push.Dialog.v2" timestamp="1611391040479">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1032" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1611389595930" />
+    <state x="1376" y="345" key="Vcs.Push.Dialog.v2/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1611391040479" />
     <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1611389589547">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
