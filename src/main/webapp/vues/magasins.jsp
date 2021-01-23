@@ -16,7 +16,7 @@
 <form action="" method="post">
 
 
-    <button type="ajouter">Connect</button>
+    <button type="ajouter">submit</button>
 </form>
 </body>
 

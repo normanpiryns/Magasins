@@ -27,13 +27,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a5c1f534-93cc-4193-b070-c0f3e943f591" name="Default Changelist" comment="Ajouter la vue liste.jsp">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifosup/produit/Produit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifosup/produit/Produit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifosup/servlet/ServletProd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifosup/servlet/ServletProd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifosup/servlet/ServletProdAdd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifosup/servlet/ServletProdAdd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/vues/ajoutProduit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/vues/ajoutProduit.jsp" afterDir="false" />
-    </list>
+    <list default="true" id="a5c1f534-93cc-4193-b070-c0f3e943f591" name="Default Changelist" comment="enlever magasin vues produits" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -87,25 +81,14 @@
     <property name="project.structure.side.proportion" value="0.30512822" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Programmes\xampp temp\htdocs\poo\Magasins\src\main\webapp" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\user\Desktop\Magasins\src\main\webapp\vues" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Programmes\xampp temp\htdocs\poo\Magasins\src\main\webapp" />
+    </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Tomcat 7.0.92" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.60" ALTERNATIVE_JRE_ENABLED="false">
       <deployment>
         <artifact name="Magasins:war exploded">
@@ -337,6 +320,29 @@
     <MESSAGE value="correction du dernier commit sur le template &amp; le css" />
     <MESSAGE value="dossier vues" />
     <MESSAGE value="vues 5 6 7 V1" />
-    <option name="LAST_COMMIT_MESSAGE" value="vues 5 6 7 V1" />
+    <MESSAGE value="enlever magasin vues produits" />
+    <option name="LAST_COMMIT_MESSAGE" value="enlever magasin vues produits" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1741" height="15" key="GridCell.Tab.0.bottom" timestamp="1611397602048">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1741" height="15" key="GridCell.Tab.0.bottom/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1611397602048" />
+    <state width="1741" height="15" key="GridCell.Tab.0.center" timestamp="1611397602047">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1741" height="15" key="GridCell.Tab.0.center/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1611397602047" />
+    <state width="1741" height="15" key="GridCell.Tab.0.left" timestamp="1611397602047">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1741" height="15" key="GridCell.Tab.0.left/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1611397602047" />
+    <state width="1741" height="15" key="GridCell.Tab.0.right" timestamp="1611397602047">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1741" height="15" key="GridCell.Tab.0.right/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1611397602047" />
+    <state x="872" y="433" key="Vcs.Push.Dialog.v2" timestamp="1611397624373">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="872" y="433" key="Vcs.Push.Dialog.v2/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1611397624373" />
   </component>
 </project>

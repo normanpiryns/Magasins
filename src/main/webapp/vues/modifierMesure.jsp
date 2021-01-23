@@ -13,6 +13,6 @@
     <input type="text"  name="mesure" placeholder="mesure">
 
 
-    <button type="submit">Connect</button>
+    <button type="submit">submit</button>
 </form>
 </body>

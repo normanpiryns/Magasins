@@ -28,7 +28,7 @@
 
 
 
-    <button type="submit">Connect</button>
+    <button type="submit">submit</button>
 </form>
 </body>
 

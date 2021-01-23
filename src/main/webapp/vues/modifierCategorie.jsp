@@ -13,6 +13,6 @@
     <input type="text"  name="catégorie" placeholder="catégorie">
 
 
-    <button type="submit">Connect</button>
+    <button type="submit">submit</button>
 </form>
 </body>
