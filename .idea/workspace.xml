@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ArtifactsWorkspaceSettings">
-    <artifacts-to-build>
-      <artifact name="Magasins:war exploded" />
-    </artifacts-to-build>
-  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
@@ -27,10 +22,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a5c1f534-93cc-4193-b070-c0f3e943f591" name="Default Changelist" comment="execute">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/ajoutProduit.jsp" afterDir="false" />
+    <list default="true" id="a5c1f534-93cc-4193-b070-c0f3e943f591" name="Default Changelist" comment="correction du dernier commit sur le template &amp; le css">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,9 +38,11 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
-        <option value="Jsp File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Pull.Settings">
+    <option name="BRANCH" value="main" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -77,33 +73,30 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../dao" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15429688" />
     <property name="project.structure.side.proportion" value="0.30512822" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\user\Desktop\Magasins\src\main\webapp" />
-      <recent name="C:\Users\user\Desktop\Magasins\src\main\webapp\WEB-INF" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Programmes\xampp temp\htdocs\poo\Magasins\src\main\webapp" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Tomcat 7.0.92" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.92" ALTERNATIVE_JRE_ENABLED="false">
+    <configuration name="Tomcat 7.0.92" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.60" ALTERNATIVE_JRE_ENABLED="false">
       <deployment>
         <artifact name="Magasins:war exploded">
           <settings>
@@ -201,7 +194,8 @@
       <workItem from="1610190994292" duration="3149000" />
       <workItem from="1610774098442" duration="784000" />
       <workItem from="1610784546829" duration="16000" />
-      <workItem from="1611385837996" duration="2961000" />
+      <workItem from="1610901688563" duration="24000" />
+      <workItem from="1611387480977" duration="678000" />
     </task>
     <task id="LOCAL-00001" summary="Gestion Magasin">
       <created>1610781737470</created>
@@ -224,14 +218,42 @@
       <option name="project" value="LOCAL" />
       <updated>1610787338224</updated>
     </task>
-    <task id="LOCAL-00004" summary="execute">
-      <created>1610798725216</created>
+    <task id="LOCAL-00004" summary="ajout du getMesureDAO dans le dao factory&#10;travail sur le produit (non-fini)">
+      <created>1610800213280</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1610798725216</updated>
+      <updated>1610800213280</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="update SQL request compliant to database">
+      <created>1611387825236</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1611387825236</updated>
+    </task>
+    <task id="LOCAL-00006" summary="correction de ma bètize">
+      <created>1611389179377</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1611389179377</updated>
+    </task>
+    <task id="LOCAL-00007" summary="ajout du template &amp; de la feuiile de style">
+      <created>1611389230935</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1611389230935</updated>
+    </task>
+    <task id="LOCAL-00008" summary="correction du dernier commit sur le template &amp; le css">
+      <created>1611389579903</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1611389579903</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,21 +305,20 @@
     <MESSAGE value="Gestion Magasin" />
     <MESSAGE value="Gestion Magasin modif" />
     <MESSAGE value="implémentation des méthodes crud produit" />
-    <MESSAGE value="execute" />
-    <option name="LAST_COMMIT_MESSAGE" value="execute" />
+    <MESSAGE value="update SQL request compliant to database" />
+    <MESSAGE value="correction de ma bètize" />
+    <MESSAGE value="ajout du template &amp; de la feuiile de style" />
+    <MESSAGE value="correction du dernier commit sur le template &amp; le css" />
+    <option name="LAST_COMMIT_MESSAGE" value="correction du dernier commit sur le template &amp; le css" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1981" y="849" key="#Tomcat_Server" timestamp="1611389184120">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state x="1032" y="256" key="Vcs.Push.Dialog.v2" timestamp="1611389595930">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1981" y="849" key="#Tomcat_Server/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1611389184120" />
-    <state x="1060" y="455" key="FileChooserDialogImpl" timestamp="1611389182612">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state x="1032" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1611389595930" />
+    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1611389589547">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1060" y="455" key="FileChooserDialogImpl/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1611389182612" />
-    <state x="872" y="433" key="Vcs.Push.Dialog.v2" timestamp="1610798749312">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="872" y="433" key="Vcs.Push.Dialog.v2/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1610798749312" />
+    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1611389589547" />
   </component>
 </project>

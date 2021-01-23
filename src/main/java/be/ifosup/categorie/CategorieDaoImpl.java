@@ -71,4 +71,16 @@ public class CategorieDaoImpl implements CategorieDAO {
 
         preparedStatement.executeUpdate();
     }
+
+    @Override
+    public Categorie getCategorieById(int id) throws SQLException {
+
+
+        connection = daoFactory.getConnection();
+        preparedStatement = connection.prepareStatement("SELECT nom_categorie FROM categories WHERE id_categorie = ?");
+        preparedStatement.setInt(1,id);
+        preparedStatement.executeUpdate();
+
+        return new Categorie(id,resultat.getString("nom_categorie"));
+    }
 }

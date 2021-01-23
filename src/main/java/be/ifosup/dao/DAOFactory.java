@@ -2,6 +2,10 @@ package be.ifosup.dao;
 
 import be.ifosup.categorie.CategorieDAO;
 import be.ifosup.categorie.CategorieDaoImpl;
+import be.ifosup.mesure.MesureDAO;
+import be.ifosup.mesure.MesureDAOImpl;
+import be.ifosup.magasin.MagasinDAO;
+import be.ifosup.magasin.MagasinDaoImpl;
 import be.ifosup.produit.Produit;
 import be.ifosup.produit.ProduitDAO;
 import be.ifosup.produit.ProduitDaoImpl;
@@ -36,7 +40,7 @@ public class DAOFactory {
             e.printStackTrace();
         }
         //peu changé selon les systèmes
-        be.ifosup.dao.DAOFactory instance = new be.ifosup.dao.DAOFactory("jdbc:mysql://localhost:3306/poo?serverTimezone=CET", "root", "");
+        be.ifosup.dao.DAOFactory instance = new be.ifosup.dao.DAOFactory("jdbc:mysql://localhost:3306/magasin?serverTimezone=CET", "root", "");
         return instance;
     }
 
@@ -46,12 +50,19 @@ public class DAOFactory {
         return DriverManager.getConnection(url, username, password);
     }
 
+    public MagasinDAO getMagasinDAO(){ return new MagasinDaoImpl(this);
+    }
+
     public ProduitDAO getProduitDAO(){
         return new ProduitDaoImpl(this);
     }
 
     public CategorieDAO getCategorieDao(){
         return new CategorieDaoImpl(this);
+    }
+
+    public MesureDAO getMesureDAO(){
+        return new MesureDAOImpl(this);
     }
 
 }

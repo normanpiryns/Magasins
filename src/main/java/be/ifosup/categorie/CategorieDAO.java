@@ -11,4 +11,6 @@ public interface CategorieDAO {
     void modifier(Categorie categorie) throws SQLException;
 
     List<Categorie> liste() throws SQLException;
+
+    Categorie getCategorieById( int id) throws SQLException;
 }
