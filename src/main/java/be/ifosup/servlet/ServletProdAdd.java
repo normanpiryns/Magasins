@@ -11,7 +11,7 @@ import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.sql.SQLException;
 
-@WebServlet(name = "ServletCategoriesAdd", urlPatterns = {"/prodadd"})
+@WebServlet(name = "ServletProdAdd", urlPatterns = {"/prodadd"})
 
 public class ServletProdAdd extends HttpServlet {
 
@@ -29,7 +29,7 @@ public class ServletProdAdd extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("views/prodAdd.jsp").forward(request, response);
+        request.getRequestDispatcher("views/ajoutProduit.jsp").forward(request, response);
     }
 
     @Override
@@ -43,15 +43,16 @@ public class ServletProdAdd extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
 
         // ----------------------- getParameters ---------------------------
-        String nom = request.getParameter("cprod");
-        String categorie = request.getParameter("");
-        String mesure = request.getParameter("");
+        String categorie = request.getParameter("categorie_choice");
+        String nom = request.getParameter("nom du produit");
+        String mesure = request.getParameter("mesure_choice");
+        String magasin = request.getParameter("magasin_choice");
 
 
         // ------------------------add to the db ---------------------------
 
         try {
-            produitDAO.Ajouter( new Produit(nom,categorie,mesure) );
+            produitDAO.Ajouter( new Produit(magasin, nom,categorie,mesure) );
 
 
 

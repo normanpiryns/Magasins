@@ -2,17 +2,21 @@
 <%@include file="../template/navigation.jsp"%>
 
 <head>
-    <title>Modifier mesure</title>
+    <title>Magasins</title>
 
 </head>
 <body>
 
-<h1>Modifier mesure</h1>
+<h1>Magasins</h1>
+
+
+
+
 
 <form action="" method="post">
-    <input type="text"  name="mesure" placeholder="mesure">
 
 
-    <button type="submit">Connect</button>
+    <button type="ajouter">Connect</button>
 </form>
 </body>
+

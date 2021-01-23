@@ -5,60 +5,10 @@
   Time: 09:15
   To change this template use File | Settings | File Templates.
 --%>
-<!-- Il faut inclure le header and la navigation -->
+<%@include file="../template/header.jsp"%>
+<%@include file="../template/navigation.jsp"%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<style>
-    .collapsible {
-        background-color: #777;
-        color: white;
-        cursor: pointer;
-        padding: 18px;
-        width: 100%;
-        border: none;
-        text-align: left;
-        outline: none;
-        font-size: 15px;
-    }
 
-    .active, .collapsible:hover {
-        background-color: #555;
-    }
-
-    .content {
-        padding: 0 18px;
-        display: none;
-        overflow: hidden;
-        background-color: #f1f1f1;
-    }
-    .edit-del-wrap{
-        display: inline-block;
-        float: right;
-        margin-top: 16px;
-        margin-bottom: 16px;
-
-    }
-
-    .edit-del-wrap a{
-        margin-left: 10px;
-        text-decoration: none;
-        color: gray;
-    }
-    #del-liste{
-        float: right;
-    }
-    .content p{
-        display: inline-block;
-    }
-    #add-produit{
-        display: inline-block;
-        padding: 8px 16px;
-        background-color: green;
-        color: white;
-        text-decoration: none;
-        border-radius: 4px;
-        margin-top: 1em;
-    }
-</style>
 
 <!-- Nom du magasin -->
 <h2>Lorem Ipsum</h2>
@@ -73,7 +23,11 @@
 <button type="button" class="collapsible">Lorem ipsum</button>
 <div class="content">
     <!-- foreach produit in categorie in liste -->
-    <p>Lorem ipsum </p><div class="edit-del-wrap"><a href="#">✎</a><a href="#">✖</a></div>
+    <ul class="list-group">
+        <li class="list-group-item">Lorem ipsum<div class="edit-del-wrap"><a href="#">✎</a><a href="#">✖</a></div></li>
+
+        <li class="list-group-item">Lorem ipsum<div class="edit-del-wrap"><a href="#">✎</a><a href="#">✖</a></div></li>
+    </ul>
 </div>
 
 <a href="#" id="add-produit">Ajouter produit</a>
@@ -95,4 +49,4 @@
 </script>
 
 
-<!-- Il faut inclure le footer -->
+<%@include file="../template/footer.jsp"%>

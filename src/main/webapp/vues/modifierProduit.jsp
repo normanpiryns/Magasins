@@ -1,4 +1,6 @@
-<html>
+<%@include file="../template/header.jsp"%>
+<%@include file="../template/navigation.jsp"%>
+
 <head>
     <title>Modifier produit</title>
 
@@ -24,17 +26,7 @@
         <option value = "kg" selected></option>
     </datalist>
 
-    <br>
-
-    <input type="text" readonly name="magasin" placeholder="magasin">
-    <input list="magasin" id="magasin_choice" name="magasin_choice" />
-    <datalist id = "magasin">
-        <option value="delhaize" selected></option>
-    </datalist>
-
-    <br>
 
     <button type="submit">Connect</button>
 </form>
 </body>
-</html>
