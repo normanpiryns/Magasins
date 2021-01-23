@@ -1,4 +1,5 @@
-
+<%@include file="../template/header.jsp"%>
+<%@include file="../template/navigation.jsp"%>
 
 <head>
     <title>Ajouter Produit</title>

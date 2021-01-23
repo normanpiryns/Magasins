@@ -1,3 +1,5 @@
+<%@include file="../template/header.jsp"%>
+<%@include file="../template/navigation.jsp"%>
 
 <head>
     <title>Modifier catégorie</title>
