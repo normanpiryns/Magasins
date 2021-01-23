@@ -19,22 +19,14 @@
 
     <br>
 
-    <input type="nombre"  name="mesure" placeholder="mesure">
+    <input type="number"  name="mesure" placeholder="mesure">
 
     <input list="mesure" id="mesure_choice" name="mesure_choice" />
     <datalist id = "mesure">
         <option value = "kg" selected></option>
     </datalist>
 
-    <br>
 
-    <input type="text" readonly name="magasin" placeholder="magasin">
-    <input list="magasin" id="magasin_choice" name="magasin_choice" />
-    <datalist id = "magasin">
-        <option value="delhaize" selected></option>
-    </datalist>
-
-    <br>
 
     <button type="submit">Connect</button>
 </form>
