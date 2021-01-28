@@ -57,6 +57,20 @@ public class MagasinDaoImpl implements MagasinDAO{
 
     @Override
     public void modifier(Magasin magasin) throws SQLException {
+        connection = daoFactory.getConnection();
 
+        preparedStatement = connection.prepareStatement("UPDATE magasins SET nom_magasin = ? WHERE id_magasin = ?; ");
+
+        preparedStatement.setInt(1, magasin.getID());
+        preparedStatement.setString(2, magasin.getNom());
+
+
+        preparedStatement.executeUpdate();
+
+    }
+
+    @Override
+    public Object getIdMag(int id) throws SQLException {
+        return null;
     }
 }
