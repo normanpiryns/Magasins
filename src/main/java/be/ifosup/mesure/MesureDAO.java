@@ -10,7 +10,7 @@ public interface MesureDAO {
 
     void ajouter (Mesure mesure) throws SQLException;
 
-    void supprimer (Mesure mesure) throws SQLException;
+    void supprimer (int id) throws SQLException;
 
     void modifier (Mesure mesure) throws SQLException;
 

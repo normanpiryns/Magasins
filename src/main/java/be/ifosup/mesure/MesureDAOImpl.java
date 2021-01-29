@@ -49,10 +49,10 @@ public class MesureDAOImpl implements MesureDAO {
     }
 
     @Override
-    public void supprimer(Mesure mesure) throws SQLException {
+    public void supprimer(int id) throws SQLException {
         connection = daoFactory.getConnection();
         preparedStatement = connection.prepareStatement("delete into mesures(ID_mesure) values(?);");
-        preparedStatement.setInt(1, mesure.getId());
+        preparedStatement.setInt(1, id);
 
         preparedStatement.executeUpdate();
     }
