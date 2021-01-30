@@ -102,4 +102,8 @@ public class ProduitDaoImpl implements ProduitDAO{
         preparedStatement.executeUpdate();
     }
 
+   /* @Override
+    public void getIdProd(int id) throws SQLException {
+
+    }*/
 }
