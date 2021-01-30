@@ -1,5 +1,6 @@
-package be.ifosup.servlet;
+package be.ifosup.servlet.mesure;
 
+import be.ifosup.categorie.Categorie;
 import be.ifosup.dao.DAOFactory;
 import be.ifosup.mesure.Mesure;
 import be.ifosup.mesure.MesureDAO;
@@ -12,9 +13,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
 
-@WebServlet(name = "ServletMesMod", urlPatterns = {"/mesmod"})
-public class ServletMesMod extends HttpServlet {
-
+@WebServlet(name = "ServletMesAdd", urlPatterns = {"/mesadd"})
+public class ServletMesAdd extends HttpServlet {
     private MesureDAO mesureDAO;
 
     public void init() throws ServletException{
@@ -23,41 +23,30 @@ public class ServletMesMod extends HttpServlet {
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        //forcer l'utf-8 dans le transfert d'information
-        request.setCharacterEncoding("UTF-8");
-
         //recuperation des champs
         String mesure = request.getParameter("mesure");
-        Integer id = Integer.parseInt(request.getParameter("id"));
 
-        //modifier dans dans la db
+
+        //ajouter dans la db
         try {
-            mesureDAO.modifier( new Mesure(id,mesure));
+            mesureDAO.ajouter( new Mesure(mesure));
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
 
-        //redirection
+        //recuperation de la liste des mesures
         try {
             request.setAttribute("mesures", mesureDAO.ListeMesure());
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
+
+        //redirection vers la liste des mesures
         request.getRequestDispatcher("vues/mesures.jsp").forward(request,response);
 
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        Integer id = Integer.parseInt(request.getParameter("id"));
-
-        //recupere la mesure que l'on veux modifier
-        try {
-            request.setAttribute("mesure",mesureDAO.getMesurebyID(id));
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
-        }
-
-        //redirection vers la page de modification de la mesure
-        request.getRequestDispatcher("vues/modifierMesures.jsp").forward(request,response);
+        request.getRequestDispatcher("vues/ajoutMesures.jsp").forward(request,response);
     }
 }
