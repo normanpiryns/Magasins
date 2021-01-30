@@ -9,7 +9,7 @@ import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.sql.SQLException;
 
-@WebServlet(name = "ServletMagMod", value = "/ServletMagMod")
+@WebServlet(name = "ServletMagMod", value = "/magmod")
 public class ServletMagMod extends HttpServlet {
 
     private MagasinDAO magasinDAO;
@@ -21,10 +21,10 @@ public class ServletMagMod extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String id = request.getParameter("id");
+        Integer id = Integer.parseInt(request.getParameter("id"));
 
         try {
-            request.setAttribute("magasin", magasinDAO.getIdMag(Integer.parseInt(id)));
+            request.setAttribute("magasin", magasinDAO.getMagasinById(id));
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
@@ -33,8 +33,6 @@ public class ServletMagMod extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-        request.setCharacterEncoding("UTF-8");
         String magasin = request.getParameter("magasin");
 
         try {

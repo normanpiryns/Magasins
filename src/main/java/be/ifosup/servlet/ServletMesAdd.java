@@ -23,9 +23,6 @@ public class ServletMesAdd extends HttpServlet {
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        //forcer l'utf-8 dans le transfert d'information
-        request.setCharacterEncoding("UTF-8");
-
         //recuperation des champs
         String mesure = request.getParameter("mesure");
 
@@ -50,12 +47,6 @@ public class ServletMesAdd extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        //redirection vers l'ajout de la mesure
-        try {
-            request.setAttribute("mesure",mesureDAO.ListeMesure());
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
-        }
         request.getRequestDispatcher("vues/ajoutMesures.jsp").forward(request,response);
     }
 }
