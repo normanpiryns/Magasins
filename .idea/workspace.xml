@@ -27,14 +27,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a5c1f534-93cc-4193-b070-c0f3e943f591" name="Default Changelist" comment="Long -&gt; Int dans CategorieDAO/Impl; JSTL dans modifierCategorie.jsp, modification du servlet pour modifier les Categories">
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/ifosup/servlet/ServletMes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/ifosup/servlet/ServletMesAdd.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/ifosup/servlet/ServletMesMod.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/ifosup/servlet/ServletMesSup.java" afterDir="false" />
+    <list default="true" id="a5c1f534-93cc-4193-b070-c0f3e943f591" name="Default Changelist" comment="Fix servlet names, linked navigation with servlets, added / changed 3 views - categories, magasins(changed) and mesures.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifosup/mesure/Mesure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifosup/mesure/Mesure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifosup/mesure/MesureDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifosup/mesure/MesureDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/be/ifosup/mesure/MesureDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifosup/mesure/MesureDAOImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
