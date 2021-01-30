@@ -1,6 +1,10 @@
 package be.ifosup.magasin;
 
+import be.ifosup.categorie.Categorie;
 import be.ifosup.dao.DAOFactory;
+import be.ifosup.mesure.Mesure;
+import be.ifosup.produit.Produit;
+
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -27,8 +31,8 @@ public class MagasinDaoImpl implements MagasinDAO{
         resultat=statement.executeQuery("select id_magasin, nom_magasin from magasins");
 
         while(resultat.next()){
-            int id = resultat.getInt("ID_Magasin");
-            String Nom = resultat.getString("Nom_Magasin");
+            int id = resultat.getInt("id_magasin");
+            String Nom = resultat.getString("nom_magasin");
             magasins.add(new Magasin(id,Nom));
 
 
@@ -70,7 +74,15 @@ public class MagasinDaoImpl implements MagasinDAO{
     }
 
     @Override
-    public Object getIdMag(int id) throws SQLException {
-        return null;
+    public Magasin getMagasinById(int id) throws SQLException {
+        connection = daoFactory.getConnection();
+        statement = connection.createStatement();
+        preparedStatement = connection.prepareStatement("SELECT * FROM magasin WHERE id_magasin = ?");
+        preparedStatement.setInt(1,id);
+        preparedStatement.executeUpdate();
+
+        String nom = resultat.getString("nom_magasin");
+
+        return new Magasin(id,nom);
     }
 }

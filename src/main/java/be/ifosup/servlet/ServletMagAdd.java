@@ -29,42 +29,32 @@ public class ServletMagAdd extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("views/magAdd.jsp").forward(request, response);
+            request.getRequestDispatcher("vues/ajoutMagasin.jsp").forward(request, response);
+
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-
-
-
-        // ---------------------- UTF-8 forcing ----------------------------
-
-        request.setCharacterEncoding("UTF-8");
-
         // ----------------------- getParameters ---------------------------
-        String titre = request.getParameter("cat");
+        String nom = request.getParameter("nom");
 
 
         // ------------------------add to the db ---------------------------
 
         try {
-            magasinDAO.ajouter( new Magasin(titre) );
-
-
-
-        } catch (SQLException e) {
-            e.printStackTrace();
+            magasinDAO.ajouter( new Magasin(nom) );
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
         }
 
 
         try {
             request.setAttribute("mag", magasinDAO.listMag());
-        } catch (SQLException e) {
-            e.printStackTrace();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
         }
         // ---------------------- redirection -----------------------------------------
 
-        request.getRequestDispatcher("views/magAdd.jsp").forward(request, response);
+        request.getRequestDispatcher("vues/magasin.jsp").forward(request, response);
     }
 }

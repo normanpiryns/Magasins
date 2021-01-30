@@ -1,11 +1,6 @@
+<%@page pageEncoding="UTF-8" %>
 <%@include file="../template/header.jsp"%>
 <%@include file="../template/navigation.jsp"%>
-
-<head>
-    <title>Modifier produit</title>
-
-</head>
-<body>
 
 <h1>Modifier produit</h1>
 
@@ -29,4 +24,4 @@
     <br>
     <button type="submit">submit</button>
 </form>
-</body>
+<%@include file="../template/footer.jsp"%>

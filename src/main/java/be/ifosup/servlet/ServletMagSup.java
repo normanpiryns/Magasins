@@ -21,26 +21,25 @@ public class ServletMagSup extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
         // -------------------------------- getParameter ---------------------
 
-        String id = request.getParameter("id");
+        Integer id = Integer.parseInt(request.getParameter("id"));
 
-        // ----------------------------- Cancel method call ------------------
+        // ----------------------------- supression du magasin ------------------
         try {
-            magasinDAO.supprimer((int) Long.parseLong(id));
+            magasinDAO.supprimer(id);
+        }catch(SQLException throwables){
+            throwables.printStackTrace();
+        }
+        // ----------------------------- liste des magasins ------------------
+        try{
             request.setAttribute("mag", magasinDAO.listMag());
 
-        } catch (SQLException e) {
-            e.printStackTrace();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
         }
         // -------------------------------- redirection -----------------------
 
-        request.getRequestDispatcher("views/mag.jsp").forward(request, response);
-    }
-
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        request.getRequestDispatcher("vues/magasin.jsp").forward(request, response);
     }
 }
