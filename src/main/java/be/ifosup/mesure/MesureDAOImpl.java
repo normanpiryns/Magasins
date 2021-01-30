@@ -23,11 +23,10 @@ public class MesureDAOImpl implements MesureDAO {
     public List<Mesure> ListeMesure() throws SQLException {
         List<Mesure> listeMesure = new ArrayList<>();
         connection = daoFactory.getConnection();
-        preparedStatement = connection.prepareStatement("select * from mesures");
-
-        preparedStatement.executeQuery();
+        statement = connection.createStatement();
+        resultat = statement.executeQuery("select * from mesures");
         while (resultat.next()) {
-            int id = resultat.getInt("ID_mesure");
+            int id = resultat.getInt("id_mesure");
             String mesure = resultat.getString("nom_mesure");
 
             Mesure user = new Mesure(id, mesure);
