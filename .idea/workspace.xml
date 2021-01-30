@@ -27,11 +27,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a5c1f534-93cc-4193-b070-c0f3e943f591" name="Default Changelist" comment="Input hidden , changements dans ajoutProduit, liste.jsp/styles.css">
+    <list default="true" id="a5c1f534-93cc-4193-b070-c0f3e943f591" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/vues/ajoutProduit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/vues/ajoutProduit.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/vues/liste.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/vues/liste.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,11 +83,11 @@
     <property name="project.structure.side.proportion" value="0.30512822" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Programmes\xampp temp\htdocs\poo\Magasins\src\main\webapp" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\user\Desktop\Magasins\src\main\webapp\vues" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Programmes\xampp temp\htdocs\poo\Magasins\src\main\webapp" />
     </key>
   </component>
   <component name="RunManager">
@@ -194,6 +191,7 @@
       <workItem from="1610784546829" duration="16000" />
       <workItem from="1610901688563" duration="24000" />
       <workItem from="1611387480977" duration="678000" />
+      <workItem from="1611990857075" duration="884000" />
     </task>
     <task id="LOCAL-00001" summary="Gestion Magasin">
       <created>1610781737470</created>
@@ -324,6 +322,32 @@
     <MESSAGE value="dossier vues" />
     <MESSAGE value="vues 5 6 7 V1" />
     <MESSAGE value="Input hidden , changements dans ajoutProduit, liste.jsp/styles.css" />
-    <option name="LAST_COMMIT_MESSAGE" value="Input hidden , changements dans ajoutProduit, liste.jsp/styles.css" />
+    <option name="LAST_COMMIT_MESSAGE" value="" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1741" height="15" key="GridCell.Tab.0.bottom" timestamp="1611400684210">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1741" height="15" key="GridCell.Tab.0.bottom/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1611400684210" />
+    <state width="1741" height="15" key="GridCell.Tab.0.center" timestamp="1611400684210">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1741" height="15" key="GridCell.Tab.0.center/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1611400684210" />
+    <state width="1741" height="15" key="GridCell.Tab.0.left" timestamp="1611400684210">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1741" height="15" key="GridCell.Tab.0.left/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1611400684210" />
+    <state width="1741" height="15" key="GridCell.Tab.0.right" timestamp="1611400684210">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1741" height="15" key="GridCell.Tab.0.right/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1611400684210" />
+    <state x="918" y="461" key="MultipleFileMergeDialog" timestamp="1611400647082">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="918" y="461" key="MultipleFileMergeDialog/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1611400647082" />
+    <state x="872" y="433" key="Vcs.Push.Dialog.v2" timestamp="1611400653355">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="872" y="433" key="Vcs.Push.Dialog.v2/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1611400653355" />
   </component>
 </project>
