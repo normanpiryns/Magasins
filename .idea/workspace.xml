@@ -27,9 +27,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a5c1f534-93cc-4193-b070-c0f3e943f591" name="Default Changelist" comment="Fix servlet names, linked navigation with servlets, added / changed 3 views - categories, magasins(changed) and mesures.">
+    <list default="true" id="a5c1f534-93cc-4193-b070-c0f3e943f591" name="Default Changelist" comment="blanc">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifosup/mesure/MesureDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifosup/mesure/MesureDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifosup/produit/ProduitDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifosup/produit/ProduitDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/vues/categories.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/vues/categories.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +95,18 @@
       <recent name="C:\Users\user\Desktop\Magasins\src\main\webapp\vues" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Tomcat Server.magasins.jsp">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Tomcat 7.0.92" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.60" ALTERNATIVE_JRE_ENABLED="false">
       <deployment>
         <artifact name="Magasins:war exploded">
@@ -181,6 +193,50 @@
         </option>
       </method>
     </configuration>
+    <configuration name="magasins.jsp" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 7.0.92" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/vues/magasins.jsp" />
+      <deployment>
+        <artifact name="Magasins:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/Magasins_war_exploded" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="magasins_jsp_Magasins" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="Magasins:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Tomcat Server.magasins.jsp" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -196,6 +252,8 @@
       <workItem from="1610901688563" duration="24000" />
       <workItem from="1611387480977" duration="678000" />
       <workItem from="1611821872204" duration="3068000" />
+      <workItem from="1611993260120" duration="79000" />
+      <workItem from="1611993392475" duration="2022000" />
     </task>
     <task id="LOCAL-00001" summary="Gestion Magasin">
       <created>1610781737470</created>
@@ -288,7 +346,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611426874577</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="blanc">
+      <created>1611991967447</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1611991967447</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -350,6 +415,13 @@
     <MESSAGE value="Input hidden dans ajoutProduit.jsp, changements dans ajoutProduit, liste.jsp/styles.css" />
     <MESSAGE value="Input hidden dans ajoutProduit.jsp, changements dans ajoutProduit, liste.jsp/styles.css 2" />
     <MESSAGE value="Long -&gt; Int dans CategorieDAO/Impl; JSTL dans modifierCategorie.jsp, modification du servlet pour modifier les Categories" />
-    <option name="LAST_COMMIT_MESSAGE" value="Long -&gt; Int dans CategorieDAO/Impl; JSTL dans modifierCategorie.jsp, modification du servlet pour modifier les Categories" />
+    <MESSAGE value="blanc" />
+    <option name="LAST_COMMIT_MESSAGE" value="blanc" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="734" y="355" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1611993748709">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="734" y="355" key="#com.intellij.execution.impl.EditConfigurationsDialog/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1611993748709" />
   </component>
 </project>

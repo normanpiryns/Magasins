@@ -14,7 +14,12 @@
 <h2>Catégories</h2>
 <br>
 <ul class="list-group"><!-- foreach loop from db -->
-    <li class="list-group-item">Lorem ipsum<div class="edit-del-wrap"><a href="#">✎</a><a href="#">✖</a></div></li>
+
+    <c:forEach items="${categories}" var="categorie">
+        <li class="list-group-item">categorie.getNom<div class="edit-del-wrap"><a href="#">✎</a><a href="#">✖</a></div></li>
+    </c:forEach>
+
+
 
     <li class="list-group-item">Lorem ipsum<div class="edit-del-wrap"><a href="#">✎</a><a href="#">✖</a></div></li>
 </ul>
