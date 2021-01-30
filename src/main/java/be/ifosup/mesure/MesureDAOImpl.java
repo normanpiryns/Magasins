@@ -51,7 +51,7 @@ public class MesureDAOImpl implements MesureDAO {
     @Override
     public void supprimer(int id) throws SQLException {
         connection = daoFactory.getConnection();
-        preparedStatement = connection.prepareStatement("delete into mesures(ID_mesure) values(?);");
+        preparedStatement = connection.prepareStatement("delete from mesures where ID_measure = ?;");
         preparedStatement.setInt(1, id);
 
         preparedStatement.executeUpdate();
@@ -60,7 +60,7 @@ public class MesureDAOImpl implements MesureDAO {
     @Override
     public void modifier(Mesure mesure) throws SQLException {
         connection = daoFactory.getConnection();
-        preparedStatement = connection.prepareStatement("update into mesures(nom_mesure) values(?) where ID_mesure =(?);");
+        preparedStatement = connection.prepareStatement("update mesures set nom_mesure = ? where ID_mesure =(?);");
         preparedStatement.setString(1, mesure.getmesure());
         preparedStatement.setInt(1, mesure.getId());
 
