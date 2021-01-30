@@ -14,7 +14,7 @@ public interface MagasinDAO {
     void ajouter (Magasin magasin) throws SQLException;
     void supprimer (int ID_Magasin ) throws SQLException;
     void modifier (Magasin magasin) throws SQLException;
-    Object getIdMag(int id ) throws SQLException;
+    Magasin getMagasinById(int id ) throws SQLException;
 
 
 }

@@ -31,32 +31,4 @@ public class ServletMag extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.getRequestDispatcher("vues/magasins.jsp").forward(request, response);
     }
-
-    // ---------------------------------------- doPost ----------------------------------------------------
-
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-
-
-        request.setCharacterEncoding("UTF-8");
-        String titre = request.getParameter("mag");
-        try {
-            magasinDAO.ajouter(new Magasin(titre));
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-
-        // -------------------------redirection ----------------------------
-
-        try {
-            request.setAttribute("mag", magasinDAO.listMag());
-            request.getRequestDispatcher("vues/categories.jsp").forward(request,response);
-
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        request.getRequestDispatcher("vues/categories.jsp").forward(request, response);
-    }
-
 }
