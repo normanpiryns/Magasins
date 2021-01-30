@@ -16,16 +16,13 @@
 <ul class="list-group"><!-- foreach loop from db -->
 
     <c:forEach items="${categories}" var="categorie">
-        <li class="list-group-item">categorie.getNom<div class="edit-del-wrap"><a href="#">✎</a><a href="#">✖</a></div></li>
+        <li class="list-group-item">${categorie.getNom()}<div class="edit-del-wrap"><a href="catmod?id=${categorie.getId()}">✎</a><a href="catsup?id=${categorie.getId()}">✖</a></div></li>
     </c:forEach>
 
-
-
-    <li class="list-group-item">Lorem ipsum<div class="edit-del-wrap"><a href="#">✎</a><a href="#">✖</a></div></li>
 </ul>
 <br>
-<form action="" method="post">
-    <input type="text" placeholder="Ajouter une catégorie">
+<form action="catadd" method="post">
+    <input type="text" placeholder="Ajouter une catégorie" name="categorie">
     <input type="submit">
 
 </form>
