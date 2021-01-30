@@ -1,4 +1,4 @@
-package be.ifosup.servlet;
+package be.ifosup.servlet.categorie;
 
 import be.ifosup.categorie.Categorie;
 import be.ifosup.categorie.CategorieDAO;
@@ -12,8 +12,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
 
-@WebServlet(name = "ServletCatAdd" , urlPatterns = {"/catadd"})
-public class ServletCatAdd extends HttpServlet {
+@WebServlet(name = "ServletCatMod" , urlPatterns = {"/catmod"})
+public class ServletCatMod extends HttpServlet {
     private CategorieDAO categorieDAO;
 
     public void init() throws ServletException{
@@ -26,11 +26,11 @@ public class ServletCatAdd extends HttpServlet {
 
         //recuperation des champs
         String categorie = request.getParameter("categorie");
-
+        String id = request.getParameter("id");
 
         //ajouter dans la db
         try {
-            categorieDAO.ajouter( new Categorie(categorie));
+            categorieDAO.modifier( new Categorie(Integer.parseInt(id),categorie));
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
@@ -46,12 +46,22 @@ public class ServletCatAdd extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        //recupération de l'id
+        String id = request.getParameter("id");
+
+        try {
+            request.setAttribute("categorie", categorieDAO.getCategorieById(Integer.parseInt(id)));
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        request.getRequestDispatcher("vues/modifierCategorie.jsp").forward(request,response);
+        /*      Ici il faut récuperer par id. Pas besoin de toute la liste. -Norman
         try {
             request.setAttribute("categories", categorieDAO.liste());
         } catch (SQLException e){
             System.out.println(e.getMessage());
         }
-        request.getRequestDispatcher("vues/categories.jsp").forward(request,response);
 
+        */
     }
 }

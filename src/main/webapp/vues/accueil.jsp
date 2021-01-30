@@ -13,10 +13,14 @@
 
 <body>
 
-<ul class="list-group"><!-- foreach loop from db -->
-    <li class="list-group-item"><a href="#">Lorem ipsum</a> </li>
+<ul class="list-group">
+    <c:forEach items="${magasins}" var="magasin">
 
-    <li class="list-group-item"><a href="#">Lorem ipsum</a></li>
+        <li class="list-group-item"><a href="mag?id=${magasin.getID()}">${magasin.getNom()}</a> </li>
+    </c:forEach>
+
+
+
 </ul>
 
 <%@include file="../template/footer.jsp"%>

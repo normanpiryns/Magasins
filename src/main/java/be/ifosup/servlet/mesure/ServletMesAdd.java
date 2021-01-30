@@ -1,4 +1,4 @@
-package be.ifosup.servlet;
+package be.ifosup.servlet.mesure;
 
 import be.ifosup.categorie.Categorie;
 import be.ifosup.dao.DAOFactory;

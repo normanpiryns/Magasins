@@ -1,4 +1,4 @@
-package be.ifosup.servlet;
+package be.ifosup.servlet.categorie;
 
 import be.ifosup.categorie.CategorieDAO;
 import be.ifosup.dao.DAOFactory;
@@ -11,8 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
 
-@WebServlet(name = "ServletCat",urlPatterns = {"/cat"})
-public class ServletCat extends HttpServlet {
+@WebServlet(name = "ServletCatSup", urlPatterns = {"/catsup"})
+public class ServletCatSup extends HttpServlet {
     private CategorieDAO categorieDAO;
 
     public void init() throws ServletException{
@@ -20,7 +20,18 @@ public class ServletCat extends HttpServlet {
         this.categorieDAO =daoFactory.getCategorieDao();
     }
 
+
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        //recup de l'id
+        int id =Integer.parseInt(request.getParameter("id"));
+
+        //appel methode de suppression
+        try {
+            categorieDAO.supprimer(id);
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+
         //redirection
         try {
             request.setAttribute("categories",categorieDAO.liste());
@@ -28,5 +39,6 @@ public class ServletCat extends HttpServlet {
             throwables.printStackTrace();
         }
         request.getRequestDispatcher("vues/categories.jsp").forward(request,response);
+
     }
 }

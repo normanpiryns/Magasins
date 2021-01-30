@@ -1,73 +1,60 @@
-package be.ifosup.servlet;
+package be.ifosup.servlet.magasin;
 
 // ----------------------------------------- imports ------------------------------------------------------------------
 
 import be.ifosup.dao.DAOFactory;
-import be.ifosup.produit.Produit;
-import be.ifosup.produit.ProduitDAO;
+import be.ifosup.magasin.Magasin;
+import be.ifosup.magasin.MagasinDAO;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.sql.SQLException;
 
-@WebServlet(name = "ServletProdAdd", urlPatterns = {"/prodadd"})
+@WebServlet(name = "ServletMagAdd", urlPatterns = {"/magadd"})
 
-public class ServletProdAdd extends HttpServlet {
+public class ServletMagAdd extends HttpServlet {
 
     // ------------------------------------------- Attributes ---------------------------------------------------------
 
-    private ProduitDAO produitDAO;
+    private MagasinDAO magasinDAO;
 
 
     // -------------------------------------------- init method --------------------------------------------------------
 
     public void init() {
         DAOFactory daoFactory = DAOFactory.getInstance();
-        this.produitDAO = daoFactory.getProduitDAO();
+        this.magasinDAO = daoFactory.getMagasinDAO();
     }
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("views/ajoutProduit.jsp").forward(request, response);
+            request.getRequestDispatcher("vues/ajoutMagasin.jsp").forward(request, response);
+
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-
-
-
-        // ---------------------- UTF-8 forcing ----------------------------
-
-        request.setCharacterEncoding("UTF-8");
-
         // ----------------------- getParameters ---------------------------
-        String categorie = request.getParameter("categorie_choice");
-        String nom = request.getParameter("nom du produit");
-        String mesure = request.getParameter("mesure_choice");
-        String magasin = request.getParameter("magasin_choice");
+        String nom = request.getParameter("nom");
 
 
         // ------------------------add to the db ---------------------------
 
         try {
-            produitDAO.Ajouter( new Produit(magasin, nom,categorie,mesure) );
-
-
-
-        } catch (SQLException e) {
-            e.printStackTrace();
+            magasinDAO.ajouter( new Magasin(nom) );
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
         }
 
 
         try {
-            request.setAttribute("mag", produitDAO.ListeProduit());
-        } catch (SQLException e) {
-            e.printStackTrace();
+            request.setAttribute("mag", magasinDAO.listMag());
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
         }
         // ---------------------- redirection -----------------------------------------
 
-        request.getRequestDispatcher("views/prodAdd.jsp").forward(request, response);
+        request.getRequestDispatcher("vues/magasin.jsp").forward(request, response);
     }
 }

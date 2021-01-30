@@ -1,4 +1,4 @@
-package be.ifosup.servlet;
+package be.ifosup.servlet.magasin;
 
 import be.ifosup.magasin.Magasin;
 import be.ifosup.magasin.MagasinDAO;

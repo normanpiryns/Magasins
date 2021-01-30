@@ -11,19 +11,14 @@
 
 <body>
 
-<h2>Mésures</h2>
+<h2>Mesures</h2>
 <br>
-<ul class="list-group"><!-- foreach loop from db -->
-    <li class="list-group-item">Lorem ipsum<div class="edit-del-wrap"><a href="#">✎</a><a href="#">✖</a></div></li>
-
-    <li class="list-group-item">Lorem ipsum<div class="edit-del-wrap"><a href="#">✎</a><a href="#">✖</a></div></li>
+<ul class="list-group">
+    <c:forEach items="${mesures}" var="mesure">
+        <li class="list-group-item">${mesure.getNom()}<div class="edit-del-wrap"><a href="#">✎</a><a href="messup?id=${mesure.getId()}">✖</a></div></li>
+    </c:forEach>
 </ul>
 <br>
-<form action="" method="post">
-    <input type="text" placeholder="Ajouter une mésure">
-    <input type="submit">
-
-</form>
 
 <%@include file="../template/footer.jsp"%>
 
