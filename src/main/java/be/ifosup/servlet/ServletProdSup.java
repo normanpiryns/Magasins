@@ -9,7 +9,7 @@ import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.sql.SQLException;
 
-@WebServlet(name = "ServletCategoriesSup", urlPatterns = {"/prodsup"})
+@WebServlet(name = "ServletProdSup", urlPatterns = {"/prodsup"})
 public class ServletProdSup extends HttpServlet {
 
     private ProduitDAO produitDAO;

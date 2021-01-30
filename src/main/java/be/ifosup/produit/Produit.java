@@ -23,6 +23,10 @@ public class Produit {
         this.mesure = mesure;
     }
 
+    public Produit(String nom) {
+       this.nom=nom;
+    }
+
     public int getId() {
         return id;
     }

@@ -6,11 +6,11 @@ import java.util.List;
 public interface CategorieDAO {
     void ajouter( Categorie categorie) throws SQLException;
 
-    void supprimer( Long id) throws SQLException;
+    void supprimer( int id) throws SQLException;
 
     void modifier(Categorie categorie) throws SQLException;
 
     List<Categorie> liste() throws SQLException;
 
-    Categorie getCategorieById( int id) throws SQLException;
+    public Categorie getCategorieById(int id) throws SQLException;
 }

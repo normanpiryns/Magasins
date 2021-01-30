@@ -1,8 +1,8 @@
 package be.ifosup.servlet;
 
-import be.ifosup.categorie.Categorie;
-import be.ifosup.categorie.CategorieDAO;
 import be.ifosup.dao.DAOFactory;
+import be.ifosup.mesure.Mesure;
+import be.ifosup.mesure.MesureDAO;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -12,56 +12,52 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
 
-@WebServlet(name = "ServletCatMod" , urlPatterns = {"/catmod"})
-public class ServletCatMod extends HttpServlet {
-    private CategorieDAO categorieDAO;
+@WebServlet(name = "ServletMesMod", urlPatterns = {"/mesmod"})
+public class ServletMesMod extends HttpServlet {
+
+    private MesureDAO mesureDAO;
 
     public void init() throws ServletException{
         DAOFactory daoFactory = DAOFactory.getInstance();
-        this.categorieDAO = daoFactory.getCategorieDao();
+        this.mesureDAO =daoFactory.getMesureDAO();
     }
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //forcer l'utf-8 dans le transfert d'information
         request.setCharacterEncoding("UTF-8");
 
         //recuperation des champs
-        String categorie = request.getParameter("categorie");
+        String mesure = request.getParameter("mesure");
+        Integer id = Integer.parseInt(request.getParameter("id"));
 
-
-        //ajouter dans la db
+        //modifier dans dans la db
         try {
-            categorieDAO.modifier( new Categorie(categorie));
+            mesureDAO.modifier( new Mesure(id,mesure));
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
 
         //redirection
         try {
-            request.setAttribute("categories", categorieDAO.liste());
+            request.setAttribute("mesures", mesureDAO.ListeMesure());
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
-        request.getRequestDispatcher("vues/categories.jsp").forward(request,response);
+        request.getRequestDispatcher("vues/mesures.jsp").forward(request,response);
 
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        //recupération de l'id
-        String id = request.getParameter("id");
+        Integer id = Integer.parseInt(request.getParameter("id"));
 
+        //recupere la mesure que l'on veux modifier
         try {
-            request.setAttribute("categorie", categorieDAO.getCategorieById(Integer.parseInt(id)));
+            request.setAttribute("mesure",mesureDAO.getMesurebyID(id));
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
-        request.getRequestDispatcher("vues/modifierCategorie.jsp").forward(request,response);
-        /*      Ici il faut récuperer par id. Pas besoin de toute la liste. -Norman
-        try {
-            request.setAttribute("categories", categorieDAO.liste());
-        } catch (SQLException e){
-            System.out.println(e.getMessage());
-        }
 
-        */
+        //redirection vers la page de modification de la mesure
+        request.getRequestDispatcher("vues/modifierMesures.jsp").forward(request,response);
     }
 }

@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
 
-@WebServlet(name = "ServletGestionCat",urlPatterns = {"/cat"})
+@WebServlet(name = "ServletCat",urlPatterns = {"/cat"})
 public class ServletCat extends HttpServlet {
     private CategorieDAO categorieDAO;
 

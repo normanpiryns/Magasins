@@ -20,6 +20,9 @@ public class Mesure {
         this.id = id;
         this.mesure = mesure;
     }
+    public Mesure(String mesure){
+        this.mesure=mesure;
+    }
 
 
 }
