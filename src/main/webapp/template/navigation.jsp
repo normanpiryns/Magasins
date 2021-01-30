@@ -7,7 +7,7 @@
             Lorsque on aura connecté les vues avec les servlets ça devrait fonctionner - Norman
             -->
             <li>
-                <a href="" class="nav-link">Accueil</a>
+                <a href="accueil" class="nav-link">Accueil</a>
             </li>
             <li>
                 <a href="mag" class="nav-link">Magasins</a>
