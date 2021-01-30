@@ -7,7 +7,7 @@
             Lorsque on aura connecté les vues avec les servlets ça devrait fonctionner - Norman
             -->
             <li>
-                <a href="accueil" class="nav-link">Accueil</a>
+                <a href="${pageContext.request.contextPath}" class="nav-link">Accueil</a>
             </li>
             <li>
                 <a href="mag" class="nav-link">Magasins</a>
@@ -16,7 +16,7 @@
                 <a href="cat" class="nav-link">Categories</a>
             </li>
             <li>
-                <a href="mesures" class="nav-link">Mesures</a>
+                <a href="mes" class="nav-link">Mesures</a>
             </li>
         </ul>
     </nav>
