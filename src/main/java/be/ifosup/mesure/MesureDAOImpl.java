@@ -41,7 +41,7 @@ public class MesureDAOImpl implements MesureDAO {
     @Override
     public void ajouter(Mesure mesure) throws SQLException {
         connection = daoFactory.getConnection();
-        preparedStatement = connection.prepareStatement("insert into mesures(nom_mesure) values ?;");
+        preparedStatement = connection.prepareStatement("insert into mesures(nom_mesure) values (?);");
         preparedStatement.setString(1, mesure.getNom());
 
         preparedStatement.executeUpdate();
@@ -61,7 +61,7 @@ public class MesureDAOImpl implements MesureDAO {
         connection = daoFactory.getConnection();
         preparedStatement = connection.prepareStatement("update mesures set nom_mesure = ? where id_mesure = ?;");
         preparedStatement.setString(1, mesure.getNom());
-        preparedStatement.setInt(1, mesure.getId());
+        preparedStatement.setInt(2, mesure.getId());
 
         preparedStatement.executeUpdate();
     }
@@ -71,10 +71,14 @@ public class MesureDAOImpl implements MesureDAO {
         connection = daoFactory.getConnection();
         preparedStatement = connection.prepareStatement("select nom_mesure from mesures where id_mesure = ? ;");
         preparedStatement.setInt(1,id);
+        resultat = preparedStatement.executeQuery();
 
-        preparedStatement.executeQuery();
-        String nom = resultat.getString("nom_mesure");
+        String s= "";
 
-        return new Mesure(id, nom);
+        while(resultat.next()){
+            s = resultat.getString("nom_mesure");
+        }
+
+        return new Mesure(id,s);
     }
 }
