@@ -2,26 +2,26 @@ package be.ifosup.mesure;
 
 public class Mesure {
     private int id;
-    private String mesure;
+    private String nom;
 
     public int getId() {
         return id;
     }
 
-    public String getmesure() {
-        return mesure;
+    public String getNom() {
+        return nom;
     }
 
-    public void setmesure(String mesure) {
-        this.mesure = mesure;
+    public void setNom(String nom) {
+        this.nom = nom;
     }
 
-    public Mesure(int id, String mesure){
+    public Mesure(int id, String nom){
         this.id = id;
-        this.mesure = mesure;
+        this.nom = nom;
     }
-    public Mesure(String mesure){
-        this.mesure=mesure;
+    public Mesure(String nom){
+        this.nom=nom;
     }
 
 

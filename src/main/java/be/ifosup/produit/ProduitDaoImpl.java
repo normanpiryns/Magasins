@@ -57,7 +57,7 @@ public class ProduitDaoImpl implements ProduitDAO{
         Categorie cat = categorieDAO.getCategorieById(fk_categorie);
 
 
-        Produit produit = new Produit(id,nom,cat.getNom(),mes.getmesure());
+        Produit produit = new Produit(id,nom,cat.getNom(),mes.getNom());
 
         return produit;
     }

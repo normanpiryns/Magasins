@@ -23,7 +23,7 @@ public class ServletMes extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //redirection
         try {
-            request.setAttribute("mesure",mesureDAO.ListeMesure());
+            request.setAttribute("mesures",mesureDAO.ListeMesure());
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
