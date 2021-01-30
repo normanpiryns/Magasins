@@ -58,6 +58,6 @@ public class ServletMesMod extends HttpServlet {
         }
 
         //redirection vers la page de modification de la mesure
-        request.getRequestDispatcher("vues/modifierMesures.jsp").forward(request,response);
+        request.getRequestDispatcher("vues/modifierMesure.jsp").forward(request,response);
     }
 }
