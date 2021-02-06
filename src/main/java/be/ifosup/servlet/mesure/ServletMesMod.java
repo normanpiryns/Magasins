@@ -48,11 +48,12 @@ public class ServletMesMod extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
         Integer id = Integer.parseInt(request.getParameter("id"));
 
         //recupere la mesure que l'on veux modifier
         try {
-            request.setAttribute("mesure",mesureDAO.getMesurebyID(id));
+            request.setAttribute("mesure", mesureDAO.getMesurebyID(id));
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
