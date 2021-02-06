@@ -90,4 +90,17 @@ public class CategorieDaoImpl implements CategorieDAO {
 
         return cat;
     }
+
+    public Categorie getCategorieByName(String nom) throws SQLException {
+
+
+        connection = daoFactory.getConnection();
+        preparedStatement = connection.prepareStatement("SELECT id_categorie FROM categories WHERE nom_categorie = ?");
+        preparedStatement.setString(1,nom);
+        resultat = preparedStatement.executeQuery();
+
+        resultat.next();
+
+        return new Categorie(resultat.getInt("id_categorie"),nom);
+    }
 }
