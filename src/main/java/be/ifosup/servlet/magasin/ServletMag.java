@@ -29,6 +29,13 @@ public class ServletMag extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        try{
+            request.setAttribute("magasins",magasinDAO.listMag());
+
+        }catch(SQLException throwables){
+            throwables.printStackTrace();
+        }
+
         request.getRequestDispatcher("vues/magasins.jsp").forward(request, response);
     }
 }

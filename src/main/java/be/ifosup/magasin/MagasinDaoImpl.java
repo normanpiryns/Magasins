@@ -28,7 +28,7 @@ public class MagasinDaoImpl implements MagasinDAO{
         List<Magasin> magasins = new ArrayList<>();
         connection = daoFactory.getConnection();
         statement=connection.createStatement();
-        resultat=statement.executeQuery("select id_magasin, nom_magasin from magasins");
+        resultat=statement.executeQuery("select * from magasins");
 
         while(resultat.next()){
             int id = resultat.getInt("id_magasin");
@@ -65,8 +65,8 @@ public class MagasinDaoImpl implements MagasinDAO{
 
         preparedStatement = connection.prepareStatement("UPDATE magasins SET nom_magasin = ? WHERE id_magasin = ?; ");
 
-        preparedStatement.setInt(1, magasin.getID());
-        preparedStatement.setString(2, magasin.getNom());
+        preparedStatement.setInt(2, magasin.getID());
+        preparedStatement.setString(1, magasin.getNom());
 
 
         preparedStatement.executeUpdate();
@@ -76,13 +76,17 @@ public class MagasinDaoImpl implements MagasinDAO{
     @Override
     public Magasin getMagasinById(int id) throws SQLException {
         connection = daoFactory.getConnection();
-        statement = connection.createStatement();
-        preparedStatement = connection.prepareStatement("SELECT * FROM magasin WHERE id_magasin = ?");
+        preparedStatement = connection.prepareStatement("SELECT nom_magasin FROM magasins WHERE id_magasin = ?");
         preparedStatement.setInt(1,id);
-        preparedStatement.executeUpdate();
+        resultat = preparedStatement.executeQuery();
 
-        String nom = resultat.getString("nom_magasin");
+        Magasin mag =new Magasin(id,"");
 
-        return new Magasin(id,nom);
+        resultat.next();
+           String nomMag = resultat.getString("nom_magasin");
+           mag.setNom(nomMag);
+
+
+        return mag;
     }
 }
