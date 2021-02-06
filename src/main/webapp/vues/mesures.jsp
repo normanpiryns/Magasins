@@ -15,11 +15,13 @@
 <br>
 <ul class="list-group">
     <c:forEach items="${mesures}" var="mesure">
-        <li class="list-group-item">${mesure.getNom()}<div class="edit-del-wrap"><a href="#">✎</a><a href="messup?id=${mesure.getId()}">✖</a></div></li>
+        <li class="list-group-item">${mesure.getNom()}<div class="edit-del-wrap"><a href="mesmod?id=${mesure.getId()}">✎</a><a href="messup?id=${mesure.getId()}">✖</a></div></li>
     </c:forEach>
 </ul>
 <br>
+<form action="mesadd" method="post">
+    <input type="text" placeholder="Ajouter une mesure" name="mesure">
+    <input type="submit">
+</form>
 
 <%@include file="../template/footer.jsp"%>
-
-

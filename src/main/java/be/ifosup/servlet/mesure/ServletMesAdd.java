@@ -26,7 +26,7 @@ public class ServletMesAdd extends HttpServlet {
         //recuperation des champs
         String mesure = request.getParameter("mesure");
 
-
+        System.out.println(mesure);
         //ajouter dans la db
         try {
             mesureDAO.ajouter( new Mesure(mesure));
@@ -44,9 +44,5 @@ public class ServletMesAdd extends HttpServlet {
         //redirection vers la liste des mesures
         request.getRequestDispatcher("vues/mesures.jsp").forward(request,response);
 
-    }
-
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("vues/ajoutMesures.jsp").forward(request,response);
     }
 }

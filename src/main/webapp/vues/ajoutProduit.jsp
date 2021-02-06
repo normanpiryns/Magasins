@@ -1,9 +1,6 @@
 <%@include file="../template/header.jsp"%>
 <%@include file="../template/navigation.jsp"%>
-<head>
-    <title>Ajouter Produit</title>
-
-</head>
+<%@page pageEncoding="UTF-8" %>
 <body>
 
 <h1>Ajouter produit</h1>

@@ -8,10 +8,9 @@
 <body>
 
 <h1>Modifier mesure</h1>
-<form action="" method="post">
-    <input type="text"  name="mesure" placeholder="mesure">
+<form action="mesadd" method="post">
+    <input type="text"  name="mesure" value="${mesure.getNom()}">
 
-    <br>
     <button type="submit">submit</button>
 </form>
 </body>

@@ -13,14 +13,16 @@ public class Produit {
         this.nom = nom;
         this.categorie=categorie;
         this.mesure=mesure;
+        this.magasin=magasin;
     }
 
 
-    public Produit(int id, String nom,String categorie,String mesure) {
+    public Produit(int id, String nom,String categorie,String mesure,String magasin) {
         this.id = id;
         this.nom = nom;
         this.categorie = categorie;
         this.mesure = mesure;
+        this.magasin=magasin;
     }
 
     public Produit(String nom) {
