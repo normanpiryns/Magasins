@@ -1,5 +1,6 @@
 package be.ifosup.mesure;
 
+import be.ifosup.categorie.Categorie;
 import be.ifosup.dao.DAOFactory;
 
 import java.sql.*;
@@ -78,5 +79,18 @@ public class MesureDAOImpl implements MesureDAO {
 
 
         return new Mesure(id,s);
+    }
+
+    public Mesure getMesureByName(String nom) throws SQLException {
+
+
+        connection = daoFactory.getConnection();
+        preparedStatement = connection.prepareStatement("SELECT id_mesure FROM mesures WHERE nom_mesure = ?");
+        preparedStatement.setString(1,nom);
+        resultat = preparedStatement.executeQuery();
+
+        resultat.next();
+
+        return new Mesure(resultat.getInt("id_mesure"),nom);
     }
 }

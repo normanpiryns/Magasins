@@ -36,7 +36,7 @@ public class ServletMagAdd extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // ----------------------- getParameters ---------------------------
-        String nom = request.getParameter("nom");
+        String nom = request.getParameter("magasin");
 
 
         // ------------------------add to the db ---------------------------
@@ -49,12 +49,12 @@ public class ServletMagAdd extends HttpServlet {
 
 
         try {
-            request.setAttribute("mag", magasinDAO.listMag());
+            request.setAttribute("magasins", magasinDAO.listMag());
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
         // ---------------------- redirection -----------------------------------------
 
-        request.getRequestDispatcher("vues/magasin.jsp").forward(request, response);
+        request.getRequestDispatcher("vues/magasins.jsp").forward(request, response);
     }
 }

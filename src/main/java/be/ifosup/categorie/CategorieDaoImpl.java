@@ -83,11 +83,24 @@ public class CategorieDaoImpl implements CategorieDAO {
         resultat = preparedStatement.executeQuery();
         Categorie cat = new Categorie(id,"");
 
-        while (resultat.next()){
+            resultat.next();
             String nomCat = resultat.getString("nom_categorie");
             cat.setNom(nomCat);
-        }
+
 
         return cat;
+    }
+
+    public Categorie getCategorieByName(String nom) throws SQLException {
+
+
+        connection = daoFactory.getConnection();
+        preparedStatement = connection.prepareStatement("SELECT id_categorie FROM categories WHERE nom_categorie = ?");
+        preparedStatement.setString(1,nom);
+        resultat = preparedStatement.executeQuery();
+
+        resultat.next();
+
+        return new Categorie(resultat.getInt("id_categorie"),nom);
     }
 }
