@@ -73,11 +73,9 @@ public class MesureDAOImpl implements MesureDAO {
         preparedStatement.setInt(1,id);
         resultat = preparedStatement.executeQuery();
 
-        String s= "";
+        resultat.next();
+        String s = resultat.getString("nom_mesure");
 
-        while(resultat.next()){
-            s = resultat.getString("nom_mesure");
-        }
 
         return new Mesure(id,s);
     }
