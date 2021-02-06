@@ -1,6 +1,7 @@
 package be.ifosup.servlet.produit;
 
 import be.ifosup.dao.DAOFactory;
+import be.ifosup.magasin.Magasin;
 import be.ifosup.magasin.MagasinDAO;
 import be.ifosup.produit.Produit;
 import be.ifosup.produit.ProduitDAO;
@@ -10,6 +11,7 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.List;
 
 @WebServlet(name = "ServletProdSup", urlPatterns = {"/prodsup"})
 public class ServletProdSup extends HttpServlet {
@@ -30,10 +32,12 @@ public class ServletProdSup extends HttpServlet {
 
         int id = Integer.parseInt(request.getParameter("id"));
 
-        // ----------------------------- Cancel method call ------------------
         try {
             Produit p = produitDAO.GetProduitByID(id);
-
+            Magasin mag = magasinDAO.getMagasinByName(p.getMagasin());
+            produitDAO.Supprimer(id);
+            List<Produit> produits = produitDAO.ListeProduitsByMagId(mag.getID());
+            request.setAttribute("produits",produits);
 
         } catch (SQLException e) {
             e.printStackTrace();

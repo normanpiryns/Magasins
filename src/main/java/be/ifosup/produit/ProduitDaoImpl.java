@@ -86,7 +86,7 @@ public class ProduitDaoImpl implements ProduitDAO{
 
         preparedStatement = connection.prepareStatement("DELETE FROM produits WHERE id_produit = ?");
 
-        preparedStatement.setLong(1,id);
+        preparedStatement.setInt(1,id);
 
         preparedStatement.executeUpdate();
     }
