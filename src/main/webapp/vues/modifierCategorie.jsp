@@ -1,5 +1,6 @@
 <%@include file="../template/header.jsp"%>
 <%@include file="../template/navigation.jsp"%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <head>
     <title>Modifier catégorie</title>
@@ -8,12 +9,11 @@
 <body>
 
 <h1>Modifier catégorie</h1>
-${categorie.getNom()}
-${categorie.getId()}
+
 <form action="catmod" method="post">
     <input type="text"  name="categorie" placeholder="${categorie.getNom()}"  />
-    <input type="text"  name="id" value="${categorie.getId()}" hidden />
-    <!-- Je ne suis pas sûr que ça se fait de cette manière - Norman -->
+    <input type="hidden"  name="id" value="${categorie.getId()}" />
+
 
     <br>
     <button type="submit">submit</button>
