@@ -69,13 +69,17 @@ public class ProduitDaoImpl implements ProduitDAO{
     public void Ajouter(Produit produit) throws SQLException {
         connection = daoFactory.getConnection();
 
-        preparedStatement = connection.prepareStatement("INSERT INTO produits (id_produit,nom_produit,fk_categorie,fk_mesure) VALUES (?,?,?,?)");
+        preparedStatement = connection.prepareStatement("INSERT INTO produits (nom_produit,fk_magasin,fk_categorie,fk_mesure,quantite) VALUES (?,?,?,?,?)");
 
+        Categorie cat = categorieDAO.getCategorieByName(produit.getCategorie());
+        Mesure mes = mesureDAO.getMesureByName(produit.getMesure());
+        Magasin mag = magasinDAO.getMagasinByName(produit.getMagasin());
 
-        preparedStatement.setInt(1,produit.getId());
-        preparedStatement.setString(2,produit.getNom());
-        preparedStatement.setString(3,produit.getCategorie());
-        preparedStatement.setString(4,produit.getMesure());
+        preparedStatement.setString(1,produit.getNom());
+        preparedStatement.setInt(2,mag.getID());
+        preparedStatement.setInt(3,cat.getId());
+        preparedStatement.setInt(4,mes.getId());
+        preparedStatement.setDouble(5,produit.getQuantite());
 
         preparedStatement.executeUpdate();
     }
@@ -86,7 +90,7 @@ public class ProduitDaoImpl implements ProduitDAO{
 
         preparedStatement = connection.prepareStatement("DELETE FROM produits WHERE id_produit = ?");
 
-        preparedStatement.setLong(1,id);
+        preparedStatement.setInt(1,id);
 
         preparedStatement.executeUpdate();
     }
