@@ -37,7 +37,6 @@ footer{
 .edit-del-wrap{
     display: inline-block;
     float: right;
-
 }
 
 .edit-del-wrap a{
@@ -62,3 +61,4 @@ footer{
     border-radius: 4px;
     margin-top: 1em;
 }
+

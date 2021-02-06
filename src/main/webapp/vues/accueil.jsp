@@ -16,7 +16,7 @@
 <ul class="list-group">
     <c:forEach items="${magasins}" var="magasin">
 
-        <li class="list-group-item"><a href="mag?id=${magasin.getID()}">${magasin.getNom()}</a> </li>
+        <li class="list-group-item"><a href="liste?id=${magasin.getID()}">${magasin.getNom()}</a> </li>
     </c:forEach>
 
 

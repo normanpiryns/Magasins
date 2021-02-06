@@ -19,34 +19,18 @@
 
 
 <a href="#" id="del-liste">DEL</a>
-<!-- foreach categorie -->
-<button type="button" class="collapsible">Lorem ipsum</button>
-<div class="content">
-    <!-- foreach produit in categorie in liste -->
-    <ul class="list-group">
-        <li class="list-group-item">Lorem ipsum<div class="edit-del-wrap"><a href="#">✎</a><a href="#">✖</a></div></li>
 
-        <li class="list-group-item">Lorem ipsum<div class="edit-del-wrap"><a href="#">✎</a><a href="#">✖</a></div></li>
+<div class="content">
+    <ul class="list-group">
+        <c:forEach items="${produits}" var="produit">
+            <li class="list-group-item">${produit.nom} - ${produit.categorie} ${produit.quantite} ${produit.mesure}<div class="edit-del-wrap"><a href="/ServletProdMod?id=${produit.id}">✎</a><a href="/prodsup?id=${produit.id}">✖</a></div></li>
+        </c:forEach>
+
     </ul>
 </div>
 
 <a href="#" id="add-produit">Ajouter produit</a>
-<script>
-    var coll = document.getElementsByClassName("collapsible");
-    var i;
 
-    for (i = 0; i < coll.length; i++) {
-        coll[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            var content = this.nextElementSibling;
-            if (content.style.display === "block") {
-                content.style.display = "none";
-            } else {
-                content.style.display = "block";
-            }
-        });
-    }
-</script>
 
 
 <%@include file="../template/footer.jsp"%>

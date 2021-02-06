@@ -1,11 +1,6 @@
 <div class="container">
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark mb-3">
         <ul class="navbar-nav">
-            <!-- Pour l'instant la navigation ne fonctionne pas car les vues sont géré de cette manière:
-            http://localhost:8080/Magasins_war_exploded/nom-de-vue
-            et pour l'instant on à accès via vues/nom-de-vue.jsp, donc le chemin est different.
-            Lorsque on aura connecté les vues avec les servlets ça devrait fonctionner - Norman
-            -->
             <li>
                 <a href="${pageContext.request.contextPath}" class="nav-link">Accueil</a>
             </li>
