@@ -32,6 +32,7 @@ public class ServletProd extends HttpServlet {
         //redirection
         try{
             request.setAttribute("produits",produitDAO.ListeProduitsByMagId(id));
+            request.setAttribute("id_magasin", id);
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }

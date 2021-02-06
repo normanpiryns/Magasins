@@ -69,15 +69,10 @@ public class ServletProdAdd extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        Integer idProd = Integer.parseInt(request.getParameter("idProd"));
         Integer idMag = Integer.parseInt(request.getParameter("idMag"));
 
-        try {
-            request.setAttribute("produits", produitDAO.GetProduitByID(idProd));
-            request.setAttribute("idMag",idMag);
-        } catch (SQLException e){
-            System.out.println(e.getMessage());
-        }
+        request.setAttribute("id_magasin",idMag);
+
         request.getRequestDispatcher("vues/ajoutProduit.jsp").forward(request,response);
     }
 }
