@@ -65,8 +65,9 @@ public class CategorieDaoImpl implements CategorieDAO {
 
         preparedStatement = connection.prepareStatement("UPDATE categories SET nom_categorie = ? WHERE id_categorie = ?; ");
 
-        preparedStatement.setInt(1,categorie.getId());
-        preparedStatement.setString(2,categorie.getNom());
+        preparedStatement.setString(1,categorie.getNom());
+        preparedStatement.setInt(2,categorie.getId());
+
 
 
         preparedStatement.executeUpdate();
@@ -79,8 +80,14 @@ public class CategorieDaoImpl implements CategorieDAO {
         connection = daoFactory.getConnection();
         preparedStatement = connection.prepareStatement("SELECT nom_categorie FROM categories WHERE id_categorie = ?");
         preparedStatement.setInt(1,id);
-        preparedStatement.executeUpdate();
+        resultat = preparedStatement.executeQuery();
+        Categorie cat = new Categorie(id,"");
 
-        return new Categorie(id,resultat.getString("nom_categorie"));
+        while (resultat.next()){
+            String nomCat = resultat.getString("nom_categorie");
+            cat.setNom(nomCat);
+        }
+
+        return cat;
     }
 }
