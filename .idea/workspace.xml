@@ -27,7 +27,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a5c1f534-93cc-4193-b070-c0f3e943f591" name="Default Changelist" comment="Ajouté méthode class Produit">
+    <list default="true" id="a5c1f534-93cc-4193-b070-c0f3e943f591" name="Default Changelist" comment="catégorie V3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,6 +46,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Pull.Settings">
+    <option name="BRANCH" value="main" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -83,14 +86,14 @@
     <property name="project.structure.side.proportion" value="0.30512822" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\user\Desktop\Magasins\src\main\webapp\vues" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Programmes\xampp temp\htdocs\poo\Magasins\src\main\webapp" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\user\Desktop\Magasins\src\main\webapp\vues" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 7.0.92">
     <configuration name="Tomcat 7.0.92" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.92" ALTERNATIVE_JRE_ENABLED="false">
       <deployment>
         <artifact name="Magasins:war exploded">
@@ -177,6 +180,110 @@
         </option>
       </method>
     </configuration>
+    <configuration name="accueil.jsp" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 7.0.92" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/vues/accueil.jsp" />
+      <deployment>
+        <artifact name="Magasins:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/Magasins_war_exploded" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="accueil_jsp_Magasins" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="Magasins:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration name="magasins.jsp" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 7.0.92" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/vues/magasins.jsp" />
+      <deployment>
+        <artifact name="Magasins:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/Magasins_war_exploded" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="magasins_jsp_Magasins" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="Magasins:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Tomcat Server.Tomcat 7.0.92" />
+      <item itemvalue="Tomcat Server.accueil.jsp" />
+      <item itemvalue="Tomcat Server.magasins.jsp" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Tomcat Server.accueil.jsp" />
+        <item itemvalue="Tomcat Server.magasins.jsp" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -192,7 +299,9 @@
       <workItem from="1610901688563" duration="24000" />
       <workItem from="1611387480977" duration="678000" />
       <workItem from="1611821872204" duration="3068000" />
-      <workItem from="1611991978486" duration="17619000" />
+      <workItem from="1611993260120" duration="79000" />
+      <workItem from="1611993392475" duration="14997000" />
+      <workItem from="1612596002590" duration="440000" />
     </task>
     <task id="LOCAL-00001" summary="Gestion Magasin">
       <created>1610781737470</created>
@@ -285,35 +394,56 @@
       <option name="project" value="LOCAL" />
       <updated>1611426874577</updated>
     </task>
-    <task id="LOCAL-00014" summary="ajout du constructeur &quot;simple&quot; de Mesure&#10;modification de l'appel de suppression de mesure (uniquement besoin de l'id et non de l'objet entier&#10;ajout des servlet de mesure">
-      <created>1611961095695</created>
+    <task id="LOCAL-00014" summary="blanc">
+      <created>1611991967447</created>
       <option name="number" value="00014" />
       <option name="presentableId" value="LOCAL-00014" />
       <option name="project" value="LOCAL" />
-      <updated>1611961095696</updated>
+      <updated>1611991967447</updated>
     </task>
-    <task id="LOCAL-00015" summary="modification/correction de l'objet &amp; servlet magasin,et mesure &#10;suppression de la methode non-implementée dans ProduitDaoImpl">
-      <created>1611996187006</created>
+    <task id="LOCAL-00015" summary="catégorie V1">
+      <created>1611995585390</created>
       <option name="number" value="00015" />
       <option name="presentableId" value="LOCAL-00015" />
       <option name="project" value="LOCAL" />
-      <updated>1611996187006</updated>
+      <updated>1611995585390</updated>
     </task>
-    <task id="LOCAL-00016" summary="maj mesuredaoimplement(liste)">
-      <created>1611998951266</created>
+    <task id="LOCAL-00016" summary="worspace de merde">
+      <created>1611996895564</created>
       <option name="number" value="00016" />
       <option name="presentableId" value="LOCAL-00016" />
       <option name="project" value="LOCAL" />
-      <updated>1611998951266</updated>
+      <updated>1611996895564</updated>
     </task>
-    <task id="LOCAL-00017" summary="maj mesure properies mesure =&gt; nom&#10;changement du nom mesure =&gt; mesures pour la liste dans /mes&#10;modicfication du nom de redirection vers modifierMesure&#10;implementation des mesure de db">
-      <created>1612005745668</created>
+    <task id="LOCAL-00017" summary="worspace de merde">
+      <created>1611997261285</created>
       <option name="number" value="00017" />
       <option name="presentableId" value="LOCAL-00017" />
       <option name="project" value="LOCAL" />
-      <updated>1612005745668</updated>
+      <updated>1611997261285</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="worspace de merde">
+      <created>1611999373982</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1611999373982</updated>
+    </task>
+    <task id="LOCAL-00019" summary="catégorie V2">
+      <created>1612001666594</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1612001666594</updated>
+    </task>
+    <task id="LOCAL-00020" summary="catégorie V3">
+      <created>1612006900290</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1612006900290</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -375,11 +505,103 @@
     <MESSAGE value="Input hidden dans ajoutProduit.jsp, changements dans ajoutProduit, liste.jsp/styles.css" />
     <MESSAGE value="Input hidden dans ajoutProduit.jsp, changements dans ajoutProduit, liste.jsp/styles.css 2" />
     <MESSAGE value="Long -&gt; Int dans CategorieDAO/Impl; JSTL dans modifierCategorie.jsp, modification du servlet pour modifier les Categories" />
-    <MESSAGE value="ajout du constructeur &quot;simple&quot; de Mesure&#10;modification de l'appel de suppression de mesure (uniquement besoin de l'id et non de l'objet entier&#10;ajout des servlet de mesure" />
-    <MESSAGE value="modification/correction de l'objet &amp; servlet magasin,et mesure suppression de la methode non-implementée" />
-    <MESSAGE value="modification/correction de l'objet &amp; servlet magasin,et mesure &#10;suppression de la methode non-implementée dans ProduitDaoImpl" />
-    <MESSAGE value="maj mesuredaoimplement(liste)" />
-    <MESSAGE value="maj mesure properies mesure =&gt; nom&#10;changement du nom mesure =&gt; mesures pour la liste dans /mes&#10;modicfication du nom de redirection vers modifierMesure&#10;implementation des mesure de db" />
-    <option name="LAST_COMMIT_MESSAGE" value="maj mesure properies mesure =&gt; nom&#10;changement du nom mesure =&gt; mesures pour la liste dans /mes&#10;modicfication du nom de redirection vers modifierMesure&#10;implementation des mesure de db" />
+    <MESSAGE value="blanc" />
+    <MESSAGE value="catégorie V1" />
+    <MESSAGE value="worspace de merde" />
+    <MESSAGE value="catégorie V2" />
+    <MESSAGE value="catégorie V3" />
+    <option name="LAST_COMMIT_MESSAGE" value="catégorie V3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2828" y="197" width="1092" height="728" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1611997731784">
+      <screen x="2560" y="197" width="1360" height="728" />
+    </state>
+    <state x="734" y="355" key="#com.intellij.execution.impl.EditConfigurationsDialog/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1611993748709" />
+    <state x="2828" y="197" width="1092" height="728" key="#com.intellij.execution.impl.EditConfigurationsDialog/2560.197.1360.728/0.0.2560.1400@2560.197.1360.728" timestamp="1611997731784" />
+    <state x="2634" y="231" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable" timestamp="1611997729574">
+      <screen x="2560" y="197" width="1360" height="728" />
+    </state>
+    <state x="2634" y="231" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable/2560.197.1360.728/0.0.2560.1400@2560.197.1360.728" timestamp="1611997729574" />
+    <state x="248" y="122" key="DiffContextDialog" timestamp="1612001709343">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="248" y="122" key="DiffContextDialog/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1612001709343" />
+    <state x="2683" y="333" key="FileChooserDialogImpl" timestamp="1611997727684">
+      <screen x="2560" y="197" width="1360" height="728" />
+    </state>
+    <state x="2683" y="333" key="FileChooserDialogImpl/2560.197.1360.728/0.0.2560.1400@2560.197.1360.728" timestamp="1611997727684" />
+    <state width="1741" height="15" key="GridCell.Tab.0.bottom" timestamp="1612008680864">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1741" height="15" key="GridCell.Tab.0.bottom/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1612008680864" />
+    <state width="901" height="15" key="GridCell.Tab.0.bottom/2560.197.1360.728/0.0.2560.1400@2560.197.1360.728" timestamp="1611998429434" />
+    <state width="1741" height="15" key="GridCell.Tab.0.center" timestamp="1612008680864">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1741" height="15" key="GridCell.Tab.0.center/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1612008680864" />
+    <state width="901" height="15" key="GridCell.Tab.0.center/2560.197.1360.728/0.0.2560.1400@2560.197.1360.728" timestamp="1611998429433" />
+    <state width="1741" height="15" key="GridCell.Tab.0.left" timestamp="1612008680864">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1741" height="15" key="GridCell.Tab.0.left/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1612008680864" />
+    <state width="901" height="15" key="GridCell.Tab.0.left/2560.197.1360.728/0.0.2560.1400@2560.197.1360.728" timestamp="1611998429433" />
+    <state width="1741" height="15" key="GridCell.Tab.0.right" timestamp="1612008680864">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1741" height="15" key="GridCell.Tab.0.right/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1612008680864" />
+    <state width="901" height="15" key="GridCell.Tab.0.right/2560.197.1360.728/0.0.2560.1400@2560.197.1360.728" timestamp="1611998429434" />
+    <state width="1741" height="15" key="GridCell.Tab.1.bottom" timestamp="1612008680864">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1741" height="15" key="GridCell.Tab.1.bottom/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1612008680864" />
+    <state width="901" height="15" key="GridCell.Tab.1.bottom/2560.197.1360.728/0.0.2560.1400@2560.197.1360.728" timestamp="1611998429379" />
+    <state width="1741" height="15" key="GridCell.Tab.1.center" timestamp="1612008680864">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1741" height="15" key="GridCell.Tab.1.center/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1612008680864" />
+    <state width="901" height="15" key="GridCell.Tab.1.center/2560.197.1360.728/0.0.2560.1400@2560.197.1360.728" timestamp="1611998429379" />
+    <state width="1741" height="15" key="GridCell.Tab.1.left" timestamp="1612008680864">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1741" height="15" key="GridCell.Tab.1.left/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1612008680864" />
+    <state width="901" height="15" key="GridCell.Tab.1.left/2560.197.1360.728/0.0.2560.1400@2560.197.1360.728" timestamp="1611998429379" />
+    <state width="1741" height="15" key="GridCell.Tab.1.right" timestamp="1612008680864">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1741" height="15" key="GridCell.Tab.1.right/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1612008680864" />
+    <state width="901" height="15" key="GridCell.Tab.1.right/2560.197.1360.728/0.0.2560.1400@2560.197.1360.728" timestamp="1611998429379" />
+    <state width="1741" height="15" key="GridCell.Tab.2.bottom" timestamp="1612008680864">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1741" height="15" key="GridCell.Tab.2.bottom/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1612008680864" />
+    <state width="901" height="15" key="GridCell.Tab.2.bottom/2560.197.1360.728/0.0.2560.1400@2560.197.1360.728" timestamp="1611998429379" />
+    <state width="1741" height="15" key="GridCell.Tab.2.center" timestamp="1612008680864">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1741" height="15" key="GridCell.Tab.2.center/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1612008680864" />
+    <state width="901" height="15" key="GridCell.Tab.2.center/2560.197.1360.728/0.0.2560.1400@2560.197.1360.728" timestamp="1611998429379" />
+    <state width="1741" height="15" key="GridCell.Tab.2.left" timestamp="1612008680864">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1741" height="15" key="GridCell.Tab.2.left/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1612008680864" />
+    <state width="901" height="15" key="GridCell.Tab.2.left/2560.197.1360.728/0.0.2560.1400@2560.197.1360.728" timestamp="1611998429379" />
+    <state width="1741" height="15" key="GridCell.Tab.2.right" timestamp="1612008680864">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1741" height="15" key="GridCell.Tab.2.right/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1612008680864" />
+    <state width="901" height="15" key="GridCell.Tab.2.right/2560.197.1360.728/0.0.2560.1400@2560.197.1360.728" timestamp="1611998429379" />
+    <state x="918" y="461" key="MultipleFileMergeDialog" timestamp="1612006919071">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="918" y="461" key="MultipleFileMergeDialog/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1612006919071" />
+    <state x="3048" y="437" key="MultipleFileMergeDialog/2560.197.1360.728/0.0.2560.1400@2560.197.1360.728" timestamp="1611996908332" />
+    <state x="872" y="433" key="Vcs.Push.Dialog.v2" timestamp="1612001713812">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="872" y="433" key="Vcs.Push.Dialog.v2/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1612001713812" />
+    <state x="1097" y="614" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1611999400341">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1097" y="614" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/2560.197.1360.728/0.0.2560.1400@0.0.2560.1400" timestamp="1611999400341" />
   </component>
 </project>
