@@ -1,6 +1,8 @@
 package be.ifosup.servlet.produit;
 
 import be.ifosup.dao.DAOFactory;
+import be.ifosup.magasin.MagasinDAO;
+import be.ifosup.produit.Produit;
 import be.ifosup.produit.ProduitDAO;
 
 import javax.servlet.*;
@@ -13,10 +15,12 @@ import java.sql.SQLException;
 public class ServletProdSup extends HttpServlet {
 
     private ProduitDAO produitDAO;
+    private MagasinDAO magasinDAO;
 
     public void init() {
         DAOFactory daoFactory = DAOFactory.getInstance();
         this.produitDAO = daoFactory.getProduitDAO();
+        this.magasinDAO = daoFactory.getMagasinDAO();
     }
 
     @Override
@@ -24,19 +28,19 @@ public class ServletProdSup extends HttpServlet {
 
         // -------------------------------- getParameter ---------------------
 
-        String id = request.getParameter("id");
+        int id = Integer.parseInt(request.getParameter("id"));
 
         // ----------------------------- Cancel method call ------------------
         try {
-            produitDAO.Supprimer((int) Long.parseLong(id));
-            request.setAttribute("prod", produitDAO.ListeProduit());
+            Produit p = produitDAO.GetProduitByID(id);
+
 
         } catch (SQLException e) {
             e.printStackTrace();
         }
         // -------------------------------- redirection -----------------------
 
-        request.getRequestDispatcher("views/prod.jsp").forward(request, response);
+        request.getRequestDispatcher("views/liste.jsp").forward(request, response);
     }
 
     @Override
