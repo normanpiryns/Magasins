@@ -39,7 +39,7 @@ public class ServletProdMod extends HttpServlet {
         try {
             Produit p = produitDAO.GetProduitByID(id);
             Categorie categorie = categorieDAO.getCategorieByName(p.getCategorie());
-            Mesure mesure = mesureDAO.getMesurebyName(p.getMesure());
+            Mesure mesure = mesureDAO.getMesureByName(p.getMesure());
 
             Integer fk_cat = categorie.getId();
             Integer fk_mesure =  mesure.getId();
@@ -56,11 +56,12 @@ public class ServletProdMod extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        Integer fk_cat = Integer.parseInt(request.getParameter("cat"));
+        Integer id = Integer.parseInt(request.getParameter("id"));
+        Integer fk_cat = Integer.parseInt(request.getParameter("categorie"));
         Integer fk_mesure = Integer.parseInt(request.getParameter("mesure"));
         Integer fk_magasin = Integer.parseInt(request.getParameter("magasin"));
         Double quantite= Double.parseDouble(request.getParameter("quantite"));
-        String nom = request.getParameter("nom");
+        String nom = request.getParameter("produit");
 
         try {
             Categorie categorie = categorieDAO.getCategorieById(fk_cat);
@@ -68,7 +69,7 @@ public class ServletProdMod extends HttpServlet {
             Magasin magasin = magasinDAO.getMagasinById(fk_magasin);
             // ------------------------add to the db ---------------------------
 
-            produitDAO.Modifier(new Produit(magasin.getNom(), nom, categorie.getNom(), mesure.getNom() ,quantite));
+            produitDAO.Modifier(new Produit(id,magasin.getNom(), nom, categorie.getNom(), mesure.getNom() ,quantite));
         } catch (SQLException e) {
             e.printStackTrace();
         }

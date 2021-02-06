@@ -57,15 +57,12 @@ public class ProduitDaoImpl implements ProduitDAO{
         int fk_categorie = resultat.getInt("fk_categorie");//cherché les categories via l'objet java
         int fk_mesure = resultat.getInt("fk_mesure");//cherché les mesure via l'objet java
         int fk_magasin = resultat.getInt("fk_magasin");
-
+        double quantite = resultat.getDouble("quantite");
         Mesure mes = mesureDAO.getMesurebyID(fk_mesure);
         Categorie cat = categorieDAO.getCategorieById(fk_categorie);
         Magasin mag = magasinDAO.getMagasinById(fk_magasin);
 
-
-        Produit produit = new Produit(id,nom,cat.getNom(),mes.getNom(),mag.getNom());
-
-        return produit;
+        return new Produit(mag.getNom(),nom,cat.getNom(),mes.getNom(),quantite);
     }
 
     @Override
@@ -122,12 +119,12 @@ public class ProduitDaoImpl implements ProduitDAO{
             String nom = resultat.getString("nom_categorie");
             int fk_categorie = resultat.getInt("fk_categorie");
             int fk_mesure = resultat.getInt("fk_mesure");
-
+            double quantite = resultat.getDouble("quantite");
             Mesure mes = mesureDAO.getMesurebyID(fk_mesure);
             Categorie cat = categorieDAO.getCategorieById(fk_categorie);
             Magasin mag = magasinDAO.getMagasinById(fk_mag);
 
-            produits.add(new Produit(id,nom,mes.getNom(),cat.getNom(),mag.getNom()));
+            produits.add(new Produit(id, mag.getNom(), nom,mes.getNom(),cat.getNom(),quantite));
         }
         return produits;
     }

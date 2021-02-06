@@ -89,4 +89,18 @@ public class MagasinDaoImpl implements MagasinDAO{
 
         return mag;
     }
+
+    @Override
+    public Magasin getMagasinByName(String nom) throws SQLException {
+
+
+        connection = daoFactory.getConnection();
+        preparedStatement = connection.prepareStatement("SELECT id_magasin FROM magasins WHERE nom_magasin = ?");
+        preparedStatement.setString(1,nom);
+        resultat = preparedStatement.executeQuery();
+
+        resultat.next();
+
+        return new Magasin(resultat.getInt("id_magasin"),nom);
+    }
 }

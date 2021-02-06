@@ -20,12 +20,12 @@ public class Produit {
     }
 
 
-    public Produit(int id, String nom,String categorie,String mesure,String magasin) {
+    public Produit(int id,String magasin, String nom, String categorie, String mesure, Double quantite) {
         this.id = id;
+        this.magasin=magasin;
         this.nom = nom;
         this.categorie = categorie;
         this.mesure = mesure;
-        this.magasin=magasin;
         this.quantite = quantite;
     }
 
