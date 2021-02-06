@@ -33,13 +33,13 @@ public class ServletMagSup extends HttpServlet {
         }
         // ----------------------------- liste des magasins ------------------
         try{
-            request.setAttribute("mag", magasinDAO.listMag());
+            request.setAttribute("magasins", magasinDAO.listMag());
 
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
         // -------------------------------- redirection -----------------------
 
-        request.getRequestDispatcher("vues/magasin.jsp").forward(request, response);
+        request.getRequestDispatcher("vues/magasins.jsp").forward(request, response);
     }
 }

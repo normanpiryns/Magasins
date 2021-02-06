@@ -9,7 +9,7 @@ import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.sql.SQLException;
 
-@WebServlet(name = "ServletProd", urlPatterns = {"/produit"})
+@WebServlet(name = "ServletProd", urlPatterns = {"/prod"})
 public class ServletProd extends HttpServlet {
 
     // -------------------------------------------- attributes -------------------------------------------
@@ -27,37 +27,15 @@ public class ServletProd extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("views/prodAdd.jsp").forward(request, response);
-    }
+        Integer id = Integer.parseInt(request.getParameter("id"));
 
-    // ---------------------------------------- doPost ----------------------------------------------------
-
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-
-
-        request.setCharacterEncoding("UTF-8");
-        String magasin = request.getParameter("");
-        String nom = request.getParameter("mag");
-        String categorie = request.getParameter("");
-        String mesure = request.getParameter("");
-        try {
-            produitDAO.Ajouter(new Produit(magasin, nom, categorie, mesure));
-        } catch (SQLException e) {
-            e.printStackTrace();
+        //redirection
+        try{
+            request.setAttribute("produits",produitDAO.ListeProduitsByMagId(id));
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
         }
 
-        // -------------------------redirection ----------------------------
-
-        try {
-            request.setAttribute("mag", produitDAO.ListeProduit());
-            request.getRequestDispatcher("views/produit.jsp").forward(request,response);
-
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        request.getRequestDispatcher("views/produit.jsp").forward(request, response);
+        request.getRequestDispatcher("views/liste.jsp").forward(request, response);
     }
-
 }

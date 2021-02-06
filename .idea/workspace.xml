@@ -27,14 +27,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a5c1f534-93cc-4193-b070-c0f3e943f591" name="Default Changelist" comment="rajout du mapping pour les servlet (css plus appeler via un servlet)">
+    <list default="true" id="a5c1f534-93cc-4193-b070-c0f3e943f591" name="Default Changelist" comment="modification du mesuregetbyid&#10;ajout de la quantite dans l'objet produit&#10;modifications des servlets de Produit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifosup/servlet/produit/ServletProdSup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifosup/servlet/produit/ServletProdSup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/template/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/template/footer.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/template/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/template/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/vues/accueil.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/vues/accueil.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/vues/ajoutProduit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/vues/ajoutProduit.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/vues/liste.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/vues/liste.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifosup/categorie/CategorieDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifosup/categorie/CategorieDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifosup/magasin/MagasinDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifosup/magasin/MagasinDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifosup/magasin/MagasinDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifosup/magasin/MagasinDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifosup/mesure/MesureDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifosup/mesure/MesureDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifosup/produit/Produit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifosup/produit/Produit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifosup/produit/ProduitDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifosup/produit/ProduitDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifosup/servlet/produit/ServletProdMod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifosup/servlet/produit/ServletProdMod.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +53,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Pull.Settings">
+    <option name="BRANCH" value="main" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -97,7 +101,7 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="Tomcat 7.0.92" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.92" ALTERNATIVE_JRE_ENABLED="false">
+    <configuration name="Tomcat 7.0.92" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.40" ALTERNATIVE_JRE_ENABLED="false">
       <deployment>
         <artifact name="Magasins:war exploded">
           <settings>
@@ -199,7 +203,7 @@
       <workItem from="1611387480977" duration="678000" />
       <workItem from="1611821872204" duration="3068000" />
       <workItem from="1611991978486" duration="17692000" />
-      <workItem from="1612597085118" duration="3961000" />
+      <workItem from="1612597085118" duration="12882000" />
     </task>
     <task id="LOCAL-00001" summary="Gestion Magasin">
       <created>1610781737470</created>
@@ -341,7 +345,21 @@
       <option name="project" value="LOCAL" />
       <updated>1612601023570</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="rajout du mapping pour les servlet (css plus appeler via un servlet)">
+      <created>1612601090328</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1612601090328</updated>
+    </task>
+    <task id="LOCAL-00022" summary="modification du mesuregetbyid&#10;ajout de la quantite dans l'objet produit&#10;modifications des servlets de Produit">
+      <created>1612609009956</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1612609009956</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -411,6 +429,106 @@
     <MESSAGE value="ajout de la modification et de l'ajout de mesure" />
     <MESSAGE value="modification de la modification de mesures, modifie reelement les mesures" />
     <MESSAGE value="rajout du mapping pour les servlet (css plus appeler via un servlet)" />
-    <option name="LAST_COMMIT_MESSAGE" value="rajout du mapping pour les servlet (css plus appeler via un servlet)" />
+    <MESSAGE value="modification du mesuregetbyid&#10;ajout de la quantite dans l'objet produit&#10;modifications des servlets de Produit" />
+    <option name="LAST_COMMIT_MESSAGE" value="modification du mesuregetbyid&#10;ajout de la quantite dans l'objet produit&#10;modifications des servlets de Produit" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="0" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1612598961772">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="0" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1612598961772" />
+    <state x="1920" y="147" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1440.860@1920.0.1440.860" timestamp="1611997640692" />
+    <state x="765" y="204" key="#com.intellij.ide.util.MemberChooser" timestamp="1612605905156">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="204" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1612605905156" />
+    <state x="2196" y="131" width="1094" height="722" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable" timestamp="1611997551416">
+      <screen x="1920" y="0" width="1440" height="860" />
+    </state>
+    <state x="2196" y="131" width="1094" height="722" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable/0.0.1920.1040/1920.0.1440.860@1920.0.1440.860" timestamp="1611997551416" />
+    <state x="1966" y="162" key="FileChooserDialogImpl" timestamp="1611997543085">
+      <screen x="1920" y="0" width="1440" height="860" />
+    </state>
+    <state x="1966" y="162" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1440.860@1920.0.1440.860" timestamp="1611997543085" />
+    <state width="1293" height="246" key="GridCell.Tab.0.bottom" timestamp="1612609037519">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1293" height="246" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1612609037519" />
+    <state width="957" height="280" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1440.860@1920.0.1440.860" timestamp="1611996948371" />
+    <state width="1293" height="246" key="GridCell.Tab.0.center" timestamp="1612609037519">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1293" height="246" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1612609037519" />
+    <state width="957" height="280" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1440.860@1920.0.1440.860" timestamp="1611996948370" />
+    <state width="1293" height="246" key="GridCell.Tab.0.left" timestamp="1612609037519">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1293" height="246" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1612609037519" />
+    <state width="957" height="280" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1440.860@1920.0.1440.860" timestamp="1611996948370" />
+    <state width="1293" height="246" key="GridCell.Tab.0.right" timestamp="1612609037519">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1293" height="246" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1612609037519" />
+    <state width="957" height="280" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1440.860@1920.0.1440.860" timestamp="1611996948370" />
+    <state width="1293" height="246" key="GridCell.Tab.1.bottom" timestamp="1612609037519">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1293" height="246" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1612609037519" />
+    <state width="957" height="280" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1440.860@1920.0.1440.860" timestamp="1611996948267" />
+    <state width="1293" height="246" key="GridCell.Tab.1.center" timestamp="1612609037519">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1293" height="246" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1612609037519" />
+    <state width="957" height="280" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1440.860@1920.0.1440.860" timestamp="1611996948267" />
+    <state width="1293" height="246" key="GridCell.Tab.1.left" timestamp="1612609037519">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1293" height="246" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1612609037519" />
+    <state width="957" height="280" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1440.860@1920.0.1440.860" timestamp="1611996948267" />
+    <state width="1293" height="246" key="GridCell.Tab.1.right" timestamp="1612609037519">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1293" height="246" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1612609037519" />
+    <state width="957" height="280" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1440.860@1920.0.1440.860" timestamp="1611996948267" />
+    <state width="1293" height="246" key="GridCell.Tab.2.bottom" timestamp="1612609037520">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1293" height="246" key="GridCell.Tab.2.bottom/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1612609037520" />
+    <state width="957" height="280" key="GridCell.Tab.2.bottom/0.0.1920.1040/1920.0.1440.860@1920.0.1440.860" timestamp="1611996948267" />
+    <state width="1293" height="246" key="GridCell.Tab.2.center" timestamp="1612609037520">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1293" height="246" key="GridCell.Tab.2.center/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1612609037520" />
+    <state width="957" height="280" key="GridCell.Tab.2.center/0.0.1920.1040/1920.0.1440.860@1920.0.1440.860" timestamp="1611996948267" />
+    <state width="1293" height="246" key="GridCell.Tab.2.left" timestamp="1612609037519">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1293" height="246" key="GridCell.Tab.2.left/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1612609037519" />
+    <state width="957" height="280" key="GridCell.Tab.2.left/0.0.1920.1040/1920.0.1440.860@1920.0.1440.860" timestamp="1611996948267" />
+    <state width="1293" height="246" key="GridCell.Tab.2.right" timestamp="1612609037520">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1293" height="246" key="GridCell.Tab.2.right/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1612609037520" />
+    <state width="957" height="280" key="GridCell.Tab.2.right/0.0.1920.1040/1920.0.1440.860@1920.0.1440.860" timestamp="1611996948267" />
+    <state x="210" y="135" key="MergeDialog" timestamp="1612598012709">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="210" y="135" key="MergeDialog/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1612598012709" />
+    <state x="598" y="281" key="MultipleFileMergeDialog" timestamp="1612609027820">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="598" y="281" key="MultipleFileMergeDialog/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1612609027820" />
+    <state x="706" y="222" key="RollbackChangesDialog" timestamp="1612601082590">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="706" y="222" key="RollbackChangesDialog/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1612601082590" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1612601101837">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1612601101837" />
+    <state x="581" y="-15" width="654" height="713" maximized="true" key="dock-window-1" timestamp="1611999146243">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="581" y="-15" width="654" height="713" maximized="true" key="dock-window-1/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1611999146243" />
   </component>
 </project>

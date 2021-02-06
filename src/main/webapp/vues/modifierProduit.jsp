@@ -4,22 +4,31 @@
 
 <h1>Modifier produit</h1>
 
-<form action="" method="post">
-    <input type="text"  name="produit" placeholder="produit">
 
-    <input list="categorie" id="categorie_choice" name="categorie_choice" />
-    <datalist id = "categorie">
-        <option value="pomme" selected></option>
-    </datalist>
+<form action="" method="post">
+
+
+    <input type="text"  name="produit" placeholder=${produit.getNom()}>
+
+
+
+    <select name="categorie">
+        <c:forEach items="${categories}" var="categorie">
+           <option> ${categorie.getNom()}</option>
+        </c:forEach>
+    </select>
 
     <br>
 
-    <input type="nombre"  name="mesure" placeholder="mesure">
+    <select name="mesure">
+        <c:forEach items="${mesures}" var="mesure">
+            <option> ${mesure.getNom()}</option>
+        </c:forEach>
+    </select>
 
-    <input list="mesure" id="mesure_choice" name="mesure_choice" />
-    <datalist id = "mesure">
-        <option value = "kg" selected></option>
-    </datalist>
+    <input type="number" name="quantite" placeholder="${produit.getQuantite()}" >
+
+    <input type="hidden"  name="id" value="${produit.getId()}"  />
 
     <br>
     <button type="submit">submit</button>

@@ -12,8 +12,8 @@
 
 <form action="catmod" method="post">
     <input type="text"  name="categorie" placeholder="${categorie.getNom()}"  />
-    <input type="hidden"  name="id" value="${categorie.getId()}" />
-
+    <input type="hidden"  name="id" value="${categorie.getId()}"  />
+    <!-- Je ne suis pas sûr que ça se fait de cette manière - Norman -->
 
     <br>
     <button type="submit">submit</button>
