@@ -14,5 +14,5 @@ public interface ProduitDAO {
 
     void Modifier (Produit produit) throws SQLException;
 
-
+    List<Produit> ListeProduitsByMagId(int fk_mag) throws SQLException;
 }

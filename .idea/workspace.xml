@@ -29,13 +29,11 @@
   <component name="ChangeListManager">
     <list default="true" id="a5c1f534-93cc-4193-b070-c0f3e943f591" name="Default Changelist" comment="maj mesuredaoimplement(liste)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifosup/mesure/Mesure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifosup/mesure/Mesure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifosup/mesure/MesureDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifosup/mesure/MesureDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifosup/produit/Produit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifosup/produit/Produit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifosup/produit/ProduitDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifosup/produit/ProduitDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/be/ifosup/produit/ProduitDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifosup/produit/ProduitDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifosup/servlet/ServletMes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifosup/servlet/ServletMes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifosup/servlet/ServletMesMod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifosup/servlet/ServletMesMod.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/vues/mesures.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/vues/mesures.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/vues/modifierMesure.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/vues/modifierMesure.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifosup/servlet/ServletListe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifosup/servlet/ServletListe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/vues/ajoutProduit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/vues/ajoutProduit.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,9 +51,6 @@
         <option value="Class" />
       </list>
     </option>
-  </component>
-  <component name="Git.Pull.Settings">
-    <option name="BRANCH" value="main" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -88,7 +83,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15429688" />
     <property name="project.structure.side.proportion" value="0.30512822" />
   </component>
@@ -101,18 +96,7 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Tomcat 7.0.92" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.40" ALTERNATIVE_JRE_ENABLED="false">
+    <configuration name="Tomcat 7.0.92" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.92" ALTERNATIVE_JRE_ENABLED="false">
       <deployment>
         <artifact name="Magasins:war exploded">
           <settings>
@@ -214,6 +198,8 @@
       <workItem from="1611387480977" duration="678000" />
       <workItem from="1611821872204" duration="3068000" />
       <workItem from="1611991978486" duration="13523000" />
+      <workItem from="1612566618067" duration="368000" />
+      <workItem from="1612567180447" duration="3722000" />
     </task>
     <task id="LOCAL-00001" summary="Gestion Magasin">
       <created>1610781737470</created>
@@ -394,96 +380,5 @@
     <MESSAGE value="modification/correction de l'objet &amp; servlet magasin,et mesure &#10;suppression de la methode non-implementée dans ProduitDaoImpl" />
     <MESSAGE value="maj mesuredaoimplement(liste)" />
     <option name="LAST_COMMIT_MESSAGE" value="maj mesuredaoimplement(liste)" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="1920" y="147" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1611997640692">
-      <screen x="1920" y="0" width="1440" height="860" />
-    </state>
-    <state x="0" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1611993391556" />
-    <state x="1920" y="147" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1440.860@1920.0.1440.860" timestamp="1611997640692" />
-    <state x="2196" y="131" width="1094" height="722" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable" timestamp="1611997551416">
-      <screen x="1920" y="0" width="1440" height="860" />
-    </state>
-    <state x="2196" y="131" width="1094" height="722" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable/0.0.1920.1040/1920.0.1440.860@1920.0.1440.860" timestamp="1611997551416" />
-    <state x="1966" y="162" key="FileChooserDialogImpl" timestamp="1611997543085">
-      <screen x="1920" y="0" width="1440" height="860" />
-    </state>
-    <state x="1966" y="162" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1440.860@1920.0.1440.860" timestamp="1611997543085" />
-    <state width="1293" height="244" key="GridCell.Tab.0.bottom" timestamp="1612004935992">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1293" height="244" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1612004935992" />
-    <state width="957" height="280" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1440.860@1920.0.1440.860" timestamp="1611996948371" />
-    <state width="1293" height="244" key="GridCell.Tab.0.center" timestamp="1612004935992">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1293" height="244" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1612004935992" />
-    <state width="957" height="280" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1440.860@1920.0.1440.860" timestamp="1611996948370" />
-    <state width="1293" height="244" key="GridCell.Tab.0.left" timestamp="1612004935992">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1293" height="244" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1612004935992" />
-    <state width="957" height="280" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1440.860@1920.0.1440.860" timestamp="1611996948370" />
-    <state width="1293" height="244" key="GridCell.Tab.0.right" timestamp="1612004935992">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1293" height="244" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1612004935992" />
-    <state width="957" height="280" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1440.860@1920.0.1440.860" timestamp="1611996948370" />
-    <state width="1293" height="244" key="GridCell.Tab.1.bottom" timestamp="1612004935864">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1293" height="244" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1612004935864" />
-    <state width="957" height="280" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1440.860@1920.0.1440.860" timestamp="1611996948267" />
-    <state width="1293" height="244" key="GridCell.Tab.1.center" timestamp="1612004935864">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1293" height="244" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1612004935864" />
-    <state width="957" height="280" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1440.860@1920.0.1440.860" timestamp="1611996948267" />
-    <state width="1293" height="244" key="GridCell.Tab.1.left" timestamp="1612004935864">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1293" height="244" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1612004935864" />
-    <state width="957" height="280" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1440.860@1920.0.1440.860" timestamp="1611996948267" />
-    <state width="1293" height="244" key="GridCell.Tab.1.right" timestamp="1612004935864">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1293" height="244" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1612004935864" />
-    <state width="957" height="280" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1440.860@1920.0.1440.860" timestamp="1611996948267" />
-    <state width="1293" height="244" key="GridCell.Tab.2.bottom" timestamp="1612004935865">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1293" height="244" key="GridCell.Tab.2.bottom/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1612004935865" />
-    <state width="957" height="280" key="GridCell.Tab.2.bottom/0.0.1920.1040/1920.0.1440.860@1920.0.1440.860" timestamp="1611996948267" />
-    <state width="1293" height="244" key="GridCell.Tab.2.center" timestamp="1612004935865">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1293" height="244" key="GridCell.Tab.2.center/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1612004935865" />
-    <state width="957" height="280" key="GridCell.Tab.2.center/0.0.1920.1040/1920.0.1440.860@1920.0.1440.860" timestamp="1611996948267" />
-    <state width="1293" height="244" key="GridCell.Tab.2.left" timestamp="1612004935864">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1293" height="244" key="GridCell.Tab.2.left/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1612004935864" />
-    <state width="957" height="280" key="GridCell.Tab.2.left/0.0.1920.1040/1920.0.1440.860@1920.0.1440.860" timestamp="1611996948267" />
-    <state width="1293" height="244" key="GridCell.Tab.2.right" timestamp="1612004935865">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1293" height="244" key="GridCell.Tab.2.right/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1612004935865" />
-    <state width="957" height="280" key="GridCell.Tab.2.right/0.0.1920.1040/1920.0.1440.860@1920.0.1440.860" timestamp="1611996948267" />
-    <state x="184" y="86" key="MergeDialog" timestamp="1611996433135">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="184" y="86" key="MergeDialog/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1611996433135" />
-    <state x="598" y="281" key="MultipleFileMergeDialog" timestamp="1611996441455">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="598" y="281" key="MultipleFileMergeDialog/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1611996441455" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1611999078551">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1611999078551" />
-    <state x="581" y="-15" width="654" height="713" maximized="true" key="dock-window-1" timestamp="1611999146243">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="581" y="-15" width="654" height="713" maximized="true" key="dock-window-1/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1611999146243" />
   </component>
 </project>
