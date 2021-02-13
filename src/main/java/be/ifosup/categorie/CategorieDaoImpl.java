@@ -39,11 +39,9 @@ public class CategorieDaoImpl implements CategorieDAO {
     public void ajouter(Categorie categorie) throws SQLException {
         connection = daoFactory.getConnection();
 
-        preparedStatement = connection.prepareStatement("INSERT INTO categories (id_categorie,nom_categorie) VALUES (?,?)");
+        preparedStatement = connection.prepareStatement("INSERT INTO categories (nom_categorie) VALUES (?)");
 
-
-        preparedStatement.setInt(1,categorie.getId());
-        preparedStatement.setString(2,categorie.getNom());
+        preparedStatement.setString(1,categorie.getNom());
 
         preparedStatement.executeUpdate();
     }

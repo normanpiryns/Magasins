@@ -12,7 +12,7 @@
 
     <select name="categorie">
         <c:forEach items="${categories}" var="categorie">
-            <option value="${categorie.id}">${categorie.nom}</option>
+            <option value="${categorie.getId()}">${categorie.getNom()}</option>
         </c:forEach>
 
     </select>
@@ -22,7 +22,7 @@
 
     <select name="mesure">
         <c:forEach items="${mesures}" var="mesure">
-            <option value="${mesure.id}">${mesure.nom}</option>
+            <option value="${mesure.getId()}">${mesure.getNom()}</option>
         </c:forEach>
 
     </select>
