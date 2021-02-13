@@ -29,7 +29,7 @@
     <input type="number" name="quantite" placeholder="${produit.getQuantite()}" >
 
     <input type="hidden"  name="id" value="${produit.getId()}"  />
-    <input type="hidden"  name="id" value="${produit.getMagasin()}"  />
+    <input type="hidden"  name="magasin" value="${produit.getMagasin()}"  />
 
     <br>
     <button type="submit">submit</button>
