@@ -128,7 +128,8 @@ public class ProduitDaoImpl implements ProduitDAO{
             Categorie cat = categorieDAO.getCategorieById(fk_categorie);
             Magasin mag = magasinDAO.getMagasinById(fk_mag);
 
-            produits.add(new Produit(id, mag.getNom(),nom,cat.getNom(),mes.getNom(),quantite));
+            produits.add(new Produit(id, mag.getNom(), nom,cat.getNom(),mes.getNom(),quantite));
+
         }
         return produits;
     }
