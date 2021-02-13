@@ -28,15 +28,16 @@ public class ServletProd extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Integer id = Integer.parseInt(request.getParameter("id"));
+        request.setAttribute("fk_magasin",request.getParameter("id"));
 
         //redirection
         try{
             request.setAttribute("produits",produitDAO.ListeProduitsByMagId(id));
-            request.setAttribute("id_magasin", id);
+
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
 
-        request.getRequestDispatcher("views/liste.jsp").forward(request, response);
+        request.getRequestDispatcher("vues/liste.jsp").forward(request, response);
     }
 }
