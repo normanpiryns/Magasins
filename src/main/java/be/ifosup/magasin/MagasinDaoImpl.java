@@ -89,6 +89,8 @@ public class MagasinDaoImpl implements MagasinDAO{
 
         return mag;
     }
+
+    @Override
     public Magasin getMagasinByName(String nom) throws SQLException {
 
 

@@ -2,7 +2,13 @@ package be.ifosup.servlet.produit;
 
 // ----------------------------------------- imports ------------------------------------------------------------------
 
+import be.ifosup.categorie.Categorie;
+import be.ifosup.categorie.CategorieDAO;
 import be.ifosup.dao.DAOFactory;
+import be.ifosup.magasin.Magasin;
+import be.ifosup.magasin.MagasinDAO;
+import be.ifosup.mesure.Mesure;
+import be.ifosup.mesure.MesureDAO;
 import be.ifosup.produit.Produit;
 import be.ifosup.produit.ProduitDAO;
 import javax.servlet.*;
@@ -18,6 +24,9 @@ public class ServletProdAdd extends HttpServlet {
     // ------------------------------------------- Attributes ---------------------------------------------------------
 
     private ProduitDAO produitDAO;
+    private MesureDAO mesureDAO;
+    private MagasinDAO magasinDAO;
+    private CategorieDAO categorieDAO;
 
 
     // -------------------------------------------- init method --------------------------------------------------------
@@ -25,49 +34,45 @@ public class ServletProdAdd extends HttpServlet {
     public void init() {
         DAOFactory daoFactory = DAOFactory.getInstance();
         this.produitDAO = daoFactory.getProduitDAO();
-    }
-
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("views/ajoutProduit.jsp").forward(request, response);
+        this.categorieDAO = daoFactory.getCategorieDao();
+        this.magasinDAO = daoFactory.getMagasinDAO();
+        this.mesureDAO = daoFactory.getMesureDAO();
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        Integer idMag = Integer.parseInt(request.getParameter("idMag"));
+        Integer fk_cat = Integer.parseInt(request.getParameter("cat"));
+        Integer fk_mesure = Integer.parseInt(request.getParameter("mesure"));
+        Double quantite= Double.parseDouble(request.getParameter("quantite"));
+        String nom = request.getParameter("nom");
 
-
-
-
-        // ---------------------- UTF-8 forcing ----------------------------
-
-        request.setCharacterEncoding("UTF-8");
-
-        // ----------------------- getParameters ---------------------------
-        String categorie = request.getParameter("categorie_choice");
-        String nom = request.getParameter("nom du produit");
-        String mesure = request.getParameter("mesure_choice");
-        String magasin = request.getParameter("magasin_choice");
-
-
+        try {
+            Categorie categorie =categorieDAO.getCategorieById(fk_cat);
+            Mesure mesure =mesureDAO.getMesurebyID(fk_mesure);
+            Magasin magasin = magasinDAO.getMagasinById(idMag);
         // ------------------------add to the db ---------------------------
 
-        try {
-            produitDAO.Ajouter( new Produit(magasin, nom,categorie,mesure) );
-
-
-
+            produitDAO.Ajouter(new Produit(magasin.getNom(), nom, categorie.getNom(), mesure.getNom() ,quantite));
         } catch (SQLException e) {
             e.printStackTrace();
         }
 
-
+        //get de la liste
         try {
-            request.setAttribute("mag", produitDAO.ListeProduit());
-        } catch (SQLException e) {
-            e.printStackTrace();
+            request.setAttribute("produits", produitDAO.ListeProduitsByMagId(idMag));
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
         }
         // ---------------------- redirection -----------------------------------------
+        request.getRequestDispatcher("views/liste.jsp").forward(request, response);
+    }
 
-        request.getRequestDispatcher("views/prodAdd.jsp").forward(request, response);
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        Integer idMag = Integer.parseInt(request.getParameter("idMag"));
+
+        request.setAttribute("id_magasin",idMag);
+
+        request.getRequestDispatcher("vues/ajoutProduit.jsp").forward(request,response);
     }
 }

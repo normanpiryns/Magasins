@@ -13,4 +13,6 @@ public interface CategorieDAO {
     List<Categorie> liste() throws SQLException;
 
     public Categorie getCategorieById(int id) throws SQLException;
+
+    public Categorie getCategorieByName(String name) throws SQLException;
 }

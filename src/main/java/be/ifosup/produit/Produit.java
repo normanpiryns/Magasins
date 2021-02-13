@@ -9,20 +9,24 @@ public class Produit {
     private String mesure;
     private String magasin;
 
-    public Produit(String magasin, String nom, String categorie,String mesure){
+    private Double quantite;
+
+    public Produit(String magasin, String nom, String categorie, String mesure, Double quantite){
         this.nom = nom;
         this.categorie=categorie;
         this.mesure=mesure;
         this.magasin=magasin;
+        this.quantite = quantite;
     }
 
 
-    public Produit(int id, String nom,String categorie,String mesure,String magasin) {
+    public Produit(int id,String magasin, String nom, String categorie, String mesure, Double quantite) {
         this.id = id;
+        this.magasin=magasin;
         this.nom = nom;
         this.categorie = categorie;
         this.mesure = mesure;
-        this.magasin=magasin;
+        this.quantite = quantite;
     }
 
     public Produit(String nom) {
@@ -66,4 +70,8 @@ public class Produit {
     public void setMagasin(String magasin) {
         this.magasin = magasin;
     }
+
+    public Double getQuantite() { return quantite; }
+
+    public void setQuantite(Double quantite) { this.quantite = quantite; }
 }

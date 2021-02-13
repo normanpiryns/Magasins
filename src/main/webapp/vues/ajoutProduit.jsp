@@ -7,26 +7,27 @@
 
 <form action="prodadd" method="post">
 
-    <input list="produit" id="produit_choice" name="produit_choice" placeholder="produit" />
-    <datalist id = "produit">
-        <option value="pomme" selected></option>
-    </datalist>
+    <input type="text" name="nom_produit" placeholder="produit" />
 
-    <input list="categorie" id="categorie_choice" name="categorie_choice" placeholder="catégorie" />
-    <datalist id = "categorie">
-        <option value="fruit" selected></option>
-    </datalist>
 
+    <select name="categorie">
+        <c:forEach items="${categories}" var="categorie">
+            <option value="${categorie.id}">${categorie.nom}</option>
+        </c:forEach>
+
+    </select>
     <br>
 
-    <input type="number"  name="mesure" placeholder="mesure">
+    <input type="number"  name="quantite" placeholder="quantite">
 
-    <input list="mesure_type" id="mesure_choice" name="mesure_choice" placeholder="mesure"/>
-    <datalist id = "mesure_type">
-        <option value = "kg" selected ></option>
-    </datalist>
+    <select name="mesure">
+        <c:forEach items="${mesures}" var="mesure">
+            <option value="${mesure.id}">${mesure.nom}</option>
+        </c:forEach>
 
-    <input type="hidden"  name="magasin"  value="">
+    </select>
+
+    <input type="hidden"  name="id_magasin"  value="${id_magasin}"> <!-- overwrite? -->
 
     <br>
     <button type="submit">submit</button>
