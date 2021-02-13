@@ -31,14 +31,13 @@ public class ServletProdSup extends HttpServlet {
         // -------------------------------- getParameter ---------------------
 
         int id = Integer.parseInt(request.getParameter("id"));
+        Integer fk_magasin = Integer.parseInt(request.getParameter("fk_magasin"));
+        request.setAttribute("fk_magasin",fk_magasin);
+
 
         try {
-            Produit p = produitDAO.GetProduitByID(id);
-            Magasin mag = magasinDAO.getMagasinByName(p.getMagasin());
             produitDAO.Supprimer(id);
-            List<Produit> produits = produitDAO.ListeProduitsByMagId(mag.getID());
-            request.setAttribute("produits",produits);
-
+            request.setAttribute("produits",produitDAO.ListeProduitsByMagId(fk_magasin));
         } catch (SQLException e) {
             e.printStackTrace();
         }
