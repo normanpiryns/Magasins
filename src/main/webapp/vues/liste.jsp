@@ -11,7 +11,7 @@
 
 
 <!-- Nom du magasin -->
-<h2>Lorem Ipsum</h2>
+<h2>${magasin.nom}</h2>
 
 
 <body>

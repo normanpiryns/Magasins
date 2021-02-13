@@ -14,6 +14,7 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.List;
 
 @WebServlet(name = "ServletProdMod", value = "/prodmod")
 public class ServletProdMod extends HttpServlet {
@@ -40,13 +41,18 @@ public class ServletProdMod extends HttpServlet {
             Produit p = produitDAO.GetProduitByID(id);
             Categorie categorie = categorieDAO.getCategorieByName(p.getCategorie());
             Mesure mesure = mesureDAO.getMesureByName(p.getMesure());
+            List<Categorie> catList = categorieDAO.liste();
+            List<Mesure> mesList = mesureDAO.ListeMesure();
 
             Integer fk_cat = categorie.getId();
             Integer fk_mesure =  mesure.getId();
 
-            request.setAttribute("name", p.getNom());
-            request.setAttribute("categorie", fk_cat);
-            request.setAttribute("mesure", fk_mesure);
+            request.setAttribute("produit" , p);
+            request.setAttribute("listCategorie" , catList);
+            request.setAttribute("mesureList", mesList);
+
+            request.setAttribute("fkCategorie", fk_cat);
+            request.setAttribute("fkMesure", fk_mesure);
 
         } catch (SQLException throwables) {
             throwables.printStackTrace();
@@ -59,17 +65,16 @@ public class ServletProdMod extends HttpServlet {
         Integer id = Integer.parseInt(request.getParameter("id"));
         Integer fk_cat = Integer.parseInt(request.getParameter("categorie"));
         Integer fk_mesure = Integer.parseInt(request.getParameter("mesure"));
-        Integer fk_magasin = Integer.parseInt(request.getParameter("magasin"));
         Double quantite= Double.parseDouble(request.getParameter("quantite"));
-        String nom = request.getParameter("produit");
+        String nom = request.getParameter("nom");
+        String nomMagasin = request.getParameter("magasin");
 
         try {
             Categorie categorie = categorieDAO.getCategorieById(fk_cat);
             Mesure mesure = mesureDAO.getMesurebyID(fk_mesure);
-            Magasin magasin = magasinDAO.getMagasinById(fk_magasin);
             // ------------------------add to the db ---------------------------
 
-            produitDAO.Modifier(new Produit(id,magasin.getNom(), nom, categorie.getNom(), mesure.getNom() ,quantite));
+            produitDAO.Modifier(new Produit(id,nomMagasin, nom, categorie.getNom(), mesure.getNom() ,quantite));
         } catch (SQLException e) {
             e.printStackTrace();
         }
