@@ -123,8 +123,8 @@ public class ProduitDaoImpl implements ProduitDAO{
         resultat = preparedStatement.executeQuery();
 
         while(resultat.next()){
-            int id = resultat.getInt("id_categorie");
-            String nom = resultat.getString("nom_categorie");
+            int id = resultat.getInt("id_produit");
+            String nom = resultat.getString("nom_produit");
             int fk_categorie = resultat.getInt("fk_categorie");
             int fk_mesure = resultat.getInt("fk_mesure");
             double quantite = resultat.getDouble("quantite");
@@ -132,7 +132,8 @@ public class ProduitDaoImpl implements ProduitDAO{
             Categorie cat = categorieDAO.getCategorieById(fk_categorie);
             Magasin mag = magasinDAO.getMagasinById(fk_mag);
 
-            produits.add(new Produit(id, mag.getNom(), nom,mes.getNom(),cat.getNom(),quantite));
+            produits.add(new Produit(id, mag.getNom(), nom,cat.getNom(),mes.getNom(),quantite));
+
         }
         return produits;
     }
