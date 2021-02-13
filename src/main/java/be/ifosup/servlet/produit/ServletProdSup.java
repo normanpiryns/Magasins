@@ -44,7 +44,7 @@ public class ServletProdSup extends HttpServlet {
         }
         // -------------------------------- redirection -----------------------
 
-        request.getRequestDispatcher("views/liste.jsp").forward(request, response);
+        request.getRequestDispatcher("vues/liste.jsp").forward(request, response);
     }
 
     @Override
