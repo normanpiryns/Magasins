@@ -7,7 +7,6 @@ public class Produit {
     private String categorie;
     private String mesure;
     private String magasin;
-
     private Double quantite;
 
     public Produit(String magasin, String nom, String categorie, String mesure, Double quantite){
