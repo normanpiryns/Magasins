@@ -10,8 +10,8 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 
-@WebServlet(name = "ServletListe", urlPatterns = {"/liste"})
-public class ServletListe extends HttpServlet {
+@WebServlet(name = "ServletListe", urlPatterns = {"/delliste"})
+public class ServletDelListe extends HttpServlet {
 
     /*
     private MesureDAO mesureDAO;

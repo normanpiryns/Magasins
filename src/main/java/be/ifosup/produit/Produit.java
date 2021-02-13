@@ -1,6 +1,5 @@
 package be.ifosup.produit;
 
-import be.ifosup.categorie.Categorie;
 
 public class Produit {
     private int id;

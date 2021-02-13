@@ -1,6 +1,7 @@
 package be.ifosup.servlet.produit;
 
 import be.ifosup.dao.DAOFactory;
+import be.ifosup.magasin.MagasinDAO;
 import be.ifosup.produit.Produit;
 import be.ifosup.produit.ProduitDAO;
 import javax.servlet.*;
@@ -15,12 +16,14 @@ public class ServletProd extends HttpServlet {
     // -------------------------------------------- attributes -------------------------------------------
 
     private ProduitDAO produitDAO;
+    private MagasinDAO magasinDAO;
 
     // -------------------------------------------- init method --------------------------------------------------------
 
     public void init() {
         DAOFactory daoFactory = DAOFactory.getInstance();
         this.produitDAO = daoFactory.getProduitDAO();
+        this.magasinDAO = daoFactory.getMagasinDAO();
     }
 
     // ---------------------------------------- doGet ----------------------------------------------------
@@ -31,11 +34,14 @@ public class ServletProd extends HttpServlet {
 
         //redirection
         try{
+
             request.setAttribute("produits",produitDAO.ListeProduitsByMagId(id));
+            request.setAttribute("mag_name",magasinDAO.getMagasinById(id).getNom());
+
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
 
-        request.getRequestDispatcher("views/liste.jsp").forward(request, response);
+        request.getRequestDispatcher("vues/liste.jsp").forward(request, response);
     }
 }
