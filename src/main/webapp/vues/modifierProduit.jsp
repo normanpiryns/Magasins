@@ -5,7 +5,7 @@
 <h1>Modifier produit</h1>
 
 
-<form action="" method="post">
+<form action="prodmod" method="post">
 
 
     <input type="text"  name="produit" placeholder=${produit.getNom()}>
