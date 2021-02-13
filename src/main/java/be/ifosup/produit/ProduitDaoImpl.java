@@ -99,12 +99,16 @@ public class ProduitDaoImpl implements ProduitDAO{
     public void Modifier(Produit produit) throws SQLException {
         connection = daoFactory.getConnection();
 
-        preparedStatement = connection.prepareStatement("UPDATE produits SET nom_produit = ?, fk_categorie = ?  , fk_mesure = ? WHERE id_produit = ?; ");
+        preparedStatement = connection.prepareStatement("UPDATE produits SET nom_produit = ?, fk_categorie = ?  , fk_mesure = ? , quantite = ? WHERE id_produit = ?; ");
 
-        preparedStatement.setInt(1,produit.getId());
-        preparedStatement.setString(2,produit.getNom());
-        preparedStatement.setString(3,produit.getCategorie());
-        preparedStatement.setString(4,produit.getMesure());
+        Categorie cat = categorieDAO.getCategorieByName(produit.getCategorie());
+        Mesure mes = mesureDAO.getMesureByName(produit.getMesure());
+
+        preparedStatement.setString(1,produit.getNom());
+        preparedStatement.setInt(2,cat.getId());
+        preparedStatement.setInt(3,mes.getId());
+        preparedStatement.setDouble(4,produit.getQuantite());
+        preparedStatement.setInt(5,produit.getId());
 
         preparedStatement.executeUpdate();
     }

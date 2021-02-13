@@ -4,6 +4,8 @@ import be.ifosup.dao.DAOFactory;
 import be.ifosup.magasin.MagasinDAO;
 import be.ifosup.produit.Produit;
 import be.ifosup.produit.ProduitDAO;
+
+import javax.security.auth.login.CredentialException;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
@@ -37,6 +39,7 @@ public class ServletProd extends HttpServlet {
 
             request.setAttribute("produits",produitDAO.ListeProduitsByMagId(fk_magasin));
             request.setAttribute("mag_name",magasinDAO.getMagasinById(fk_magasin).getNom());
+            request.setAttribute("fk_magasin",fk_magasin);
 
 
         } catch (SQLException throwables) {
