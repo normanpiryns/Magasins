@@ -8,27 +8,28 @@
 <form action="prodmod" method="post">
 
 
-    <input type="text"  name="produit" placeholder=${produit.getNom()}>
+    <input type="text"  name="nom" placeholder=${produit.getNom()}>
 
 
 
-    <select name="categorie">
-        <c:forEach items="${categories}" var="categorie">
-           <option> ${categorie.getNom()}</option>
+    <select name="categorie" >
+        <c:forEach items="${listCategorie}" var="categorie">
+           <option value="${categorie.getId()}" <c:if test = "${fkCategorie == categorie.getId()}">selected</c:if>>${categorie.getNom()}</option>
         </c:forEach>
     </select>
 
     <br>
 
     <select name="mesure">
-        <c:forEach items="${mesures}" var="mesure">
-            <option> ${mesure.getNom()}</option>
+        <c:forEach items="${mesureList}" var="mesure">
+            <option value="${mesure.getId()}" <c:if test = "${fkMesure == mesure.getId()}">selected</c:if>>${mesure.getNom()}</option>
         </c:forEach>
     </select>
 
     <input type="number" name="quantite" placeholder="${produit.getQuantite()}" >
 
     <input type="hidden"  name="id" value="${produit.getId()}"  />
+    <input type="hidden"  name="id" value="${produit.getMagasin()}"  />
 
     <br>
     <button type="submit">submit</button>

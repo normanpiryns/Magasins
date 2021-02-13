@@ -11,7 +11,7 @@
 <form action="mesmod" method="post">
     <input type="hidden" name="id" value="${mesure.getId()}">
     <input type="text"  name="mesure" value="${mesure.getNom()}">
-
+    <br>
     <button type="submit">submit</button>
 </form>
 </body>
