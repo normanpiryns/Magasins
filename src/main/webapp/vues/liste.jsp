@@ -29,7 +29,7 @@
     </ul>
 </div>
 
-<a href="prodadd?id_magasin=${id_magasin}" id="add-produit">Ajouter produit</a>
+<a href="prodadd?id_magasin=${fk_magasin}" id="add-produit">Ajouter produit</a>
 
 
 

@@ -41,11 +41,11 @@ public class ServletProdAdd extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        Integer idMag = Integer.parseInt(request.getParameter("idMag"));
-        Integer fk_cat = Integer.parseInt(request.getParameter("cat"));
+        Integer idMag = Integer.parseInt(request.getParameter("id_magasin"));
+        Integer fk_cat = Integer.parseInt(request.getParameter("categorie"));
         Integer fk_mesure = Integer.parseInt(request.getParameter("mesure"));
         Double quantite= Double.parseDouble(request.getParameter("quantite"));
-        String nom = request.getParameter("nom");
+        String nom = request.getParameter("nom_produit");
 
         try {
             Categorie categorie =categorieDAO.getCategorieById(fk_cat);
@@ -69,9 +69,15 @@ public class ServletProdAdd extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        Integer idMag = Integer.parseInt(request.getParameter("idMag"));
+        Integer idMag = Integer.parseInt(request.getParameter("id_magasin"));
 
         request.setAttribute("id_magasin",idMag);
+        try {
+            request.setAttribute("categories",categorieDAO.liste());
+            request.setAttribute("mesures",mesureDAO.ListeMesure());
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
 
         request.getRequestDispatcher("vues/ajoutProduit.jsp").forward(request,response);
     }

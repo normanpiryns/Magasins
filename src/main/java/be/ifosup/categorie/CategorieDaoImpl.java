@@ -41,7 +41,7 @@ public class CategorieDaoImpl implements CategorieDAO {
 
         preparedStatement = connection.prepareStatement("INSERT INTO categories (nom_categorie) VALUES (?)");
 
-        preparedStatement.setString(2,categorie.getNom());
+        preparedStatement.setString(1,categorie.getNom());
 
         preparedStatement.executeUpdate();
     }
