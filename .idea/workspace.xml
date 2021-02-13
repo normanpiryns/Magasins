@@ -27,8 +27,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a5c1f534-93cc-4193-b070-c0f3e943f591" name="Default Changelist" comment="ajout produit V1">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="a5c1f534-93cc-4193-b070-c0f3e943f591" name="Default Changelist" comment="liste.jsp">
       <change beforePath="$PROJECT_DIR$/src/main/webapp/vues/liste.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/vues/liste.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -491,7 +490,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613204532709</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="liste.jsp">
+      <created>1613209003248</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1613209003248</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -540,7 +546,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Gestion Magasin" />
     <MESSAGE value="Gestion Magasin modif" />
     <MESSAGE value="implémentation des méthodes crud produit" />
     <MESSAGE value="update SQL request compliant to database" />
@@ -565,6 +570,7 @@
     <MESSAGE value="magasinByName" />
     <MESSAGE value="commmit matin 13/02" />
     <MESSAGE value="ajout produit V1" />
-    <option name="LAST_COMMIT_MESSAGE" value="ajout produit V1" />
+    <MESSAGE value="liste.jsp" />
+    <option name="LAST_COMMIT_MESSAGE" value="liste.jsp" />
   </component>
 </project>
