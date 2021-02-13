@@ -18,8 +18,8 @@
 
 
 
-<a href="/delliste" id="del-liste">DEL</a>
-
+<a href="/delliste?id=${fk_magasin}" id="del-liste">DEL</a>
+<div style="clear: both"></div>
 
     <ul class="list-group">
         <c:forEach items="${produits}" var="produit">
