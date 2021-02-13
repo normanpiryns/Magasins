@@ -61,6 +61,8 @@ public class ServletProdAdd extends HttpServlet {
         //get de la liste
         try {
             request.setAttribute("produits", produitDAO.ListeProduitsByMagId(idMag));
+            request.setAttribute("mag_name",magasinDAO.getMagasinById(idMag).getNom());
+            request.setAttribute("fk_magasin",idMag);
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
