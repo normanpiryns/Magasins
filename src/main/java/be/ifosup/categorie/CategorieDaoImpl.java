@@ -101,4 +101,24 @@ public class CategorieDaoImpl implements CategorieDAO {
 
         return new Categorie(resultat.getInt("id_categorie"),nom);
     }
+
+    public boolean testCatLink(int id) throws SQLException{
+        List<Categorie> categories = new ArrayList<>();
+
+        connection = daoFactory.getConnection();
+        preparedStatement = connection.prepareStatement("select * from categories left join produits ON id_categorie = fk_categorie where id_categorie = ?");
+        preparedStatement.setInt(1,id);
+        resultat = preparedStatement.executeQuery();
+
+        while(resultat.next()){
+            String nom = resultat.getString("nom_categorie");
+
+            categories.add(new Categorie(id,nom));
+        }
+        if (categories.size()>0){
+            return false;
+        } else {
+            return true;
+        }
+    }
 }

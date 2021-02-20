@@ -15,4 +15,6 @@ public interface CategorieDAO {
     public Categorie getCategorieById(int id) throws SQLException;
 
     public Categorie getCategorieByName(String name) throws SQLException;
+
+    public boolean testCatLink(int id) throws SQLException;
 }
