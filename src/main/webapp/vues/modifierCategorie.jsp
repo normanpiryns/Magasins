@@ -9,14 +9,14 @@
 <body>
 
 <h1>Modifier catégorie</h1>
-
+<br>
 <form action="catmod" method="post">
     <input type="text"  name="categorie" value="${categorie.getNom()}"  />
     <input type="hidden"  name="id" value="${categorie.getId()}"  />
-    <!-- Je ne suis pas sûr que ça se fait de cette manière - Norman -->
 
-    <br>
-    <button type="submit">submit</button>
+
+    <br><br>
+    <button type="submit">Submit</button>
 </form>
 
 

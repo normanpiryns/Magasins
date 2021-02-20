@@ -13,6 +13,9 @@
 
 <body>
 
+<h2>Liste de magasins</h2>
+<br>
+
 <ul class="list-group">
     <c:forEach items="${magasins}" var="magasin">
 
