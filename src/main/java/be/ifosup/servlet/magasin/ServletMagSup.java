@@ -22,7 +22,6 @@ public class ServletMagSup extends HttpServlet {
         DAOFactory daoFactory = DAOFactory.getInstance();
         this.magasinDAO = daoFactory.getMagasinDAO();
         this.produitDAO = daoFactory.getProduitDAO();
-
     }
 
     @Override
@@ -35,9 +34,10 @@ public class ServletMagSup extends HttpServlet {
         try {
             List<Produit> test = produitDAO.ListeProduitsByMagId(id);
             if (test.size()>0){
-                request.setAttribute("erreur", "magasin non vide");
-            }else{
-                magasinDAO.supprimer(id);}
+                request.setAttribute("errorMsg","Le magasin doit être vide.");
+            } else {
+                magasinDAO.supprimer(id);
+            }
 
         }catch(SQLException throwables){
             throwables.printStackTrace();
