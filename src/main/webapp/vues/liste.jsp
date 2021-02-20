@@ -13,7 +13,7 @@
 
 <h2>${mag_name}</h2>
 
-
+<p id="error">${errorMsg}</p>
 <body>
 
 <ul class="list-group">
