@@ -8,9 +8,7 @@
 <form action="prodmod" method="post">
 
 
-    <input type="text"  name="nom" placeholder=${produit.getNom()}>
-
-
+    <input type="text"  name="nom" value="${produit.getNom()}">
 
     <select name="categorie" >
         <c:forEach items="${listCategorie}" var="categorie">
@@ -26,10 +24,10 @@
         </c:forEach>
     </select>
 
-    <input type="number" name="quantite" placeholder="${produit.getQuantite()}" >
+    <input type="number" name="quantite" value="${produit.getQuantite()}" >
 
     <input type="hidden"  name="id" value="${produit.getId()}"  />
-    <input type="hidden"  name="id" value="${produit.getMagasin()}"  />
+    <input type="hidden"  name="magasin" value="${produit.getMagasin()}"  />
 
     <br>
     <button type="submit">submit</button>

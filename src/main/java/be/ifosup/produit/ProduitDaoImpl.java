@@ -52,7 +52,6 @@ public class ProduitDaoImpl implements ProduitDAO{
         resultat = preparedStatement.executeQuery();
 
         resultat.next();
-
         String nom = resultat.getString("nom_produit");
         int fk_categorie = resultat.getInt("fk_categorie");//cherché les categories via l'objet java
         int fk_mesure = resultat.getInt("fk_mesure");//cherché les mesure via l'objet java
@@ -62,7 +61,7 @@ public class ProduitDaoImpl implements ProduitDAO{
         Categorie cat = categorieDAO.getCategorieById(fk_categorie);
         Magasin mag = magasinDAO.getMagasinById(fk_magasin);
 
-        return new Produit(mag.getNom(),nom,cat.getNom(),mes.getNom(),quantite);
+        return new Produit(id , mag.getNom(),nom,cat.getNom(),mes.getNom(),quantite);
     }
 
     @Override

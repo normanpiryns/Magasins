@@ -46,7 +46,7 @@ public class ServletProdMod extends HttpServlet {
 
             Integer fk_cat = categorie.getId();
             Integer fk_mesure =  mesure.getId();
-
+            //System.out.println(p.getId());
             request.setAttribute("produit" , p);
             request.setAttribute("listCategorie" , catList);
             request.setAttribute("mesureList", mesList);
@@ -68,23 +68,29 @@ public class ServletProdMod extends HttpServlet {
         Double quantite= Double.parseDouble(request.getParameter("quantite"));
         String nom = request.getParameter("nom");
         String nomMagasin = request.getParameter("magasin");
-
         try {
             Categorie categorie = categorieDAO.getCategorieById(fk_cat);
             Mesure mesure = mesureDAO.getMesurebyID(fk_mesure);
-            // ------------------------add to the db ---------------------------
+            Magasin magasin = magasinDAO.getMagasinByName(nomMagasin);
 
-            produitDAO.Modifier(new Produit(id,nomMagasin, nom, categorie.getNom(), mesure.getNom() ,quantite));
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+            Produit prodtest =new Produit(id,nomMagasin, nom, categorie.getNom(), mesure.getNom() ,quantite);
+            produitDAO.Modifier(prodtest);
+            System.out.println(prodtest.getNom() + prodtest.getCategorie() + prodtest.getMesure() + prodtest.getId());
+
+            //produitDAO.Modifier(new Produit(id,nomMagasin, nom, categorie.getNom(), mesure.getNom() , quantite));
+
+            //produitDAO.Modifier(new Produit(1,"lidle", "pomme", "fruit", "piece" , 1.0));
 
 
-        try {
-            request.setAttribute("produits", produitDAO.ListeProduit());
+
+
+            request.setAttribute("produits",produitDAO.ListeProduitsByMagId(magasin.getID()));
+            request.setAttribute("mag_name",nomMagasin);
+            request.setAttribute("fk_magasin",magasin.getID());
+
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
-        request.getRequestDispatcher("vues/liste.jsp").forward(request,response);
+        request.getRequestDispatcher("vues/liste.jsp").forward(request, response);
     }
     }
