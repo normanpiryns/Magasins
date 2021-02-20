@@ -16,7 +16,7 @@
 <br>
 <form action="catadd" method="post">
     <input type="text" placeholder="Ajouter une catégorie" name="categorie">
-    <input type="submit">
+    <input class="add-button" type="submit">
 
 </form>
 
