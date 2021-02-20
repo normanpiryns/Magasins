@@ -21,7 +21,7 @@
 <br>
 <form action="mesadd" method="post">
     <input type="text" placeholder="Ajouter une mesure" name="mesure">
-    <input type="submit">
+    <input class="add-button" type="submit">
 </form>
 
 <%@include file="../template/footer.jsp"%>
