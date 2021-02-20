@@ -70,3 +70,8 @@ footer{
     color: red;
     font-style: italic;
 }
+
+.list-group-item a{
+    text-decoration: none;
+    color: black;
+}
