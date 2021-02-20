@@ -5,7 +5,7 @@
 <body>
 
 <h1>Magasins</h1>
-${errorMsg}
+<p id="error">${errorMsg}</p>
 <ul class="list-group"><!-- foreach loop from db -->
 
     <c:forEach items="${magasins}" var="magasin">
