@@ -4,10 +4,11 @@
 <body>
 
 <h1>Ajouter produit</h1>
+<br>
 
 <form action="prodadd" method="post">
 
-    <input type="text" name="nom_produit" placeholder="produit" />
+    <input type="text" name="nom_produit" placeholder="Nom du produit" />
 
 
     <select name="categorie">
@@ -18,7 +19,7 @@
     </select>
     <br>
 
-    <input type="number"  name="quantite" placeholder="quantite">
+    <input type="number"  name="quantite" placeholder="Quantité">
 
     <select name="mesure">
         <c:forEach items="${mesures}" var="mesure">
@@ -30,7 +31,7 @@
     <input type="hidden"  name="id_magasin"  value="${id_magasin}"> <!-- overwrite? -->
 
     <br>
-    <button class="add-button" type="submit">submit</button>
+    <button type="submit">Submit</button>
 </form>
 </body>
 

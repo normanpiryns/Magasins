@@ -12,7 +12,7 @@
 
 
 <h2>${mag_name}</h2>
-
+<br>
 <p id="error">${errorMsg}</p>
 <body>
 

@@ -68,7 +68,50 @@
     margin: 1em;
 }
 
+.add-button[type="submit"]{
+    border: 1px;
+}
+
+.add-button[type="submit"]:hover, button[type="submit"]:hover{
+   background-color: #336600;
+}
+
 #error{
     color: red;
     font-style: italic;
+}
+
+.list-group-item a{
+    text-decoration: none;
+    color: black;
+}
+
+.container{
+    padding: 0 !important;
+}
+
+.navbar-nav li a:first-child{
+    padding-left: 2em;
+}
+
+.list-group-item a:hover{
+    color: #999999;
+}
+
+.navbar{
+    border-radius: 5px;
+}
+
+form[action="prodadd"] > *, form[action="prodmod"] > *{
+    margin:5px
+}
+
+button[type="submit"]{
+    border: 1px solid;
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: green;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
 }

@@ -31,7 +31,6 @@ public class ServletMag extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try{
             request.setAttribute("magasins",magasinDAO.listMag());
-
         }catch(SQLException throwables){
             throwables.printStackTrace();
         }
