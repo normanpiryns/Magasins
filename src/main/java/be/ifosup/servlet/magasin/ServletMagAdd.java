@@ -43,7 +43,7 @@ public class ServletMagAdd extends HttpServlet {
         // ------------------------add to the db ---------------------------
 
         try {
-            if(nom != "")
+            if(nom != "" && !nom.contains("<"))
             {
                 magasinDAO.ajouter( new Magasin(nom) );
             }

@@ -30,7 +30,7 @@ public class ServletMesAdd extends HttpServlet {
         System.out.println(mesure);
         //ajouter dans la db
         try {
-            if(mesure != "")
+            if(mesure != "" && !mesure.contains("<"))
             {
                 mesureDAO.ajouter( new Mesure(mesure));
             }
