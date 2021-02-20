@@ -41,32 +41,41 @@ public class ServletProdAdd extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        Integer idMag = Integer.parseInt(request.getParameter("id_magasin"));
-        Integer fk_cat = Integer.parseInt(request.getParameter("categorie"));
-        Integer fk_mesure = Integer.parseInt(request.getParameter("mesure"));
-        Double quantite= Double.parseDouble(request.getParameter("quantite"));
-        String nom = request.getParameter("nom_produit");
+
 
         try {
-            if(nom != "" && !nom.contains("<"))
+            if(mesureDAO.ListeMesure().size()>0 && categorieDAO.liste().size()>0){
+                Integer idMag = Integer.parseInt(request.getParameter("id_magasin"));
+                Integer fk_cat = Integer.parseInt(request.getParameter("categorie"));
+                Integer fk_mesure = Integer.parseInt(request.getParameter("mesure"));
+                Double quantite= Double.parseDouble(request.getParameter("quantite"));
+                String nom = request.getParameter("nom_produit");
+
+                if(nom != "" && !nom.contains("<"))
             {
                 Categorie categorie =categorieDAO.getCategorieById(fk_cat);
                 Mesure mesure =mesureDAO.getMesurebyID(fk_mesure);
                 Magasin magasin = magasinDAO.getMagasinById(idMag);
                 // ------------------------add to the db ---------------------------
 
-                produitDAO.Ajouter(new Produit(magasin.getNom(), nom, categorie.getNom(), mesure.getNom() ,quantite));
+
+                    produitDAO.Ajouter(new Produit(magasin.getNom(), nom, categorie.getNom(), mesure.getNom() ,quantite));
+
+
+
+
             }
 
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+
 
         //get de la liste
-        try {
+
             request.setAttribute("produits", produitDAO.ListeProduitsByMagId(idMag));
             request.setAttribute("mag_name",magasinDAO.getMagasinById(idMag).getNom());
             request.setAttribute("fk_magasin",idMag);
+        }else{
+            request.setAttribute("errorMsg","veuillez créer des catégories et/ou mesures");
+        }
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
