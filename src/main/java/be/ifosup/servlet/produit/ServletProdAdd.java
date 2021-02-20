@@ -41,36 +41,54 @@ public class ServletProdAdd extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        Integer idMag = Integer.parseInt(request.getParameter("id_magasin"));
-        Integer fk_cat = Integer.parseInt(request.getParameter("categorie"));
-        Integer fk_mesure = Integer.parseInt(request.getParameter("mesure"));
-        Double quantite= Double.parseDouble(request.getParameter("quantite"));
         String nom = request.getParameter("nom_produit");
 
+        Integer idMag = Integer.parseInt(request.getParameter("id_magasin"));
+
+        request.setAttribute("fk_magasin",idMag);
+
+
+        Double quantite;
+        if(request.getParameter("quantite") != ""){
+            quantite= Double.parseDouble(request.getParameter("quantite"));
+        }
+        else{
+            quantite = 0d;
+        }
+
         try {
-            if(nom != "" && !nom.contains("<"))
-            {
+            if(mesureDAO.ListeMesure().size()>0 && categorieDAO.liste().size()>0 &&nom != "" && !nom.contains("<") ){
+
+                Integer fk_cat = Integer.parseInt(request.getParameter("categorie"));
+                Integer fk_mesure = Integer.parseInt(request.getParameter("mesure"));
+
+
                 Categorie categorie =categorieDAO.getCategorieById(fk_cat);
                 Mesure mesure =mesureDAO.getMesurebyID(fk_mesure);
                 Magasin magasin = magasinDAO.getMagasinById(idMag);
                 // ------------------------add to the db ---------------------------
 
-                produitDAO.Ajouter(new Produit(magasin.getNom(), nom, categorie.getNom(), mesure.getNom() ,quantite));
-            }
+                    produitDAO.Ajouter(new Produit(magasin.getNom(), nom, categorie.getNom(), mesure.getNom() ,quantite));
 
-        } catch (SQLException e) {
-            e.printStackTrace();
+
+        }else{
+            request.setAttribute("errorMsg","info(s) manquante(s)");
+
+        }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
         }
 
-        //get de la liste
         try {
-            request.setAttribute("produits", produitDAO.ListeProduitsByMagId(idMag));
             request.setAttribute("mag_name",magasinDAO.getMagasinById(idMag).getNom());
+            request.setAttribute("produits", produitDAO.ListeProduitsByMagId(idMag));
             request.setAttribute("fk_magasin",idMag);
+
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
         // ---------------------- redirection -----------------------------------------
+
         request.getRequestDispatcher("vues/liste.jsp").forward(request, response);
     }
 
