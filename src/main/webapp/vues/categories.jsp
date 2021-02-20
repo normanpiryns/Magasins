@@ -7,7 +7,7 @@
 <h1>Catégories</h1>
 <br>
 <ul class="list-group"><!-- foreach loop from db -->
-
+    <p id="error">${errorMsg}</p>
     <c:forEach items="${categories}" var="categorie">
         <li class="list-group-item">${categorie.getNom()}<div class="edit-del-wrap"><a href="catmod?id=${categorie.getId()}">✎</a><a href="catsup?id=${categorie.getId()}">✖</a></div></li>
     </c:forEach>
