@@ -13,6 +13,7 @@
 
 <h2>Mesures</h2>
 <br>
+<p id="error">${errorMsg}</p>
 <ul class="list-group">
     <c:forEach items="${mesures}" var="mesure">
         <li class="list-group-item">${mesure.getNom()}<div class="edit-del-wrap"><a href="mesmod?id=${mesure.getId()}">✎</a><a href="messup?id=${mesure.getId()}">✖</a></div></li>

@@ -24,10 +24,15 @@ public class ServletCatSup extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //recup de l'id
         int id =Integer.parseInt(request.getParameter("id"));
-
+        System.out.println(id);
         //appel methode de suppression
         try {
-            categorieDAO.supprimer(id);
+            if(categorieDAO.testCatLink(id)){
+                categorieDAO.supprimer(id);
+            }else{
+                request.setAttribute("errorMsg","La catégorie ne doit être associé avec aucun produit.");
+            }
+
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }

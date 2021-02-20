@@ -2,6 +2,7 @@ package be.ifosup.servlet.mesure;
 
 import be.ifosup.categorie.Categorie;
 import be.ifosup.dao.DAOFactory;
+import be.ifosup.magasin.Magasin;
 import be.ifosup.mesure.Mesure;
 import be.ifosup.mesure.MesureDAO;
 
@@ -29,7 +30,10 @@ public class ServletMesAdd extends HttpServlet {
         System.out.println(mesure);
         //ajouter dans la db
         try {
-            mesureDAO.ajouter( new Mesure(mesure));
+            if(mesure != "" && !mesure.contains("<"))
+            {
+                mesureDAO.ajouter( new Mesure(mesure));
+            }
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }

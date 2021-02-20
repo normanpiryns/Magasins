@@ -2,6 +2,7 @@ package be.ifosup.servlet.magasin;
 
 // ----------------------------------------- imports ------------------------------------------------------------------
 
+import be.ifosup.categorie.Categorie;
 import be.ifosup.dao.DAOFactory;
 import be.ifosup.magasin.Magasin;
 import be.ifosup.magasin.MagasinDAO;
@@ -42,7 +43,10 @@ public class ServletMagAdd extends HttpServlet {
         // ------------------------add to the db ---------------------------
 
         try {
-            magasinDAO.ajouter( new Magasin(nom) );
+            if(nom != "" && !nom.contains("<"))
+            {
+                magasinDAO.ajouter( new Magasin(nom) );
+            }
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }

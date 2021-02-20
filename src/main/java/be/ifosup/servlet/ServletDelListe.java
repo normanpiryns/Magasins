@@ -18,6 +18,7 @@ public class ServletDelListe extends HttpServlet {
 
 
     private ProduitDAO produitDAO;
+    private MagasinDAO magasinDAO;
 
 
 
@@ -25,7 +26,7 @@ public class ServletDelListe extends HttpServlet {
         DAOFactory daoFactory = DAOFactory.getInstance();
 
         this.produitDAO = daoFactory.getProduitDAO();
-
+        this.magasinDAO = daoFactory.getMagasinDAO();
 
     }
 
@@ -41,15 +42,12 @@ public class ServletDelListe extends HttpServlet {
             for (Produit prod:produits) {
                 produitDAO.Supprimer(prod.getId());
             }
-
+            request.setAttribute("magasins",magasinDAO.listMag());
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
 
-            request.setAttribute("fk_magasin",fk_magasin);
-
-
-        request.getRequestDispatcher("vues/liste.jsp").forward(request,response);
+        request.getRequestDispatcher("vues/accueil.jsp").forward(request,response);
     }
 
     @Override

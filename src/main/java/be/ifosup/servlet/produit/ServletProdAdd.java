@@ -48,12 +48,16 @@ public class ServletProdAdd extends HttpServlet {
         String nom = request.getParameter("nom_produit");
 
         try {
-            Categorie categorie =categorieDAO.getCategorieById(fk_cat);
-            Mesure mesure =mesureDAO.getMesurebyID(fk_mesure);
-            Magasin magasin = magasinDAO.getMagasinById(idMag);
-        // ------------------------add to the db ---------------------------
+            if(nom != "" && !nom.contains("<"))
+            {
+                Categorie categorie =categorieDAO.getCategorieById(fk_cat);
+                Mesure mesure =mesureDAO.getMesurebyID(fk_mesure);
+                Magasin magasin = magasinDAO.getMagasinById(idMag);
+                // ------------------------add to the db ---------------------------
 
-            produitDAO.Ajouter(new Produit(magasin.getNom(), nom, categorie.getNom(), mesure.getNom() ,quantite));
+                produitDAO.Ajouter(new Produit(magasin.getNom(), nom, categorie.getNom(), mesure.getNom() ,quantite));
+            }
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
