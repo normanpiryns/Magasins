@@ -93,4 +93,24 @@ public class MesureDAOImpl implements MesureDAO {
 
         return new Mesure(resultat.getInt("id_mesure"),nom);
     }
+    @Override
+    public boolean testMesLink(int id) throws SQLException{
+        List<Categorie> mesures = new ArrayList<>();
+
+        connection = daoFactory.getConnection();
+        preparedStatement = connection.prepareStatement("select * from mesures right join produits ON id_mesure = fk_mesure where id_mesure = ?");
+        preparedStatement.setInt(1,id);
+        resultat = preparedStatement.executeQuery();
+
+        while(resultat.next()){
+            String nom = resultat.getString("nom_mesure");
+
+            mesures.add(new Categorie(id,nom));
+        }
+        if (mesures.size()>0){
+            return false;
+        } else {
+            return true;
+        }
+    }
 }

@@ -27,7 +27,11 @@ public class ServletMesSup extends HttpServlet {
 
         //suppression de la mesure
         try {
-            mesureDAO.supprimer(id);
+            if(mesureDAO.testMesLink(id)){
+                mesureDAO.supprimer(id);
+            }else{
+                request.setAttribute("errorMsg","La mesure ne doit être associé avec aucun produit.");
+            }
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }

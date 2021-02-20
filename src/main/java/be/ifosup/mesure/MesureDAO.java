@@ -17,4 +17,5 @@ public interface MesureDAO {
     public Mesure getMesurebyID(int id ) throws SQLException;
 
     public Mesure getMesureByName(String nom) throws SQLException;
+    public boolean testMesLink(int id) throws SQLException;
 }
