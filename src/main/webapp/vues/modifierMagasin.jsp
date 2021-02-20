@@ -10,7 +10,7 @@
 <h1>Modifier magasin</h1>
 
 <form action="" method="post">
-    <input type="text"  name="magasin" placeholder="${magasin.getNom()}">
+    <input type="text"  name="magasin" value="${magasin.getNom()}">
     <input type="hidden"  name="id" value="${magasin.getID()}"  />
     <br>
     <button type="submit">submit</button>
