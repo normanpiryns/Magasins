@@ -5,6 +5,7 @@
 <body>
 
 <h1>Magasins</h1>
+<p id="error">${errorMsg}</p>
 <ul class="list-group"><!-- foreach loop from db -->
     <c:forEach items="${magasins}" var="magasin">
         <li class="list-group-item">${magasin.getNom()}<div class="edit-del-wrap"><a href="magmod?id=${magasin.getID()}">✎</a><a href="magsup?id=${magasin.getID()}">✖</a></div></li>
