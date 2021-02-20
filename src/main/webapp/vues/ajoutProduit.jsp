@@ -30,7 +30,7 @@
     <input type="hidden"  name="id_magasin"  value="${id_magasin}"> <!-- overwrite? -->
 
     <br>
-    <button type="submit">submit</button>
+    <button class="add-button" type="submit">submit</button>
 </form>
 </body>
 
