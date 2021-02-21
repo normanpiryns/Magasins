@@ -1,5 +1,6 @@
 package be.ifosup.servlet.mesure;
 
+import be.ifosup.categorie.Categorie;
 import be.ifosup.dao.DAOFactory;
 import be.ifosup.mesure.Mesure;
 import be.ifosup.mesure.MesureDAO;
@@ -28,11 +29,15 @@ public class ServletMesMod extends HttpServlet {
 
         //recuperation des champs
         String mesure = request.getParameter("mesure");
+        mesure = mesure.trim();
         Integer id = Integer.parseInt(request.getParameter("id"));
 
         //modifier dans dans la db
         try {
-            mesureDAO.modifier( new Mesure(id,mesure));
+            if(mesure != "" && !mesure.contains("<")&& (!mesure.isEmpty()))
+            {
+                mesureDAO.modifier( new Mesure(id,mesure));
+            }
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
