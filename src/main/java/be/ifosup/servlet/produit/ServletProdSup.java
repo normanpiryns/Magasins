@@ -36,8 +36,10 @@ public class ServletProdSup extends HttpServlet {
 
 
         try {
+            Magasin magasin = magasinDAO.getMagasinById(fk_magasin);
             produitDAO.Supprimer(id);
             request.setAttribute("produits",produitDAO.ListeProduitsByMagId(fk_magasin));
+            request.setAttribute("mag_name",magasin.getNom());
         } catch (SQLException e) {
             e.printStackTrace();
         }
