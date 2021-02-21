@@ -26,11 +26,11 @@ public class ServletCatAdd extends HttpServlet {
 
         //recuperation des champs
         String categorie = request.getParameter("categorie");
-
+        categorie = categorie.trim();
 
         //ajouter dans la db
         try {
-            if(categorie != "" && !categorie.contains("<"))
+            if(categorie != "" && !categorie.contains("<")&& (!categorie.isEmpty()))
             {
                 categorieDAO.ajouter( new Categorie(categorie));
             }
