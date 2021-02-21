@@ -34,10 +34,14 @@ public class ServletMagMod extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String magasin = request.getParameter("magasin");
+        magasin = magasin.trim();
         String id = request.getParameter("id");
 
         try {
-            magasinDAO.modifier( new Magasin(Integer.parseInt(id),magasin));
+            if(magasin != "" && !magasin.contains("<")&& (!magasin.isEmpty()))
+            {
+                magasinDAO.modifier( new Magasin(Integer.parseInt(id),magasin));
+            }
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
