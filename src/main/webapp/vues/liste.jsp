@@ -16,12 +16,31 @@
 <p id="error">${errorMsg}</p>
 <body>
 
-<ul class="list-group">
-    <c:forEach items="${produits}" var="produit">
-        <li class="list-group-item"><span class="col">Nom du produit: </span>${produit.getNom()} | <span class="col">Nom de catégorie: </span> ${produit.getCategorie()} | <span class="col">Quantité: </span> ${produit.getQuantite()} | <span class="col">Mesure: </span>${produit.getMesure()}<div class="edit-del-wrap"><a href="prodmod?id=${produit.getId()}">✎</a><a href="prodsup?id=${produit.getId()}&fk_magasin=${fk_magasin}">✖</a></div></li>
-    </c:forEach>
-</ul>
-
+<table class="table">
+    <thead>
+        <th scope="col">Nom du produit</th>
+        <th scope="col">Nom de catégorie</th>
+        <th scope="col">Quantité</th>
+        <th scope="col">Mesure</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <c:forEach items="${produits}" var="produit">
+            <tr>
+                <td>${produit.getNom()}</td>
+                <td>${produit.getCategorie()}</td>
+                <td>${produit.getQuantite()}</td>
+                <td>${produit.getMesure()}</td>
+                <td>
+                    <div class="edit-del-wrap">
+                        <a href="prodmod?id=${produit.getId()}">✎</a>
+                        <a href="prodsup?id=${produit.getId()}&fk_magasin=${fk_magasin}">✖</a>
+                    </div>
+                </td>
+            </tr>
+        </c:forEach>
+    </tbody>
+</table>
 
 <a href="prodadd?id_magasin=${fk_magasin}" id="add-produit">Ajouter produit</a>
 <a href="delliste?fk_magasin=${fk_magasin}" id="del-liste" >
