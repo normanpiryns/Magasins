@@ -27,7 +27,7 @@ public class ServletMesAdd extends HttpServlet {
         //recuperation des champs
         String mesure = request.getParameter("mesure");
 
-        System.out.println(mesure);
+
         //ajouter dans la db
         try {
             if(mesure != "" && !mesure.contains("<"))

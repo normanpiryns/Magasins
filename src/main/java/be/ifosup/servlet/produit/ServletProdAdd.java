@@ -42,6 +42,8 @@ public class ServletProdAdd extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String nom = request.getParameter("nom_produit");
+        nom = nom.trim();
+        System.out.println(nom);
 
         Integer idMag = Integer.parseInt(request.getParameter("id_magasin"));
 
@@ -49,7 +51,7 @@ public class ServletProdAdd extends HttpServlet {
 
 
         Double quantite;
-        if(request.getParameter("quantite") != ""){
+        if(request.getParameter("quantite") != "" ){
             quantite= Double.parseDouble(request.getParameter("quantite"));
         }
         else{
@@ -61,6 +63,10 @@ public class ServletProdAdd extends HttpServlet {
 
                 Integer fk_cat = Integer.parseInt(request.getParameter("categorie"));
                 Integer fk_mesure = Integer.parseInt(request.getParameter("mesure"));
+
+                if(quantite<0){
+                    quantite = 0d;
+                }
 
 
                 Categorie categorie =categorieDAO.getCategorieById(fk_cat);
