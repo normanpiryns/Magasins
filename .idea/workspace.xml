@@ -27,11 +27,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a5c1f534-93cc-4193-b070-c0f3e943f591" name="Default Changelist" comment="Liste view and h1 / h2 + br fixes">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifosup/achat/Achat.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifosup/achat/AchatDAO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifosup/achat/AchatDaoImpl.java" beforeDir="false" />
+    <list default="true" id="a5c1f534-93cc-4193-b070-c0f3e943f591" name="Default Changelist" comment="Table">
       <change beforePath="$PROJECT_DIR$/src/main/webapp/vues/liste.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/vues/liste.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -316,7 +312,7 @@
       <workItem from="1612596002590" duration="12590000" />
       <workItem from="1613200244094" duration="11808000" />
       <workItem from="1613811695627" duration="2530000" />
-      <workItem from="1613898339248" duration="1590000" />
+      <workItem from="1613898339248" duration="1908000" />
     </task>
     <task id="LOCAL-00001" summary="Gestion Magasin">
       <created>1610781737470</created>
@@ -542,7 +538,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613821399993</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Table">
+      <created>1613900265746</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1613900265746</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -591,7 +594,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ajout du template &amp; de la feuiile de style" />
     <MESSAGE value="correction du dernier commit sur le template &amp; le css" />
     <MESSAGE value="dossier vues" />
     <MESSAGE value="vues 5 6 7 V1" />
@@ -616,6 +618,7 @@
     <MESSAGE value="modification du boutton de suppression de la liste d'un magasin" />
     <MESSAGE value="Some CSS and visual things" />
     <MESSAGE value="Liste view and h1 / h2 + br fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Liste view and h1 / h2 + br fixes" />
+    <MESSAGE value="Table" />
+    <option name="LAST_COMMIT_MESSAGE" value="Table" />
   </component>
 </project>
