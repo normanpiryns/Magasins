@@ -26,7 +26,7 @@ public class ServletCatAdd extends HttpServlet {
 
         //recuperation des champs
         String categorie = request.getParameter("categorie");
-
+        categorie = categorie.trim();
 
         //ajouter dans la db
         try {

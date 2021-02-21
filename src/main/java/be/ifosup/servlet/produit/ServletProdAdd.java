@@ -62,6 +62,10 @@ public class ServletProdAdd extends HttpServlet {
                 Integer fk_cat = Integer.parseInt(request.getParameter("categorie"));
                 Integer fk_mesure = Integer.parseInt(request.getParameter("mesure"));
 
+                if(quantite<0){
+                    quantite = 0d;
+                }
+
 
                 Categorie categorie =categorieDAO.getCategorieById(fk_cat);
                 Mesure mesure =mesureDAO.getMesurebyID(fk_mesure);
