@@ -30,7 +30,7 @@ public class ServletCatAdd extends HttpServlet {
 
         //ajouter dans la db
         try {
-            if(categorie != "" && !categorie.contains("<"))
+            if(categorie != "" && !categorie.contains("<")&& (!categorie.isEmpty()))
             {
                 categorieDAO.ajouter( new Categorie(categorie));
             }

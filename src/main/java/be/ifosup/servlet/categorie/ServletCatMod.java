@@ -26,11 +26,15 @@ public class ServletCatMod extends HttpServlet {
 
         //recuperation des champs
         String categorie = request.getParameter("categorie");
+        categorie = categorie.trim();
         String id = request.getParameter("id");
 
         //ajouter dans la db
         try {
-            categorieDAO.modifier( new Categorie(Integer.parseInt(id),categorie));
+            if(categorie != "" && !categorie.contains("<")&& (!categorie.isEmpty()))
+            {
+                categorieDAO.modifier( new Categorie(Integer.parseInt(id),categorie));
+            }
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }

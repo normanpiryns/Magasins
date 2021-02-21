@@ -57,7 +57,7 @@ public class ServletProdAdd extends HttpServlet {
         }
 
         try {
-            if(mesureDAO.ListeMesure().size()>0 && categorieDAO.liste().size()>0 &&nom != "" && !nom.contains("<") ){
+            if(mesureDAO.ListeMesure().size()>0 && categorieDAO.liste().size()>0 && !nom.isEmpty() && !nom.contains("<") ){
 
                 Integer fk_cat = Integer.parseInt(request.getParameter("categorie"));
                 Integer fk_mesure = Integer.parseInt(request.getParameter("mesure"));

@@ -28,10 +28,9 @@ public class ServletMesAdd extends HttpServlet {
         String mesure = request.getParameter("mesure");
         mesure = mesure.trim();
 
-
         //ajouter dans la db
         try {
-            if(mesure != "" && !mesure.contains("<"))
+            if(mesure != "" && !mesure.contains("<")&& !mesure.isEmpty())
             {
                 mesureDAO.ajouter( new Mesure(mesure));
             }
