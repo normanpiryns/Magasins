@@ -4,7 +4,7 @@
 
 <body>
 
-<h1>Catégories</h1>
+<h2>Catégories</h2>
 <br>
 <ul class="list-group"><!-- foreach loop from db -->
     <p id="error">${errorMsg}</p>

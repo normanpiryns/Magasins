@@ -28,7 +28,7 @@ public class ServletMesAdd extends HttpServlet {
         String mesure = request.getParameter("mesure");
         mesure = mesure.trim();
 
-        System.out.println(mesure);
+
         //ajouter dans la db
         try {
             if(mesure != "" && !mesure.contains("<"))

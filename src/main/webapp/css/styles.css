@@ -90,8 +90,8 @@
     padding: 0 !important;
 }
 
-.navbar-nav li a:first-child{
-    padding-left: 2em;
+.navbar-nav li:first-child a{
+    padding-left: 2em !important;
 }
 
 .list-group-item a:hover{
@@ -114,4 +114,9 @@ button[type="submit"]{
     color: white;
     text-decoration: none;
     border-radius: 4px;
+}
+
+.col{
+    font-style: italic;
+    color: gray;
 }
