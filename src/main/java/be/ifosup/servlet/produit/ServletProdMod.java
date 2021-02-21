@@ -68,11 +68,27 @@ public class ServletProdMod extends HttpServlet {
         Double quantite= Double.parseDouble(request.getParameter("quantite"));
         String nom = request.getParameter("nom");
         String nomMagasin = request.getParameter("magasin");
+
+        nom = nom.trim();
+
+        if(request.getParameter("quantite") != ""){
+            quantite= Double.parseDouble(request.getParameter("quantite"));
+        }
+        else{
+            quantite = 0d;
+        }
+
+        if(quantite<0){
+            quantite = 0d;
+        }
+
         try {
+
             Categorie categorie = categorieDAO.getCategorieById(fk_cat);
             Mesure mesure = mesureDAO.getMesurebyID(fk_mesure);
             Magasin magasin = magasinDAO.getMagasinByName(nomMagasin);
 
+            if(!nom.isEmpty() && !nom.contains("<")){
             Produit prodtest =new Produit(id,nomMagasin, nom, categorie.getNom(), mesure.getNom() ,quantite);
             produitDAO.Modifier(prodtest);
             System.out.println(prodtest.getNom() + prodtest.getCategorie() + prodtest.getMesure() + prodtest.getId());
@@ -81,7 +97,7 @@ public class ServletProdMod extends HttpServlet {
 
             //produitDAO.Modifier(new Produit(1,"lidle", "pomme", "fruit", "piece" , 1.0));
 
-
+            }
 
 
             request.setAttribute("produits",produitDAO.ListeProduitsByMagId(magasin.getID()));
