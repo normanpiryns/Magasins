@@ -16,14 +16,6 @@
 <p id="error">${errorMsg}</p>
 <body>
 
-<!--
-<ul class="list-group">
-    <c:forEach items="${produits}" var="produit">
-        <li class="list-group-item"><span class="col">Nom du produit: </span>${produit.getNom()} | <span class="col">Nom de catégorie: </span> ${produit.getCategorie()} | <span class="col">Quantité: </span> ${produit.getQuantite()} | <span class="col">Mesure: </span>${produit.getMesure()}<div class="edit-del-wrap"><a href="prodmod?id=${produit.getId()}">✎</a><a href="prodsup?id=${produit.getId()}&fk_magasin=${fk_magasin}">✖</a></div></li>
-    </c:forEach>
-</ul>
--->
-
 <table class="table">
     <thead>
         <th scope="col">Nom du produit</th>
