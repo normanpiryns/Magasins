@@ -2,7 +2,7 @@
 <%@include file="../template/header.jsp"%>
 <%@include file="../template/navigation.jsp"%>
 
-<h1>Modifier produit</h1>
+<h2>Modifier produit</h2>
 <br>
 
 

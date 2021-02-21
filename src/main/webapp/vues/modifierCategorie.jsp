@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<h1>Modifier catégorie</h1>
+<h2>Modifier catégorie</h2>
 <br>
 <form action="catmod" method="post">
     <input type="text"  name="categorie" value="${categorie.getNom()}"  />

@@ -7,12 +7,12 @@
 </head>
 <body>
 
-<h1>Modifier magasin</h1>
-
+<h2>Modifier magasin</h2>
+<br>
 <form action="" method="post">
     <input type="text"  name="magasin" value="${magasin.getNom()}">
     <input type="hidden"  name="id" value="${magasin.getID()}"  />
-    <br>
-    <button type="submit">submit</button>
+    <br><br>
+    <button type="submit">Submit</button>
 </form>
 </body>

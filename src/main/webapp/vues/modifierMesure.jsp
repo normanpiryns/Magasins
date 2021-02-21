@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<h1>Modifier mesure</h1>
+<h2>Modifier mesure</h2>
 <br>
 <form action="mesmod" method="post">
     <input type="hidden" name="id" value="${mesure.getId()}">
