@@ -26,6 +26,7 @@ public class ServletMesAdd extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //recuperation des champs
         String mesure = request.getParameter("mesure");
+        mesure = mesure.trim();
 
         System.out.println(mesure);
         //ajouter dans la db

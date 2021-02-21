@@ -38,7 +38,7 @@ public class ServletMagAdd extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // ----------------------- getParameters ---------------------------
         String nom = request.getParameter("magasin");
-
+        nom = nom.trim();
 
         // ------------------------add to the db ---------------------------
 

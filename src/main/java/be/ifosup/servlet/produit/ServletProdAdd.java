@@ -42,6 +42,7 @@ public class ServletProdAdd extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String nom = request.getParameter("nom_produit");
+        nom = nom.trim();
 
         Integer idMag = Integer.parseInt(request.getParameter("id_magasin"));
 
