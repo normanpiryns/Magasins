@@ -27,11 +27,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a5c1f534-93cc-4193-b070-c0f3e943f591" name="Default Changelist" comment="Table">
+    <list default="true" id="a5c1f534-93cc-4193-b070-c0f3e943f591" name="Default Changelist" comment="h1 -&gt; h2 + &lt;br&gt; mod cat,mes,produit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/vues/modifierMagasin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/vues/modifierMagasin.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/vues/modifierMesure.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/vues/modifierMesure.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/vues/modifierProduit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/vues/modifierProduit.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifosup/servlet/magasin/ServletMagAdd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifosup/servlet/magasin/ServletMagAdd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/vues/accueil.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/vues/accueil.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/vues/magasins.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/vues/magasins.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +79,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../GestionAchatPoo-master" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15429688" />
@@ -94,17 +94,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 7.0.92">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Tomcat 7.0.92" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.92" ALTERNATIVE_JRE_ENABLED="false">
       <deployment>
         <artifact name="Magasins:war exploded">
@@ -315,7 +304,9 @@
       <workItem from="1612596002590" duration="12590000" />
       <workItem from="1613200244094" duration="11808000" />
       <workItem from="1613811695627" duration="2530000" />
-      <workItem from="1613898339248" duration="4731000" />
+      <workItem from="1613898339248" duration="5596000" />
+      <workItem from="1614246425436" duration="427000" />
+      <workItem from="1614248811109" duration="4645000" />
     </task>
     <task id="LOCAL-00001" summary="Gestion Magasin">
       <created>1610781737470</created>
@@ -562,7 +553,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613900568985</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="h1 -&gt; h2 + &lt;br&gt; mod cat,mes,produit">
+      <created>1613904766959</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1613904766967</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -611,7 +609,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="correction du dernier commit sur le template &amp; le css" />
     <MESSAGE value="dossier vues" />
     <MESSAGE value="vues 5 6 7 V1" />
     <MESSAGE value="Input hidden , changements dans ajoutProduit, liste.jsp/styles.css" />
@@ -636,6 +633,7 @@
     <MESSAGE value="Some CSS and visual things" />
     <MESSAGE value="Liste view and h1 / h2 + br fixes" />
     <MESSAGE value="Table" />
-    <option name="LAST_COMMIT_MESSAGE" value="Table" />
+    <MESSAGE value="h1 -&gt; h2 + &lt;br&gt; mod cat,mes,produit" />
+    <option name="LAST_COMMIT_MESSAGE" value="h1 -&gt; h2 + &lt;br&gt; mod cat,mes,produit" />
   </component>
 </project>

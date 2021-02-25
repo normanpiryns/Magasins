@@ -14,7 +14,7 @@
 </ul>
 
 <br>
-<form action="magadd" method="post">
+<form action="magadd?accueil=0" method="post">
     <input type="text" placeholder="Ajouter un magasin" name="magasin">
     <input class="add-button" type="submit"/>
 

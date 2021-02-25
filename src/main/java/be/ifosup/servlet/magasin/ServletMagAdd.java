@@ -58,7 +58,12 @@ public class ServletMagAdd extends HttpServlet {
             throwables.printStackTrace();
         }
         // ---------------------- redirection -----------------------------------------
+        // If view on view magasin, remain on same view after adding. If view on accueil, remain on same view
+        if(Integer.parseInt(request.getParameter("accueil")) != 1 ){
+            request.getRequestDispatcher("vues/magasins.jsp").forward(request, response);
+        } else {
+            request.getRequestDispatcher("vues/accueil.jsp").forward(request, response);
+        }
 
-        request.getRequestDispatcher("vues/magasins.jsp").forward(request, response);
     }
 }
